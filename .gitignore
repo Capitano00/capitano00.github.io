@@ -1,0 +1,11 @@
+node_modules
+dist
+.astro
+.dev.*.log
+qa/*.log
+qa/screenshots/*.png
+.env
+.env.*
+*.local
+.DS_Store
+Thumbs.db

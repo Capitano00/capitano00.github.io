@@ -1,0 +1,41 @@
+---
+import { weeklyUpdates } from "@/data/updates";
+---
+
+<section id="updates" aria-labelledby="updates-heading" class="mx-auto max-w-7xl px-5 py-16 sm:px-8">
+  <div class="grid gap-8 lg:grid-cols-[0.72fr_1.28fr]">
+    <div>
+      <p class="text-sm font-semibold uppercase tracking-[0.16em] text-copper">Weekly cadence</p>
+      <h2 id="updates-heading" class="mt-3 max-w-xl font-display text-4xl font-semibold leading-tight text-ink md:text-5xl">
+        Draft first, publish after review
+      </h2>
+      <p class="mt-5 leading-7 text-ink-soft">
+        Codex can prepare weekly drafts from repository evidence, but the public site does not auto-publish changes. That keeps disclosure and quality judgement with the owner.
+      </p>
+    </div>
+    <div class="border-y border-ink/12">
+      {
+        weeklyUpdates.map((update) => (
+          <article class="py-6">
+            <div class="flex flex-wrap items-center justify-between gap-3">
+              <p class="text-sm font-semibold text-copper">{update.week}</p>
+              <span class="rounded-full border border-ink/15 bg-white/70 px-3 py-1 text-xs font-semibold uppercase tracking-[0.08em] text-ink-soft">
+                {update.status}
+              </span>
+            </div>
+            <h3 class="mt-3 font-display text-2xl font-semibold leading-tight text-ink">{update.title}</h3>
+            <p class="mt-3 leading-7 text-ink-soft">{update.summary}</p>
+            <ul class="mt-4 space-y-2">
+              {update.focus.map((item) => (
+                <li class="flex gap-3 text-sm leading-6 text-ink-soft">
+                  <span class="mt-2 size-1.5 shrink-0 rounded-full bg-copper" />
+                  <span>{item}</span>
+                </li>
+              ))}
+            </ul>
+          </article>
+        ))
+      }
+    </div>
+  </div>
+</section>

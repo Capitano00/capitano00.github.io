@@ -1,0 +1,46 @@
+---
+import { mediaEvidence } from "@/data/media";
+---
+
+<section aria-labelledby="media-heading" class="bg-paper-warm/55">
+  <div class="mx-auto grid max-w-7xl gap-8 px-5 py-16 sm:px-8 lg:grid-cols-[0.72fr_1.28fr]">
+    <div>
+      <p class="text-sm font-semibold uppercase tracking-[0.16em] text-copper">Evidence queue</p>
+      <h2 id="media-heading" class="mt-3 max-w-xl font-display text-4xl font-semibold leading-tight text-ink md:text-5xl">
+        Visual proof should be useful, not revealing.
+      </h2>
+      <p class="mt-5 leading-7 text-ink-soft">
+        The first release can ship with abstract evidence. Real screenshots should appear only after a redaction pass, and each image should have a specific reason to exist.
+      </p>
+      <div class="mt-6 rounded-md border border-ink/12 bg-white/70 p-4 text-sm leading-6 text-ink-soft">
+        <strong class="block text-ink">Redaction test</strong>
+        A public image must still be safe if copied into a LinkedIn post without surrounding context.
+      </div>
+    </div>
+    <div class="divide-y divide-ink/12 border-y border-ink/12">
+      {
+        mediaEvidence.map((item, index) => (
+          <article class="grid gap-4 py-5 md:grid-cols-[4rem_1fr] md:py-6">
+            <div>
+              <span class="grid size-10 place-items-center rounded-md border border-copper/30 bg-white font-display text-sm font-semibold text-copper">
+                {index + 1}
+              </span>
+            </div>
+            <div>
+              <div class="flex flex-wrap items-center justify-between gap-3">
+                <h3 class="font-display text-2xl font-semibold leading-tight text-ink">{item.title}</h3>
+                <span class="rounded-full border border-copper/25 bg-white/70 px-3 py-1 text-xs font-semibold uppercase tracking-[0.08em] text-copper">
+                  {item.status}
+                </span>
+              </div>
+              <p class="mt-3 text-sm leading-6 text-ink-soft">{item.intendedUse}</p>
+              <p class="mt-3 text-sm leading-6 text-ink-soft">
+                <strong class="text-ink">Before publishing:</strong> {item.publicSafetyNote}
+              </p>
+            </div>
+          </article>
+        ))
+      }
+    </div>
+  </div>
+</section>
