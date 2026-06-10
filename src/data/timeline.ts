@@ -87,6 +87,17 @@ export const timeline: TimelineMilestone[] = [
     tags: ["Design Optimisation", "PVsyst", "Evidence review"]
   },
   {
+    id: "pvsyst-workflow-bridge",
+    period: "9-10 June 2026",
+    title: "PVsyst workflow bridge and ZIP Builder alpha",
+    summary:
+      "The PVsyst path moved into supervised workflow automation: read-only desktop evidence capture, navigation screenshots, output artefact validation, Design Optimisation handoff, and a parallel ZIP-based project builder that preserves near-shading content for manual rerun validation.",
+    evidence:
+      "Repo evidence inspected on 2026-06-10: PVsyst workflow bridge notes, read-only extraction/navigation evidence, Project ZIP Builder S1 alpha note, and 324 commits in the active checkout.",
+    status: "current",
+    tags: ["PVsyst", "Read-only automation", "ZIP Builder"]
+  },
+  {
     id: "journal",
     period: "June 2026",
     title: "Public innovation journal begins",

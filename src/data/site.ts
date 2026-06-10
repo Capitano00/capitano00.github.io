@@ -4,7 +4,7 @@ export const siteMeta = {
     "A personal innovation portfolio led by HelioFabric: governed renewable-workflow tooling, responsible AI-assisted delivery, and public-safe progress updates.",
   author: "Boyong Wang",
   status: "Public draft",
-  reviewedThrough: "2026-06-07",
+  reviewedThrough: "2026-06-10",
   temporaryHost: "Cloudflare Pages temporary URL planned",
   brand: {
     logoLockup: "/brand/heliofabric-logo-lockup.png",
@@ -14,8 +14,8 @@ export const siteMeta = {
   repositoryEvidence: {
     firstLocalCommitDate: "2026-04-06",
     importedSnapshotStart: "v0.0.21+",
-    inspectedCommitCount: 248,
-    inspectedOn: "2026-06-04"
+    inspectedCommitCount: 324,
+    inspectedOn: "2026-06-10"
   }
 };
 
@@ -59,7 +59,7 @@ export const flagshipProject = {
   summary:
     "A personal case study in turning repetitive consultancy workflows into structured data, reviewable tools, and traceable delivery evidence, including UI automation, ML experiments, map artefacts, and due-diligence support.",
   metrics: [
-    { value: "248", label: "commits inspected" },
+    { value: "324", label: "commits inspected" },
     { value: "10+", label: "registered tool workflows" },
     { value: "UI + ML", label: "automation experiments" }
   ]
@@ -76,9 +76,9 @@ export const disclosureRules = [
 export const currentSignals = [
   {
     label: "Workstream",
-    value: "Design Optimisation",
+    value: "PVsyst workflow bridge",
     detail:
-      "Transparent PV design review: PVsyst evidence, DC capacity checks, grid clipping, and explainable ranking."
+      "Read-only desktop evidence capture, output artefact validation, Design Optimisation handoff, and ZIP-based rerun experiments."
   },
   {
     label: "Boundary",
@@ -88,9 +88,9 @@ export const currentSignals = [
   },
   {
     label: "Milestone",
-    value: "Logo and launch-ready build",
+    value: "ZIP Builder alpha",
     detail:
-      "HelioFabric identity added before the first Cloudflare Pages temporary URL is shared."
+      "A parallel PVsyst project ZIP workflow can preview selected variant assumptions, preserve near-shading content, and produce artefacts for manual validation."
   }
 ];
 
@@ -141,7 +141,7 @@ export const productMapSteps = [
 ];
 
 export const editorialMetrics = [
-  { value: "248", label: "commits inspected" },
+  { value: "324", label: "commits inspected" },
   { value: "v0.0.21+", label: "imported snapshots" },
   { value: "2026-04-06", label: "first local commit" }
 ];
