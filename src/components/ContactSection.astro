@@ -1,0 +1,31 @@
+---
+import { contactProfile } from "@/data/site";
+
+const hasLinkedInUrl = contactProfile.linkedinUrl.trim().startsWith("http");
+const contactHref = hasLinkedInUrl
+  ? contactProfile.linkedinUrl
+  : "https://www.linkedin.com/search/results/people/?keywords=Boyong%20Wang";
+const contactLabel = hasLinkedInUrl ? contactProfile.linkedinLabel : "Search Boyong Wang on LinkedIn";
+---
+
+<section id="contact" aria-labelledby="contact-heading" class="mx-auto max-w-7xl px-5 py-16 sm:px-8">
+  <div class="grid gap-8 rounded-md bg-ink p-6 text-paper md:grid-cols-[0.8fr_1.2fr] md:p-8">
+    <div>
+      <p class="text-sm font-semibold uppercase tracking-[0.16em] text-solar">{contactProfile.eyebrow}</p>
+      <h2 id="contact-heading" class="mt-3 max-w-xl font-display text-4xl font-semibold leading-tight md:text-5xl">
+        {contactProfile.heading}
+      </h2>
+    </div>
+    <div class="flex flex-col items-start justify-between gap-6">
+      <p class="max-w-2xl leading-7 text-paper/76">{contactProfile.summary}</p>
+      <a
+        class="focus-ring inline-flex rounded-full bg-solar px-5 py-3 text-sm font-semibold text-ink shadow-lift"
+        href={contactHref}
+        target="_blank"
+        rel="noreferrer"
+      >
+        {contactLabel}
+      </a>
+    </div>
+  </div>
+</section>

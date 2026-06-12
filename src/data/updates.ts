@@ -21,19 +21,19 @@ export const weeklyUpdates: WeeklyUpdate[] = [
   },
   {
     week: "Week of 2026-06-07",
-    title: "Logo milestone and first public rollout preparation",
+    title: "Logo milestone and first public identity pass",
     summary:
-      "The HelioFabric visual identity has been added to the public innovation journal ahead of the first Cloudflare Pages rollout. The update strengthens the public product signal while keeping the page focused on high-level progress and disclosure boundaries.",
+      "The HelioFabric visual identity has been added to the personal site ahead of first public sharing. The update strengthens the product signal while keeping the page focused on high-level progress and professional credibility.",
     focus: [
       "Add the HelioFabric logo and app-style mark to the first viewport and sharing metadata.",
       "Record the identity work as a public-safe June 2026 milestone.",
-      "Prepare the static build folder for manual Cloudflare Pages Direct Upload."
+      "Prepare the static build output for manual publishing after review."
     ],
     status: "draft"
   },
   {
     week: "Week of 2026-06-01",
-    title: "Starting the public innovation journal",
+    title: "Starting the public portfolio record",
     summary:
       "The first public-safe site structure is being prepared. The current product narrative centres on governed renewable-project workflows, Design Optimisation, and responsible AI-assisted delivery practice.",
     focus: [

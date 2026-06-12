@@ -14,7 +14,7 @@ export const mediaEvidence: MediaEvidence[] = [
     intendedUse:
       "Show the selection-driven product surface with synthetic or heavily redacted project rows.",
     publicSafetyNote:
-      "Crop or replace project names, coordinates, client details, private values, and any non-public parameters."
+      "Crop or replace project labels, location indicators, private values, and any non-public parameters."
   },
   {
     id: "tool-controller-cropped",
@@ -23,7 +23,7 @@ export const mediaEvidence: MediaEvidence[] = [
     intendedUse:
       "Show the high-level tool-run pattern: input preview, run history, and artefact discipline.",
     publicSafetyNote:
-      "Do not show provider secrets, run artefact paths, live credentials, raw evidence filenames, or private project identifiers."
+      "Use generic workflow surfaces, edited examples, or reviewed artefact labels only."
   },
   {
     id: "origin-reconstruction",
@@ -32,6 +32,6 @@ export const mediaEvidence: MediaEvidence[] = [
     intendedUse:
       "Use a labelled reconstruction if original pre-Git screenshots are unavailable or unsuitable for publication.",
     publicSafetyNote:
-      "Label clearly as a reconstruction and avoid exposing any old private workflow, file path, or employer-specific process detail."
+      "Label clearly as a reconstruction and avoid exposing old private workflow or organisation-specific process detail."
   }
 ];

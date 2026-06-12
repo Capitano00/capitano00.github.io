@@ -1,7 +1,7 @@
 export const siteMeta = {
-  title: "Boyong Wang | Personal Innovation Portfolio",
+  title: "Boyong Wang | Renewable Workflow & AI Delivery Portfolio",
   description:
-    "A personal innovation portfolio led by HelioFabric: governed renewable-workflow tooling, responsible AI-assisted delivery, and public-safe progress updates.",
+    "Boyong Wang's personal portfolio: renewable-workflow product thinking, governed data tools, responsible AI-assisted delivery, and the HelioFabric flagship case study.",
   author: "Boyong Wang",
   status: "Public draft",
   reviewedThrough: "2026-06-10",
@@ -21,35 +21,82 @@ export const siteMeta = {
 
 export const personalProfile = {
   name: "Boyong Wang",
-  eyebrow: "Personal innovation portfolio",
-  headline: "Building governed tools for renewable-project delivery.",
+  eyebrow: "Personal portfolio",
+  headline: "Renewable-workflow systems, product judgement, and responsible AI delivery.",
   summary:
-    "A concise record of product thinking, responsible AI-assisted development, and workflow systems shaped through renewable-consulting practice.",
-  roleSignal: "Renewable workflow tooling, structured project data, and agent-assisted delivery",
+    "I turn repeated renewable-project delivery friction into structured tools, reviewable evidence, and practical automation paths that keep expert judgement in the loop.",
+  roleSignal: "Renewable workflow tooling, structured project data, and AI-assisted delivery",
   deliverySignal:
-    "Building from operational pain into traceable tools, evidence logs, and reviewed delivery artefacts.",
-  primaryAction: "Explore the flagship project",
-  secondaryAction: "Review the timeline"
+    "Building from operational pain into traceable product structure, evidence logs, and reviewed delivery artefacts.",
+  primaryAction: "View HelioFabric",
+  primaryActionHref: "#heliofabric",
+  secondaryAction: "Connect on LinkedIn",
+  secondaryActionHref: "#contact"
+};
+
+export const aboutProfile = {
+  eyebrow: "About",
+  heading: "A personal site for applied product development, not a CV archive.",
+  paragraphs: [
+    "My work sits at the overlap of renewable project review, structured data, and practical software delivery. The common thread is making repeated technical workflows easier to inspect, reuse, and improve without hiding the judgement behind them.",
+    "HelioFabric is the flagship case study on this site because it shows that thinking in one place: product framing, data contracts, automation experiments, evidence trails, and responsible use of AI-assisted development."
+  ],
+  focusAreas: [
+    "Renewable project workflow design",
+    "Structured data and workbook contracts",
+    "Agent-assisted software delivery",
+    "Evidence-led review systems"
+  ]
+};
+
+export const capabilitySignals = [
+  {
+    label: "Product judgement",
+    title: "Turning messy workflows into usable systems",
+    detail:
+      "Framing operational pain as product structure: scopes, review states, data ownership, tool boundaries, and adoption-ready narratives."
+  },
+  {
+    label: "Delivery method",
+    title: "AI-assisted, but still governed",
+    detail:
+      "Using Codex and agentic workflows to accelerate implementation while keeping source-of-truth docs, verification, and human review visible."
+  },
+  {
+    label: "Technical focus",
+    title: "Data, automation, and renewable review tooling",
+    detail:
+      "Building around parameter catalogues, workbook round-trips, tool-run artefacts, UI automation, and high-level progress evidence."
+  }
+];
+
+export const contactProfile = {
+  eyebrow: "Contact",
+  heading: "For professional follow-up, use LinkedIn.",
+  summary:
+    "This site is designed to support a LinkedIn profile link and colleague review without publishing personal phone or email details.",
+  linkedinLabel: "Connect on LinkedIn",
+  linkedinUrl: ""
 };
 
 export const portfolioLayers = [
   {
-    label: "Profile",
+    label: "Profile signal",
     title: "Product judgement",
     detail:
-      "How operational problems are translated into product structure, delivery priorities, and public-safe evidence."
+      "Operational problems translated into product structure, delivery priorities, and credible evidence."
   },
   {
-    label: "Flagship",
+    label: "Flagship proof",
     title: "HelioFabric build",
     detail:
-      "A renewable-workflow platform used to show applied thinking across data modelling, tooling, and review flows."
+      "A renewable-workflow platform showing applied thinking across data modelling, tooling, and review flows."
   },
   {
-    label: "Method",
+    label: "Working method",
     title: "Responsible AI delivery",
     detail:
-      "Agent-assisted development is framed through source-of-truth docs, evidence trails, verification, and human review."
+      "Agent-assisted development framed through source-of-truth docs, evidence trails, verification, and human review."
   }
 ];
 
@@ -66,28 +113,28 @@ export const flagshipProject = {
 };
 
 export const disclosureRules = [
-  "No client names, private project details, coordinates, private economics, credentials, tokens, or raw provider artefacts.",
-  "Screenshots must be sanitised or cropped before publication.",
-  "Funding, adoption, and internal-use language remains conservative until approved for public statement.",
-  "Tool outputs and AI-assisted workflows are described as governed drafts, artefacts, or alpha capabilities where relevant.",
-  "Weekly updates are draft-only until manually reviewed."
+  "Use high-level workflow descriptions instead of private delivery, location, or commercial details.",
+  "Use abstract visuals or reviewed screenshots where the point is evidence rather than disclosure.",
+  "Keep funding, adoption, and internal-use language factual, conservative, and approved for public use.",
+  "Describe AI and automation as supervised delivery support, not unsupervised decision-making.",
+  "Review weekly notes manually before they become part of the public record."
 ];
 
 export const currentSignals = [
   {
-    label: "Workstream",
+    label: "Active workstream",
     value: "PVsyst workflow bridge",
     detail:
       "Read-only desktop evidence capture, output artefact validation, Design Optimisation handoff, and ZIP-based rerun experiments."
   },
   {
-    label: "Boundary",
-    value: "High-level status only",
+    label: "Delivery method",
+    value: "Supervised automation",
     detail:
-      "No client names, coordinates, private economics, credentials, raw artefacts, or unapproved company claims."
+      "Automation work is paired with source-of-truth notes, evidence logs, and review gates before results are treated as accepted."
   },
   {
-    label: "Milestone",
+    label: "Next proof point",
     value: "ZIP Builder alpha",
     detail:
       "A parallel PVsyst project ZIP workflow can preview selected variant assumptions, preserve near-shading content, and produce artefacts for manual validation."
@@ -96,24 +143,24 @@ export const currentSignals = [
 
 export const statusCards = [
   {
-    label: "What it is",
-    value: "Governed workflow tooling",
-    detail: "A renewable-project data platform shaped around reviewable workbooks, parameters, and tool-run artefacts."
+    label: "What I build",
+    value: "Governed workflow tools",
+    detail: "Renewable-project systems shaped around reviewable workbooks, structured parameters, and tool-run artefacts."
   },
   {
     label: "Why it matters",
     value: "Less repetitive review work",
-    detail: "The public story is about reducing repeated consulting workflow pressure without removing expert judgement."
+    detail: "The goal is to reduce repeated delivery effort while keeping specialist judgement visible and auditable."
   },
   {
-    label: "How it is delivered",
+    label: "How I deliver",
     value: "Agent-assisted SDLC",
     detail: "Codex-supported implementation with source-of-truth docs, role gates, verification, and handoff notes."
   },
   {
-    label: "What stays private",
-    value: "Sensitive evidence and economics",
-    detail: "Project details, coordinates, credentials, client names, raw artefacts, and private commercial context stay out."
+    label: "How I communicate",
+    value: "Public-safe evidence",
+    detail: "Progress is described through high-level workflow evidence, not private project material or unapproved claims."
   }
 ];
 
@@ -135,8 +182,8 @@ export const productMapSteps = [
     detail: "Evidence checked before acceptance"
   },
   {
-    label: "Public record",
-    detail: "Sanitised progress, not project disclosure"
+    label: "Reviewed progress",
+    detail: "High-level updates and reusable lessons"
   }
 ];
 

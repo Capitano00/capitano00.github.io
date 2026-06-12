@@ -1,14 +1,16 @@
 ---
 import BaseLayout from "@/layouts/BaseLayout.astro";
 import AnimatedTimeline from "@/components/AnimatedTimeline";
+import ContactSection from "@/components/ContactSection.astro";
 import CurrentStatusBand from "@/components/CurrentStatusBand.astro";
 import DisclosurePanel from "@/components/DisclosurePanel.astro";
 import MediaEvidence from "@/components/MediaEvidence.astro";
+import ProfileOverview from "@/components/ProfileOverview.astro";
 import ProductMap from "@/components/ProductMap.astro";
 import ProjectAreas from "@/components/ProjectAreas.astro";
 import StatusBoard from "@/components/StatusBoard.astro";
 import UpdateList from "@/components/UpdateList.astro";
-import { flagshipProject, personalProfile, portfolioLayers, siteMeta } from "@/data/site";
+import { flagshipProject, personalProfile, siteMeta } from "@/data/site";
 import { timeline } from "@/data/timeline";
 ---
 
@@ -17,10 +19,11 @@ import { timeline } from "@/data/timeline";
     <section class="mx-auto grid w-full max-w-7xl gap-10 overflow-hidden px-5 pb-14 pt-8 sm:px-8 lg:min-h-[84vh] lg:grid-cols-[0.95fr_1.05fr] lg:items-start lg:pt-14">
       <div class="min-w-0 max-w-[21.25rem] sm:max-w-none">
         <nav aria-label="Primary" class="mb-10 flex flex-wrap items-center gap-3 text-sm font-medium text-ink-soft">
-          <a class="focus-ring rounded-full px-3 py-2 hover:bg-white/80" href="#profile">Profile</a>
-          <a class="focus-ring rounded-full px-3 py-2 hover:bg-white/80" href="#heliofabric">Work</a>
+          <a class="focus-ring rounded-full px-3 py-2 hover:bg-white/80" href="#profile">Home</a>
+          <a class="focus-ring rounded-full px-3 py-2 hover:bg-white/80" href="#about">About</a>
+          <a class="focus-ring rounded-full px-3 py-2 hover:bg-white/80" href="#heliofabric">HelioFabric</a>
           <a class="focus-ring rounded-full px-3 py-2 hover:bg-white/80" href="#timeline">Timeline</a>
-          <a class="focus-ring rounded-full px-3 py-2 hover:bg-white/80" href="#updates">Updates</a>
+          <a class="focus-ring rounded-full px-3 py-2 hover:bg-white/80" href="#contact">Contact</a>
         </nav>
         <p id="profile" class="text-sm font-semibold uppercase tracking-[0.16em] text-copper">{personalProfile.eyebrow}</p>
         <h1 class="mt-5 max-w-4xl break-words font-display text-4xl font-semibold leading-[1.02] text-ink sm:text-6xl md:text-7xl">
@@ -33,16 +36,16 @@ import { timeline } from "@/data/timeline";
           {personalProfile.summary}
         </p>
         <div class="mt-8 flex max-w-[21rem] flex-wrap gap-2 sm:max-w-none sm:gap-3">
-          <a class="focus-ring rounded-full bg-ink px-4 py-3 text-sm font-semibold text-paper shadow-lift sm:px-5" href="#timeline">
+          <a class="focus-ring rounded-full bg-ink px-4 py-3 text-sm font-semibold text-paper shadow-lift sm:px-5" href={personalProfile.primaryActionHref}>
             {personalProfile.primaryAction}
           </a>
-          <a class="focus-ring rounded-full border border-ink/20 bg-white/70 px-4 py-3 text-sm font-semibold text-ink sm:px-5" href="#updates">
+          <a class="focus-ring rounded-full border border-ink/20 bg-white/70 px-4 py-3 text-sm font-semibold text-ink sm:px-5" href={personalProfile.secondaryActionHref}>
             {personalProfile.secondaryAction}
           </a>
         </div>
         <div class="mt-7 grid max-w-2xl gap-3 text-sm leading-6 text-ink-soft sm:grid-cols-2">
           <p class="rounded-md border border-ink/10 bg-white/55 p-4">
-            <span class="block text-xs font-semibold uppercase tracking-[0.12em] text-copper">Focus</span>
+            <span class="block text-xs font-semibold uppercase tracking-[0.12em] text-copper">Professional focus</span>
             <span class="mt-2 block">{personalProfile.roleSignal}</span>
           </p>
           <p class="rounded-md border border-ink/10 bg-white/55 p-4">
@@ -55,7 +58,7 @@ import { timeline } from "@/data/timeline";
       <aside id="heliofabric" aria-labelledby="featured-project-heading" class="rounded-md border border-ink/10 bg-white/58 p-5 shadow-lift backdrop-blur sm:p-7 lg:mt-16">
         <div class="flex items-start justify-between gap-5">
           <p class="text-sm font-semibold uppercase tracking-[0.16em] text-copper">{flagshipProject.eyebrow}</p>
-          <span class="rounded-full border border-ink/12 bg-paper/70 px-3 py-1 text-xs font-semibold uppercase tracking-[0.12em] text-ink-soft">Active build</span>
+          <span class="rounded-full border border-ink/12 bg-paper/70 px-3 py-1 text-xs font-semibold uppercase tracking-[0.12em] text-ink-soft">Case study</span>
         </div>
         <a class="focus-ring mt-6 inline-flex rounded-md" href="#timeline" aria-label="HelioFabric project record">
           <img
@@ -85,29 +88,7 @@ import { timeline } from "@/data/timeline";
       </aside>
     </section>
 
-    <section aria-labelledby="portfolio-layer-heading" class="mx-auto max-w-7xl px-5 pb-16 sm:px-8">
-      <div class="border-y border-ink/12 py-8">
-        <div class="grid gap-6 lg:grid-cols-[0.7fr_1.3fr] lg:items-start">
-          <div>
-            <p class="text-sm font-semibold uppercase tracking-[0.16em] text-copper">Portfolio signal</p>
-            <h2 id="portfolio-layer-heading" class="mt-3 font-display text-3xl font-semibold text-ink md:text-4xl">
-              Applied product development, shown through one flagship build.
-            </h2>
-          </div>
-          <div class="grid gap-3 md:grid-cols-3">
-            {
-              portfolioLayers.map((layer) => (
-                <article class="rounded-md border border-ink/10 bg-white/60 p-5">
-                  <p class="text-xs font-semibold uppercase tracking-[0.12em] text-copper">{layer.label}</p>
-                  <h3 class="mt-3 font-display text-xl font-semibold leading-tight text-ink">{layer.title}</h3>
-                  <p class="mt-3 text-sm leading-6 text-ink-soft">{layer.detail}</p>
-                </article>
-              ))
-            }
-          </div>
-        </div>
-      </div>
-    </section>
+    <ProfileOverview />
 
     <CurrentStatusBand />
     <div id="brief">
@@ -116,12 +97,12 @@ import { timeline } from "@/data/timeline";
     <section aria-labelledby="product-map-heading" class="mx-auto max-w-7xl px-5 py-16 sm:px-8">
       <div class="grid gap-8 lg:grid-cols-[0.74fr_1.26fr] lg:items-start">
         <div>
-          <p class="text-sm font-semibold uppercase tracking-[0.16em] text-copper">HelioFabric record</p>
+          <p class="text-sm font-semibold uppercase tracking-[0.16em] text-copper">Flagship case study</p>
           <h2 id="product-map-heading" class="mt-3 font-display text-4xl font-semibold leading-tight text-ink md:text-5xl">
-            The flagship project has its own public-safe story.
+            HelioFabric shows the work through one focused build.
           </h2>
           <p class="mt-5 leading-7 text-ink-soft">
-            This keeps the broader site personal while giving HelioFabric enough space to explain the workflow, evidence basis, and disclosure boundary.
+            The project gives the broader portfolio a concrete centre: workflow pain, product structure, evidence-led automation, and reviewed progress.
           </p>
         </div>
         <ProductMap />
@@ -144,18 +125,7 @@ import { timeline } from "@/data/timeline";
     </section>
 
     <UpdateList />
+    <ContactSection />
     <DisclosurePanel />
-
-    <section id="publishing" aria-labelledby="publishing-heading" class="mx-auto max-w-7xl px-5 py-16 sm:px-8">
-      <div class="rounded-md bg-field p-6 md:p-8">
-        <p class="text-sm font-semibold uppercase tracking-[0.16em] text-copper">Publishing route</p>
-        <h2 id="publishing-heading" class="mt-3 font-display text-3xl font-semibold text-ink md:text-4xl">
-          Built as a portable static site for Cloudflare Pages Direct Upload
-        </h2>
-        <p class="mt-4 max-w-3xl leading-7 text-ink-soft">
-          The first public version should use a temporary Cloudflare Pages URL. A personal domain can be connected later after the content, screenshots, and disclosure boundaries are approved.
-        </p>
-      </div>
-    </section>
   </main>
 </BaseLayout>

@@ -100,23 +100,23 @@ export const timeline: TimelineMilestone[] = [
   {
     id: "journal",
     period: "June 2026",
-    title: "Public innovation journal begins",
+    title: "Personal portfolio record begins",
     summary:
-      "A separate public website starts tracking HelioFabric at a high level: why it exists, how it is being developed, what changed each week, and what remains deliberately private.",
+      "A separate personal website starts tracking HelioFabric at a high level: why it exists, how it is being developed, what changed each week, and what can be shared responsibly.",
     evidence:
       "This site. Weekly updates are draft-only until manually reviewed.",
     status: "current",
-    tags: ["Innovation journal", "Public-safe", "Weekly drafts"]
+    tags: ["Personal site", "Public-safe", "Weekly drafts"]
   },
   {
     id: "visual-identity-rollout",
     period: "7 June 2026",
     title: "HelioFabric visual identity prepared for first public rollout",
     summary:
-      "A dedicated HelioFabric logo and app-style mark were added to the public innovation journal so the first external link has a clearer product identity and a more credible LinkedIn preview.",
+      "A dedicated HelioFabric logo and app-style mark were added to the personal site so the first external link has a clearer product identity and a more credible LinkedIn preview.",
     evidence:
-      "Brand milestone: logo assets were prepared from the uploaded HelioFabric identity board and wired into the website before Cloudflare Pages upload.",
+      "Brand milestone: logo assets were prepared from the uploaded HelioFabric identity board and wired into the website before first public review.",
     status: "current",
-    tags: ["Logo", "Brand identity", "Cloudflare-ready"]
+    tags: ["Logo", "Brand identity", "Public-ready"]
   }
 ];
