@@ -76,7 +76,7 @@ export const contactProfile = {
   summary:
     "This site is designed to support a LinkedIn profile link and colleague review without publishing personal phone or email details.",
   linkedinLabel: "Connect on LinkedIn",
-  linkedinUrl: ""
+  linkedinUrl: "https://www.linkedin.com/in/boyong-w-160a04249/"
 };
 
 export const portfolioLayers = [
