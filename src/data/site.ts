@@ -301,13 +301,3 @@ export const profileLinks = {
     }
   ]
 };
-
-export const publicationNote = {
-  eyebrow: "Publication note",
-  heading: "What is intentionally excluded.",
-  rules: [
-    "Client identities, sensitive site details, deal terms, access material, and report material are excluded.",
-    "HelioFabric is presented as an internal platform project, not an employer product statement or source-code release.",
-    "Screenshots and visuals are synthetic, redacted, or reviewed before publication."
-  ]
-};
