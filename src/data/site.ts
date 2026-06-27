@@ -3,9 +3,10 @@ export const siteMeta = {
   description:
     "Boyong Wang's personal portfolio: renewable-workflow product thinking, governed data tools, responsible AI-assisted delivery, and the HelioFabric flagship case study.",
   author: "Boyong Wang",
-  status: "Public draft",
-  reviewedThrough: "2026-06-10",
-  temporaryHost: "Cloudflare Pages temporary URL planned",
+  status: "Public review ready",
+  reviewedThrough: "2026-06-27",
+  temporaryHost: "GitHub Pages",
+  canonicalUrl: "https://capitano00.github.io",
   brand: {
     logoLockup: "/brand/heliofabric-logo-lockup.png",
     icon: "/brand/heliofabric-icon.png",
@@ -22,14 +23,14 @@ export const siteMeta = {
 export const personalProfile = {
   name: "Boyong Wang",
   eyebrow: "Personal portfolio",
-  headline: "Renewable-workflow systems, product judgement, and responsible AI delivery.",
+  headline: "Building governed tools for renewable-project delivery.",
   summary:
-    "I turn repeated renewable-project delivery friction into structured tools, reviewable evidence, and practical automation paths that keep expert judgement in the loop.",
-  roleSignal: "Renewable workflow tooling, structured project data, and AI-assisted delivery",
+    "A concise record of product thinking, responsible AI-assisted development, and workflow systems shaped through renewable-consulting practice.",
+  roleSignal: "Renewable workflow tooling, structured project data, and agent-assisted delivery",
   deliverySignal:
-    "Building from operational pain into traceable product structure, evidence logs, and reviewed delivery artefacts.",
-  primaryAction: "View HelioFabric",
-  primaryActionHref: "#heliofabric",
+    "Building from operational pain into traceable tools, evidence logs, and reviewed delivery artefacts.",
+  primaryAction: "Explore the flagship project",
+  primaryActionHref: "#heliofabric-case-study",
   secondaryAction: "Connect on LinkedIn",
   secondaryActionHref: "#contact"
 };
@@ -74,9 +75,11 @@ export const contactProfile = {
   eyebrow: "Contact",
   heading: "For professional follow-up, use LinkedIn.",
   summary:
-    "This site is designed to support a LinkedIn profile link and colleague review without publishing personal phone or email details.",
+    "This site supports recruiter and interviewer review without publishing personal phone or email details.",
   linkedinLabel: "Connect on LinkedIn",
-  linkedinUrl: "https://www.linkedin.com/in/boyong-w-160a04249/"
+  linkedinUrl: "https://www.linkedin.com/in/boyong-w-160a04249/",
+  githubLabel: "View GitHub profile",
+  githubUrl: "https://github.com/Capitano00"
 };
 
 export const portfolioLayers = [
@@ -104,20 +107,44 @@ export const flagshipProject = {
   eyebrow: "Flagship project",
   heading: "Governed workflow tooling for renewable-project delivery.",
   summary:
-    "A personal case study in turning repetitive consultancy workflows into structured data, reviewable tools, and traceable delivery evidence, including UI automation, ML experiments, map artefacts, and due-diligence support.",
+    "HelioFabric is an internal-platform case study: a governed layer around renewable-project data, specialist tools, workbook contracts, evidence artefacts, and human review.",
   metrics: [
     { value: "324", label: "commits inspected" },
     { value: "10+", label: "registered tool workflows" },
-    { value: "UI + ML", label: "automation experiments" }
+    { value: "AI + data", label: "delivery method" }
+  ]
+};
+
+export const flagshipCaseStudy = {
+  eyebrow: "Flagship case study",
+  heading: "HelioFabric wraps expert renewable workflows without taking accountability away from engineers.",
+  statusNote:
+    "Internal R&D / internal platform case study. It is not presented as external SaaS, an open-source release, or an autonomous decision system.",
+  problem:
+    "Renewable-energy consulting work often spans Excel workbooks, PDFs, PVsyst/Meteonorm-style specialist tools, project registers, assumptions, evidence files, maps, and final expert review. A generic chatbot does not solve that operating problem because the bottleneck is the workflow around the expert.",
+  solution:
+    "HelioFabric gives those workflows a governed data and tool layer: canonical project facts stay separate from extracted evidence candidates, tool runs produce artefacts, workbook imports use preview/commit gates, and users explicitly promote reviewed information into the source of truth.",
+  evidence: [
+    "FastAPI backend with Pydantic, SQLAlchemy, Alembic, and SQLite/PostgreSQL-ready architecture.",
+    "Next.js/React/TypeScript frontend with workbench views, parameter maintenance, dashboards, maps, and tool surfaces.",
+    "Workbook contracts for analysis export, batch snapshots, patch updates, and review-first Excel round trips.",
+    "Tool Controller patterns for input preview, run history, downloadable artefacts, and supervised acceptance.",
+    "Agent-assisted delivery using source-of-truth docs, implementer/reviewer roles, verification commands, and handoff notes."
+  ],
+  safeguards: [
+    "No public source code for HelioFabric on this site.",
+    "No client names, sensitive location details, raw evidence artefacts, secrets, local data stores, or confidential report material.",
+    "Screenshots are synthetic, redacted, or manually reviewed before publication.",
+    "AI outputs are described as supervised candidates, not silent canonical writes or final engineering judgement."
   ]
 };
 
 export const disclosureRules = [
   "Use high-level workflow descriptions instead of private delivery, location, or commercial details.",
-  "Use abstract visuals or reviewed screenshots where the point is evidence rather than disclosure.",
+  "Use synthetic, redacted, or manually reviewed screenshots where the point is evidence rather than disclosure.",
   "Keep funding, adoption, and internal-use language factual, conservative, and approved for public use.",
   "Describe AI and automation as supervised delivery support, not unsupervised decision-making.",
-  "Review weekly notes manually before they become part of the public record."
+  "Keep HelioFabric as a case study unless a separate code-release review approves standalone open-source tools."
 ];
 
 export const currentSignals = [
@@ -135,9 +162,9 @@ export const currentSignals = [
   },
   {
     label: "Next proof point",
-    value: "ZIP Builder alpha",
+    value: "Synthetic demo evidence",
     detail:
-      "A parallel PVsyst project ZIP workflow can preview selected variant assumptions, preserve near-shading content, and produce artefacts for manual validation."
+      "Public screenshots should use sandbox or redacted data so the product surface is visible without exposing live project material."
   }
 ];
 
@@ -198,7 +225,7 @@ export const projectAreas = [
     title: "Governed project data",
     summary:
       "Projects, sites, subarrays, parameters, units, formula outputs, review states, and workbook contracts are kept deliberately separate so review evidence does not become accidental truth.",
-    tags: ["Parameter Library", "Workbench", "Excel round-trip"]
+    tags: ["Parameter Library", "Workbench", "Excel round trip"]
   },
   {
     title: "Tool Controller",
@@ -210,6 +237,6 @@ export const projectAreas = [
     title: "Responsible automation",
     summary:
       "AI-assisted and provider-automation workflows are framed as reviewable evidence paths, not silent canonical-data writers or unsupervised public claims.",
-    tags: ["Human review", "No secrets", "Draft first"]
+    tags: ["Human review", "No secrets", "Reviewed first"]
   }
 ];

@@ -104,7 +104,7 @@ export const timeline: TimelineMilestone[] = [
     summary:
       "A separate personal website starts tracking HelioFabric at a high level: why it exists, how it is being developed, what changed each week, and what can be shared responsibly.",
     evidence:
-      "This site. Weekly updates are draft-only until manually reviewed.",
+      "This site. Public updates are added only after manual review.",
     status: "current",
     tags: ["Personal site", "Public-safe", "Weekly drafts"]
   },

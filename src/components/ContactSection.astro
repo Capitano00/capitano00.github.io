@@ -18,14 +18,24 @@ const contactLabel = hasLinkedInUrl ? contactProfile.linkedinLabel : "Search Boy
     </div>
     <div class="flex flex-col items-start justify-between gap-6">
       <p class="max-w-2xl leading-7 text-paper/76">{contactProfile.summary}</p>
-      <a
-        class="focus-ring inline-flex rounded-full bg-solar px-5 py-3 text-sm font-semibold text-ink shadow-lift"
-        href={contactHref}
-        target="_blank"
-        rel="noreferrer"
-      >
-        {contactLabel}
-      </a>
+      <div class="flex flex-wrap gap-3">
+        <a
+          class="focus-ring inline-flex rounded-full bg-solar px-5 py-3 text-sm font-semibold text-ink shadow-lift"
+          href={contactHref}
+          target="_blank"
+          rel="noreferrer"
+        >
+          {contactLabel}
+        </a>
+        <a
+          class="focus-ring inline-flex rounded-full border border-paper/20 px-5 py-3 text-sm font-semibold text-paper"
+          href={contactProfile.githubUrl}
+          target="_blank"
+          rel="noreferrer"
+        >
+          {contactProfile.githubLabel}
+        </a>
+      </div>
     </div>
   </div>
 </section>

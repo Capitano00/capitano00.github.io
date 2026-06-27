@@ -9,3 +9,8 @@ qa/screenshots/*.png
 *.local
 .DS_Store
 Thumbs.db
+# Public repository boundary: keep local drafts/review notes out of GitHub Pages.
+content/weekly-drafts/*.md
+content/weekly-drafts/README.md
+docs/*.md
+docs/assets/*
