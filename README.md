@@ -2,7 +2,7 @@
 
 GitHub Pages source for Boyong Wang's professional website.
 
-Content starts from renewable-energy consulting experience, then shows applied AI workflow systems, side projects, and technical background. HelioFabric is presented as the flagship project inside the project section, while 3D-RAMS is the public demo repository.
+Content starts from renewable-energy consulting experience, then shows applied AI workflow systems, personal projects, and technical background. HelioFabric is presented as the flagship project inside the personal projects section, while 3D-RAMS is the public demo repository.
 
 ## Route
 
@@ -30,7 +30,7 @@ Static output is generated in `dist/`.
 
 - Professional career: OWC / ABL Group consulting foundation and aggregate renewable-advisory context.
 - Applied AI systems: document workflows, workbook/tool automation, review gates, data contracts, and traceable outputs.
-- Side projects: HelioFabric as the flagship project and 3D-RAMS as the public demo.
+- Personal projects: HelioFabric as the flagship project and 3D-RAMS as the public demo.
 - Technical background: physics, robotics, sensor fusion, and connected-vehicle research systems.
 - Profiles: LinkedIn, GitHub, and the 3D-RAMS repository.
 
