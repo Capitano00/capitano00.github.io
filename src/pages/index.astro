@@ -5,6 +5,7 @@ import { mediaEvidence } from "@/data/media";
 import { timeline } from "@/data/timeline";
 import {
   capabilitySignals,
+  consultingFoundation,
   contactProfile,
   disclosureRules,
   flagshipCaseStudy,
@@ -12,7 +13,8 @@ import {
   personalProfile,
   projectPortfolio,
   siteMeta,
-  statusCards
+  statusCards,
+  technicalFoundation
 } from "@/data/site";
 
 const caseStudyPanels = [
@@ -46,9 +48,11 @@ const linkedInHref = hasLinkedInUrl
         <div class="min-w-0">
           <nav aria-label="Primary" class="mb-8 flex flex-wrap items-center gap-2 text-sm font-medium text-ink-soft">
             <a class="focus-ring rounded-md px-3 py-2 hover:bg-white/80" href="#profile">Home</a>
+            <a class="focus-ring rounded-md px-3 py-2 hover:bg-white/80" href="#consulting">Consulting</a>
             <a class="focus-ring rounded-md px-3 py-2 hover:bg-white/80" href="#heliofabric-case-study">HelioFabric</a>
             <a class="focus-ring rounded-md px-3 py-2 hover:bg-white/80" href="#projects">Projects</a>
             <a class="focus-ring rounded-md px-3 py-2 hover:bg-white/80" href="#method">Method</a>
+            <a class="focus-ring rounded-md px-3 py-2 hover:bg-white/80" href="#background">Background</a>
             <a class="focus-ring rounded-md px-3 py-2 hover:bg-white/80" href="#timeline">Timeline</a>
             <a class="focus-ring rounded-md px-3 py-2 hover:bg-white/80" href="#profiles">Profiles</a>
           </nav>
@@ -101,6 +105,31 @@ const linkedInHref = hasLinkedInUrl
             }
           </div>
         </aside>
+      </div>
+    </section>
+
+    <section id="consulting" aria-labelledby="consulting-heading" class="mx-auto max-w-7xl px-5 py-12 sm:px-8">
+      <div class="grid gap-6 lg:grid-cols-[0.72fr_1.28fr] lg:items-end">
+        <div>
+          <p class="text-xs font-semibold uppercase tracking-[0.14em] text-copper">{consultingFoundation.eyebrow}</p>
+          <h2 id="consulting-heading" class="mt-3 max-w-xl font-display text-3xl font-semibold leading-tight text-ink md:text-4xl">
+            {consultingFoundation.heading}
+          </h2>
+        </div>
+        <p class="max-w-3xl text-sm leading-6 text-ink-soft sm:text-base sm:leading-7">
+          {consultingFoundation.intro}
+        </p>
+      </div>
+      <div class="mt-8 grid gap-4 md:grid-cols-3">
+        {
+          consultingFoundation.items.map((item) => (
+            <article class="rounded-md border border-ink/10 bg-white/68 p-5 shadow-sm">
+              <p class="text-xs font-semibold uppercase tracking-[0.1em] text-copper">{item.label}</p>
+              <h3 class="mt-3 font-display text-xl font-semibold leading-tight text-ink">{item.title}</h3>
+              <p class="mt-3 text-sm leading-6 text-ink-soft">{item.detail}</p>
+            </article>
+          ))
+        }
       </div>
     </section>
 
@@ -233,10 +262,10 @@ const linkedInHref = hasLinkedInUrl
             The working pattern is simple: define the workflow, protect the data boundary, make outputs inspectable, then accept results explicitly.
           </p>
         </div>
-        <div class="mt-8 grid gap-0 border-y border-paper/14 lg:grid-cols-4">
+        <div class="mt-8 grid gap-4 md:grid-cols-2 xl:grid-cols-5">
           {
             statusCards.map((card) => (
-              <article class="border-b border-paper/14 py-5 last:border-b-0 lg:border-b-0 lg:border-r lg:px-6 lg:first:pl-0 lg:last:border-r-0">
+              <article class="rounded-md border border-paper/14 bg-paper/5 p-5">
                 <p class="text-xs font-semibold uppercase tracking-[0.1em] text-solar">{card.label}</p>
                 <h3 class="mt-2 font-display text-xl font-semibold leading-tight">{card.value}</h3>
                 <p class="mt-2 text-sm leading-6 text-paper/76">{card.detail}</p>
@@ -244,6 +273,31 @@ const linkedInHref = hasLinkedInUrl
             ))
           }
         </div>
+      </div>
+    </section>
+
+    <section id="background" aria-labelledby="background-heading" class="mx-auto max-w-7xl px-5 py-12 sm:px-8">
+      <div class="grid gap-6 lg:grid-cols-[0.72fr_1.28fr] lg:items-end">
+        <div>
+          <p class="text-xs font-semibold uppercase tracking-[0.14em] text-copper">{technicalFoundation.eyebrow}</p>
+          <h2 id="background-heading" class="mt-3 max-w-xl font-display text-3xl font-semibold leading-tight text-ink md:text-4xl">
+            {technicalFoundation.heading}
+          </h2>
+        </div>
+        <p class="max-w-3xl text-sm leading-6 text-ink-soft sm:text-base sm:leading-7">
+          {technicalFoundation.intro}
+        </p>
+      </div>
+      <div class="mt-8 grid gap-4 md:grid-cols-3">
+        {
+          technicalFoundation.items.map((item) => (
+            <article class="rounded-md border border-ink/10 bg-white/70 p-5 shadow-sm">
+              <p class="text-xs font-semibold uppercase tracking-[0.1em] text-copper">{item.label}</p>
+              <h3 class="mt-3 font-display text-xl font-semibold leading-tight text-ink">{item.title}</h3>
+              <p class="mt-3 text-sm leading-6 text-ink-soft">{item.detail}</p>
+            </article>
+          ))
+        }
       </div>
     </section>
 

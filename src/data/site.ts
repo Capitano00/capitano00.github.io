@@ -1,7 +1,7 @@
 export const siteMeta = {
   title: "Boyong Wang | Public Engineering Portfolio",
   description:
-    "A concise public engineering portfolio covering AI-assisted software delivery, renewable workflow tooling, HelioFabric, and public agentic demos.",
+    "A concise public engineering portfolio for renewable-energy consulting, reviewable workflow tooling, HelioFabric, and public agentic demos.",
   author: "Boyong Wang",
   status: "Public-safe",
   reviewedThrough: "Q2 2026",
@@ -23,15 +23,42 @@ export const siteMeta = {
 export const personalProfile = {
   name: "Boyong Wang",
   eyebrow: "Public engineering portfolio",
-  headline: "AI-assisted engineering for reviewable renewable-workflow tools.",
+  headline: "Renewable-energy consultant building reviewable engineering workflow tools.",
   summary:
-    "I turn repeated technical workflow friction into structured software: clear data boundaries, supervised automation, review gates, and public-safe evidence.",
-  roleSignal: "AI-assisted engineering, workflow tooling, and public agent demos",
+    "I work as a consultant at OWC / ABL Group, where technical due diligence, energy yield work, design review, and renewable advisory expose the workflow friction that good software should reduce.",
+  roleSignal: "Renewable-energy consulting, workflow tooling, and public agent demos",
   deliverySignal: "Product thinking, typed systems, evidence trails, and human review before acceptance.",
   primaryAction: "Read HelioFabric case study",
   primaryActionHref: "#heliofabric-case-study",
   secondaryAction: "View public profiles",
   secondaryActionHref: "#profiles"
+};
+
+export const consultingFoundation = {
+  eyebrow: "Consulting foundation",
+  heading: "The workflow problems come from real renewable advisory work.",
+  intro:
+    "The software work starts from consultant delivery: turning technical assumptions, evidence, workbook logic, and review comments into clear outputs that other people can inspect.",
+  items: [
+    {
+      label: "Current base",
+      title: "Consultant at OWC / ABL Group",
+      detail:
+        "Renewable-energy advisory work across technical due diligence, energy yield assessment, design review, planning review, and stakeholder-ready reporting."
+    },
+    {
+      label: "Aggregate exposure",
+      title: "80+ projects, 5+ GW advisory context",
+      detail:
+        "Public-safe scale signals from utility-scale solar PV, BESS, and Power-to-X work, kept at aggregate level without client or site details."
+    },
+    {
+      label: "Operating focus",
+      title: "Optimise engineering workflows",
+      detail:
+        "The long-term focus is to make repeated expert work easier to structure, automate, inspect, and review without weakening accountability."
+    }
+  ]
 };
 
 export const aboutProfile = {
@@ -52,9 +79,9 @@ export const aboutProfile = {
 
 export const capabilitySignals = [
   {
-    label: "Problem framing",
-    title: "Start with workflow pressure",
-    detail: "Repeated workbook, evidence, and tool-handling steps are treated as system-design problems."
+    label: "Consulting judgement",
+    title: "Start from the work, not the tool",
+    detail: "Repeated workbook, evidence, design, and review steps are treated as workflow-design problems before automation is proposed."
   },
   {
     label: "System design",
@@ -67,9 +94,9 @@ export const capabilitySignals = [
     detail: "Agent-assisted delivery speeds implementation while preserving verification and human acceptance."
   },
   {
-    label: "Public evidence",
-    title: "Show the pattern, not the private material",
-    detail: "Public evidence uses high-level explanations, reviewed assets, and synthetic product surfaces."
+    label: "Engineering base",
+    title: "Use physics and robotics instincts",
+    detail: "Sensor fusion, computational physics, and controls work shape the preference for traceable systems and explicit assumptions."
   }
 ];
 
@@ -177,7 +204,7 @@ export const flagshipCaseStudy = {
   ],
   safeguards: [
     "No public HelioFabric source code.",
-    "No private identities, sensitive place details, raw evidence, secrets, local stores, or report material.",
+    "No private identities, sensitive place details, unreviewed evidence files, secrets, local stores, or report material.",
     "Screenshots are synthetic, redacted, or manually reviewed before publication.",
     "AI outputs are described as supervised candidates, not final engineering judgement."
   ]
@@ -186,7 +213,7 @@ export const flagshipCaseStudy = {
 export const disclosureRules = [
   "Use high-level workflow descriptions instead of private delivery details.",
   "Use synthetic, redacted, or reviewed screenshots where the point is product evidence.",
-  "Keep adoption and internal-use language factual, conservative, and approved for public use.",
+  "Keep internal-use language factual, conservative, and approved for public use.",
   "Describe AI and automation as supervised delivery support.",
   "Treat HelioFabric as a case study unless a separate release review approves standalone public code."
 ];
@@ -211,6 +238,11 @@ export const currentSignals = [
 
 export const statusCards = [
   {
+    label: "Consulting input",
+    value: "Real workflow pressure",
+    detail: "TDD, EYA, design review, workbook handling, and advisory outputs reveal where repeated effort accumulates."
+  },
+  {
     label: "Build",
     value: "Governed workflow tools",
     detail: "Systems shaped around reviewable workbooks, structured parameters, and tool-run artefacts."
@@ -231,6 +263,33 @@ export const statusCards = [
     detail: "Progress is described through high-level workflow evidence and reviewed visuals."
   }
 ];
+
+export const technicalFoundation = {
+  eyebrow: "Physics and Robotics",
+  heading: "A technical foundation for traceable systems.",
+  intro:
+    "The background evidence is compact by design: enough to show the engineering base behind the workflow tools without turning the page into an academic CV.",
+  items: [
+    {
+      label: "Physics",
+      title: "Imperial College London",
+      detail:
+        "Physics with Theoretical Physics, including data-compression optimisation work for the ESA Comet Interceptor mission."
+    },
+    {
+      label: "Robotics",
+      title: "University of Sussex",
+      detail:
+        "MSc Robotics and Autonomous Systems, with UKF-based sensor fusion for real-time UGV indoor localisation."
+    },
+    {
+      label: "Research systems",
+      title: "SvecLab connected-vehicle work",
+      detail:
+        "ROS platform and sensor-fusion test workflows using Linux, Arduino, STM32, YOLO, and localisation methods."
+    }
+  ]
+};
 
 export const productMapSteps = [
   {
