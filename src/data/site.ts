@@ -19,7 +19,7 @@ export const heroProfile = {
   summary:
     "I work within the Onshore Solar team, focusing on utility-scale PV and PV + BESS hybrid projects. I provide technical advisory and due diligence support for clients buying, selling, or developing assets, and for banks requiring lenders' technical advisory.",
   judgement:
-    "The pattern I care about is simple: AI and automation can create useful candidates, but acceptance should stay explicit, traceable, and human-reviewed.",
+    "Alongside consulting work, I identify engineering workflows where AI and automation can improve efficiency and quality, then build end-to-end solutions with an agentic development harness. My tools keep expert review central, with human-in-the-loop checks, traceable evidence, and explicit decision gates.",
   primaryAction: "View projects",
   primaryActionHref: "#projects",
   secondaryAction: "View profiles",
