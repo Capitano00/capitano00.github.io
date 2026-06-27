@@ -30,20 +30,16 @@ export const heroProfile = {
 
 export const atAGlance = [
   {
-    label: "Current work",
+    label: "Work / role",
     value: "Consultant at OWC / ABL Group"
   },
   {
-    label: "Domain context",
-    value: "80+ renewable projects, 5+ GW advisory exposure"
+    label: "Project experience",
+    value: "80+ projects totalling over 5 GW across EMEA, APAC, and AMEA"
   },
   {
-    label: "Systems stack",
-    value: "Python/FastAPI, React/TypeScript, relational data"
-  },
-  {
-    label: "Delivery pattern",
-    value: "Tool orchestration, data contracts, review gates"
+    label: "Skillset",
+    value: "Python/FastAPI, React/TypeScript, SQL, pandas/openpyxl, MATLAB/Simulink, PVsyst/Meteonorm, ROS, CAD automation"
   }
 ];
 
