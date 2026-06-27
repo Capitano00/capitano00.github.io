@@ -1,8 +1,8 @@
 # Boyong Wang Personal Innovation Portfolio
 
-Public GitHub Pages site for Boyong Wang's recruiter/interviewer-facing portfolio, led by the HelioFabric flagship case study.
+Public GitHub Pages site for Boyong Wang's recruiter/interviewer-facing AI-assisted engineering portfolio, led by the HelioFabric flagship case study and designed to include public agentic side projects such as 3D-RAMS.
 
-The site is designed as a company-safe development record: it introduces the personal profile layer first, then uses HelioFabric as evidence of responsible AI-assisted delivery practice, product judgement, governed workflow tooling, and reviewed high-level progress without exposing confidential project data.
+The site is designed as a company-safe development record: it introduces the personal profile layer first, uses HelioFabric as the deep flagship proof point, and leaves room for public side projects that demonstrate agentic engineering range without exposing confidential project data.
 
 ## Public Route
 
@@ -39,6 +39,14 @@ Before pushing or publishing:
 3. Inspect the generated `dist/` page on desktop and mobile.
 4. Confirm GitHub profile and LinkedIn links work.
 5. Push only approved public site files to `Capitano00/capitano00.github.io`.
+
+## Project Structure
+
+The first public version should keep three levels visible:
+
+- HelioFabric as the flagship internal-platform case study.
+- 3D-RAMS as the first public side-project card, using only public README-safe claims.
+- Future AI / agentic project slots for reviewed standalone tools and experiments.
 
 ## Brand Assets
 

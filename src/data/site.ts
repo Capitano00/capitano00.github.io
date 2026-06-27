@@ -1,7 +1,7 @@
 export const siteMeta = {
-  title: "Boyong Wang | Renewable Workflow & AI Delivery Portfolio",
+  title: "Boyong Wang | AI-Assisted Engineering Portfolio",
   description:
-    "Boyong Wang's personal portfolio: renewable-workflow product thinking, governed data tools, responsible AI-assisted delivery, and the HelioFabric flagship case study.",
+    "Boyong Wang's personal portfolio: AI-assisted engineering, renewable workflow tooling, HelioFabric, and public agentic side projects.",
   author: "Boyong Wang",
   status: "Public review ready",
   reviewedThrough: "2026-06-27",
@@ -23,10 +23,10 @@ export const siteMeta = {
 export const personalProfile = {
   name: "Boyong Wang",
   eyebrow: "Personal portfolio",
-  headline: "Building governed tools for renewable-project delivery.",
+  headline: "AI-assisted engineering, renewable workflow tools, and agentic side projects.",
   summary:
-    "A concise record of product thinking, responsible AI-assisted development, and workflow systems shaped through renewable-consulting practice.",
-  roleSignal: "Renewable workflow tooling, structured project data, and agent-assisted delivery",
+    "A concise record of applied product thinking, responsible AI-assisted development, renewable workflow systems, and public agentic engineering experiments.",
+  roleSignal: "AI-assisted engineering, renewable workflow tooling, and public agent demos",
   deliverySignal:
     "Building from operational pain into traceable tools, evidence logs, and reviewed delivery artefacts.",
   primaryAction: "Explore the flagship project",
@@ -40,13 +40,14 @@ export const aboutProfile = {
   heading: "A personal site for applied product development, not a CV archive.",
   paragraphs: [
     "My work sits at the overlap of renewable project review, structured data, and practical software delivery. The common thread is making repeated technical workflows easier to inspect, reuse, and improve without hiding the judgement behind them.",
-    "HelioFabric is the flagship case study on this site because it shows that thinking in one place: product framing, data contracts, automation experiments, evidence trails, and responsible use of AI-assisted development."
+    "HelioFabric is the flagship case study because it shows that thinking in one place: product framing, data contracts, automation experiments, evidence trails, and responsible use of AI-assisted development. Public side projects such as 3D-RAMS sit alongside it as smaller, faster proofs of agentic engineering range."
   ],
   focusAreas: [
     "Renewable project workflow design",
     "Structured data and workbook contracts",
     "Agent-assisted software delivery",
-    "Evidence-led review systems"
+    "Evidence-led review systems",
+    "Public agentic side projects"
   ]
 };
 
@@ -65,9 +66,9 @@ export const capabilitySignals = [
   },
   {
     label: "Technical focus",
-    title: "Data, automation, and renewable review tooling",
+    title: "Data, automation, and agentic engineering demos",
     detail:
-      "Building around parameter catalogues, workbook round-trips, tool-run artefacts, UI automation, and high-level progress evidence."
+      "Building around parameter catalogues, workbook round trips, tool-run artefacts, local-first agent demos, UI automation, and high-level progress evidence."
   }
 ];
 
@@ -99,7 +100,50 @@ export const portfolioLayers = [
     label: "Working method",
     title: "Responsible AI delivery",
     detail:
-      "Agent-assisted development framed through source-of-truth docs, evidence trails, verification, and human review."
+      "Agent-assisted development framed through source-of-truth docs, evidence trails, verification, human review, and safety boundaries."
+  }
+];
+
+
+export const projectPortfolio = [
+  {
+    id: "heliofabric",
+    eyebrow: "Flagship case study",
+    title: "HelioFabric",
+    status: "Internal platform case study",
+    summary:
+      "Governed renewable-workflow tooling around project data, workbook contracts, specialist-tool artefacts, and human review. It is presented as product and delivery evidence, not as public source code.",
+    linkLabel: "Review the flagship case study",
+    href: "#heliofabric-case-study",
+    tags: ["FastAPI", "Next.js", "Tool Controller", "Human review"],
+    proof:
+      "Best evidence for product judgement, data governance, agent-assisted delivery practice, and long-form workflow ownership."
+  },
+  {
+    id: "3d-rams",
+    eyebrow: "Public side project",
+    title: "3D-RAMS",
+    status: "Local-first demo agent",
+    summary:
+      "A public hackathon-style agent that turns a coordinate into an inspectable 3D pre-visit briefing pack using deterministic Python code, a React/Vite/CesiumJS UI, synthetic fixtures, evidence trace, and a safety gate.",
+    linkLabel: "View GitHub repo",
+    href: "https://github.com/Capitano00/3D-RAMS",
+    tags: ["Python", "React", "CesiumJS", "Safety gate"],
+    proof:
+      "Shows public agentic engineering range while keeping real site data, live provider keys, certified RAMS, and work-approval claims out of scope."
+  },
+  {
+    id: "future-agentic-projects",
+    eyebrow: "Portfolio direction",
+    title: "Future AI / agentic projects",
+    status: "Reserved for reviewed public work",
+    summary:
+      "This site is structured to add future standalone tools, public experiments, and agentic workflows as they become safe, useful, and well documented.",
+    linkLabel: "View GitHub profile",
+    href: "https://github.com/Capitano00",
+    tags: ["Standalone tools", "Public experiments", "AI career transition"],
+    proof:
+      "Keeps the portfolio long-term and extensible instead of making the homepage depend on one project story."
   }
 ];
 
