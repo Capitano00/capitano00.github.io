@@ -62,6 +62,6 @@ export const timeline: TimelineMilestone[] = [
     evidence:
       "This GitHub Pages site and reviewed public assets.",
     status: "current",
-    tags: ["Public-safe", "Synthetic visuals", "Project portfolio"]
+    tags: ["Reviewed visuals", "Synthetic surfaces", "Public record"]
   }
 ];

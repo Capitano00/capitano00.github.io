@@ -1,8 +1,8 @@
 # Boyong Wang Public Engineering Portfolio
 
-Public GitHub Pages site for Boyong Wang's renewable-energy consulting foundation, reviewable engineering workflow tools, HelioFabric flagship case study, and public side projects such as 3D-RAMS.
+Public GitHub Pages site for Boyong Wang's renewable-energy consulting foundation, applied AI workflow systems, HelioFabric flagship case study, and public demo project 3D-RAMS.
 
-The public record stays concise: it starts from public-safe consulting context, states the workflow problem, describes the system shape, and keeps clear evidence boundaries before adding detail.
+The public record stays concise: it starts from consulting context, states the workflow problem, describes the system shape, and keeps clear evidence boundaries before adding detail.
 
 ## Public Route
 
@@ -42,11 +42,13 @@ Before pushing or publishing:
 
 ## Project Structure
 
-The first public version should keep three levels visible:
+The public page should keep five levels visible:
 
 - OWC / ABL Group consulting context as the professional foundation, using aggregate renewable-advisory evidence only.
-- HelioFabric as the flagship internal-platform case study.
-- 3D-RAMS as the first public side-project card, using only public README-safe claims.
+- Applied AI system patterns for documents, workbooks, tool runs, evidence candidates, and review gates.
+- HelioFabric as the flagship internal-platform case study with an architecture flow.
+- 3D-RAMS as the public local-first demo, using only claims already safe in the public repository.
+- Technical foundation from physics, robotics, and sensor fusion.
 
 ## Brand Assets
 
