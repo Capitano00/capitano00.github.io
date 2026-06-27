@@ -230,28 +230,28 @@ export const projects: Project[] = [
 export const helioArchitecture = [
   {
     label: "Inputs",
-    title: "Documents, workbooks, project facts",
-    detail: "Source material enters as context, not accepted truth."
+    title: "Docs, workbooks, facts",
+    detail: "Collected as context."
   },
   {
     label: "Candidates",
-    title: "Extraction and assumptions",
-    detail: "Parsers, tools, or AI create structured candidates with references."
+    title: "Extracted values",
+    detail: "Linked to evidence and assumptions."
   },
   {
-    label: "Controller",
-    title: "Tool runs and artefacts",
-    detail: "Input previews, run records, outputs, and artefacts stay traceable."
+    label: "Tool runs",
+    title: "Previews and records",
+    detail: "Runs create traceable artefacts."
   },
   {
-    label: "Review",
-    title: "Evidence and review gate",
-    detail: "Assumptions and generated output are inspected before acceptance."
+    label: "Review gate",
+    title: "Human check",
+    detail: "Evidence is inspected before use."
   },
   {
-    label: "Accepted state",
-    title: "Canonical project record",
-    detail: "Only reviewed decisions move into the accepted workflow state."
+    label: "Accepted record",
+    title: "Canonical state",
+    detail: "Only reviewed decisions are promoted."
   }
 ];
 
