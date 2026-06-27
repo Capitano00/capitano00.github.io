@@ -37,7 +37,9 @@ const sectionNav = [
     <section class="border-b border-ink/10">
       <div class="mx-auto grid max-w-7xl gap-8 px-5 py-10 sm:px-8 lg:grid-cols-[1fr_0.82fr] lg:py-14">
         <div class="min-w-0">
-          <p class="text-xs font-semibold uppercase tracking-[0.14em] text-copper">{heroProfile.eyebrow}</p>
+          <p class="text-xs font-semibold uppercase tracking-[0.14em] text-copper">
+            {heroProfile.eyebrow.map((line) => <span class="block">{line}</span>)}
+          </p>
           <h1 class="mt-4 max-w-4xl break-words font-display text-4xl font-semibold leading-[1.03] text-ink sm:text-[3rem] md:text-[3.35rem]">
             {heroProfile.name}
           </h1>

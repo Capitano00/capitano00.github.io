@@ -13,7 +13,10 @@ export const siteMeta = {
 };
 
 export const heroProfile = {
-  eyebrow: "Renewable energy technical advisory + AI automation for engineering workflow efficiency",
+  eyebrow: [
+    "Renewable energy technical advisory",
+    "AI automation for engineering workflow efficiency"
+  ],
   name: "Boyong Wang",
   companyContext:
     "At OWC / ABL Group, I work alongside experienced engineers and industry specialists with a global project record, supporting clients across the energy and infrastructure sectors.",
