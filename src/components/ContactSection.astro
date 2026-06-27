@@ -5,22 +5,22 @@ const hasLinkedInUrl = contactProfile.linkedinUrl.trim().startsWith("http");
 const contactHref = hasLinkedInUrl
   ? contactProfile.linkedinUrl
   : "https://www.linkedin.com/search/results/people/?keywords=Boyong%20Wang";
-const contactLabel = hasLinkedInUrl ? contactProfile.linkedinLabel : "Search Boyong Wang on LinkedIn";
+const contactLabel = hasLinkedInUrl ? contactProfile.linkedinLabel : "LinkedIn profile";
 ---
 
-<section id="contact" aria-labelledby="contact-heading" class="mx-auto max-w-7xl px-5 py-16 sm:px-8">
-  <div class="grid gap-8 rounded-md bg-ink p-6 text-paper md:grid-cols-[0.8fr_1.2fr] md:p-8">
+<section id="profiles" aria-labelledby="profiles-heading" class="mx-auto max-w-7xl px-5 py-14 sm:px-8">
+  <div class="grid gap-7 rounded-md bg-ink p-6 text-paper md:grid-cols-[0.8fr_1.2fr] md:p-8">
     <div>
-      <p class="text-sm font-semibold uppercase tracking-[0.16em] text-solar">{contactProfile.eyebrow}</p>
-      <h2 id="contact-heading" class="mt-3 max-w-xl font-display text-4xl font-semibold leading-tight md:text-5xl">
+      <p class="text-xs font-semibold uppercase tracking-[0.14em] text-solar">{contactProfile.eyebrow}</p>
+      <h2 id="profiles-heading" class="mt-3 max-w-xl font-display text-3xl font-semibold leading-tight md:text-4xl">
         {contactProfile.heading}
       </h2>
     </div>
-    <div class="flex flex-col items-start justify-between gap-6">
-      <p class="max-w-2xl leading-7 text-paper/76">{contactProfile.summary}</p>
+    <div class="flex flex-col items-start justify-between gap-5">
+      <p class="max-w-2xl text-sm leading-6 text-paper/76 sm:text-base sm:leading-7">{contactProfile.summary}</p>
       <div class="flex flex-wrap gap-3">
         <a
-          class="focus-ring inline-flex rounded-full bg-solar px-5 py-3 text-sm font-semibold text-ink shadow-lift"
+          class="focus-ring inline-flex rounded-md bg-solar px-4 py-2.5 text-sm font-semibold text-ink shadow-lift"
           href={contactHref}
           target="_blank"
           rel="noreferrer"
@@ -28,7 +28,7 @@ const contactLabel = hasLinkedInUrl ? contactProfile.linkedinLabel : "Search Boy
           {contactLabel}
         </a>
         <a
-          class="focus-ring inline-flex rounded-full border border-paper/20 px-5 py-3 text-sm font-semibold text-paper"
+          class="focus-ring inline-flex rounded-md border border-paper/20 px-4 py-2.5 text-sm font-semibold text-paper"
           href={contactProfile.githubUrl}
           target="_blank"
           rel="noreferrer"

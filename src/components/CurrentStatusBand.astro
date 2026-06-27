@@ -4,15 +4,15 @@ import { currentSignals } from "@/data/site";
 
 <section aria-labelledby="current-status-heading" class="bg-ink text-paper">
   <div class="mx-auto max-w-7xl px-5 py-10 sm:px-8">
-    <div class="grid gap-5 lg:grid-cols-[0.72fr_1.28fr] lg:items-end">
+    <div class="grid gap-5 lg:grid-cols-[0.76fr_1.24fr] lg:items-end">
       <div>
-        <p class="text-sm font-semibold uppercase tracking-[0.16em] text-solar">Current focus</p>
-        <h2 id="current-status-heading" class="mt-2 max-w-xl font-display text-3xl font-semibold leading-tight md:text-5xl">
-          What I am building now.
+        <p class="text-xs font-semibold uppercase tracking-[0.14em] text-solar">Selected focus</p>
+        <h2 id="current-status-heading" class="mt-2 max-w-xl font-display text-3xl font-semibold leading-tight md:text-4xl">
+          Current technical themes.
         </h2>
       </div>
-      <p class="max-w-3xl text-base leading-7 text-paper/76">
-        The active work is turning specialist renewable-project workflows into reviewable tools, evidence logs, and reusable delivery patterns.
+      <p class="max-w-3xl text-sm leading-6 text-paper/76 sm:text-base sm:leading-7">
+        The public record highlights durable patterns: reviewable tools, evidence logs, and reusable delivery methods.
       </p>
     </div>
 
@@ -20,8 +20,8 @@ import { currentSignals } from "@/data/site";
       {
         currentSignals.map((signal) => (
           <article class="border-b border-paper/14 py-5 last:border-b-0 lg:border-b-0 lg:border-r lg:px-6 lg:first:pl-0 lg:last:border-r-0">
-            <p class="text-xs font-semibold uppercase tracking-[0.12em] text-solar">{signal.label}</p>
-            <h3 class="mt-2 font-display text-2xl font-semibold leading-tight">{signal.value}</h3>
+            <p class="text-xs font-semibold uppercase tracking-[0.1em] text-solar">{signal.label}</p>
+            <h3 class="mt-2 font-display text-xl font-semibold leading-tight">{signal.value}</h3>
             <p class="mt-2 text-sm leading-6 text-paper/76">{signal.detail}</p>
           </article>
         ))

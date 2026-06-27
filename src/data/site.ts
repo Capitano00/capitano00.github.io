@@ -1,10 +1,10 @@
 export const siteMeta = {
-  title: "Boyong Wang | AI-Assisted Engineering Portfolio",
+  title: "Boyong Wang | Public Engineering Portfolio",
   description:
-    "Boyong Wang's personal portfolio: AI-assisted engineering, renewable workflow tooling, HelioFabric, and public agentic side projects.",
+    "Boyong Wang's public engineering portfolio: AI-assisted software delivery, renewable workflow tooling, HelioFabric, and public agentic demos.",
   author: "Boyong Wang",
-  status: "Public review ready",
-  reviewedThrough: "2026-06-27",
+  status: "Public-safe",
+  reviewedThrough: "Q2 2026",
   temporaryHost: "GitHub Pages",
   canonicalUrl: "https://capitano00.github.io",
   brand: {
@@ -13,10 +13,10 @@ export const siteMeta = {
     ogImage: "/og-image.png"
   },
   repositoryEvidence: {
-    firstLocalCommitDate: "2026-04-06",
+    firstLocalCommitDate: "Q2 2026",
     importedSnapshotStart: "v0.0.21+",
-    inspectedCommitCount: 324,
-    inspectedOn: "2026-06-10"
+    inspectedCommitCount: "300+",
+    inspectedOn: "Q2 2026"
   }
 };
 
@@ -25,29 +25,29 @@ export const personalProfile = {
   eyebrow: "Personal portfolio",
   headline: "AI-assisted engineering, renewable workflow tools, and agentic side projects.",
   summary:
-    "A concise record of applied product thinking, responsible AI-assisted development, renewable workflow systems, and public agentic engineering experiments.",
+    "A concise public record of applied product thinking, responsible AI-assisted development, renewable workflow systems, and public agentic engineering experiments.",
   roleSignal: "AI-assisted engineering, renewable workflow tooling, and public agent demos",
   deliverySignal:
     "Building from operational pain into traceable tools, evidence logs, and reviewed delivery artefacts.",
   primaryAction: "Explore the flagship project",
   primaryActionHref: "#heliofabric-case-study",
-  secondaryAction: "Connect on LinkedIn",
-  secondaryActionHref: "#contact"
+  secondaryAction: "Public profiles",
+  secondaryActionHref: "#profiles"
 };
 
 export const aboutProfile = {
   eyebrow: "About",
-  heading: "A personal site for applied product development, not a CV archive.",
+  heading: "A public record of selected engineering work.",
   paragraphs: [
     "My work sits at the overlap of renewable project review, structured data, and practical software delivery. The common thread is making repeated technical workflows easier to inspect, reuse, and improve without hiding the judgement behind them.",
-    "HelioFabric is the flagship case study because it shows that thinking in one place: product framing, data contracts, automation experiments, evidence trails, and responsible use of AI-assisted development. Public side projects such as 3D-RAMS sit alongside it as smaller, faster proofs of agentic engineering range."
+    "HelioFabric is the flagship case study because it shows that thinking in one place: product framing, data contracts, automation experiments, evidence trails, and responsible use of AI-assisted development. Public side projects such as 3D-RAMS sit alongside it as smaller, faster demos of agentic engineering range."
   ],
   focusAreas: [
-    "Renewable project workflow design",
-    "Structured data and workbook contracts",
-    "Agent-assisted software delivery",
+    "Renewable workflow design",
+    "Structured data contracts",
+    "Agent-assisted delivery",
     "Evidence-led review systems",
-    "Public agentic side projects"
+    "Public agentic demos"
   ]
 };
 
@@ -56,7 +56,7 @@ export const capabilitySignals = [
     label: "Product judgement",
     title: "Turning messy workflows into usable systems",
     detail:
-      "Framing operational pain as product structure: scopes, review states, data ownership, tool boundaries, and adoption-ready narratives."
+      "Framing operational pain as product structure: scopes, review states, data ownership, tool boundaries, and clear delivery narratives."
   },
   {
     label: "Delivery method",
@@ -66,20 +66,20 @@ export const capabilitySignals = [
   },
   {
     label: "Technical focus",
-    title: "Data, automation, and agentic engineering demos",
+    title: "Data, automation, and agentic demos",
     detail:
       "Building around parameter catalogues, workbook round trips, tool-run artefacts, local-first agent demos, UI automation, and high-level progress evidence."
   }
 ];
 
 export const contactProfile = {
-  eyebrow: "Contact",
-  heading: "For professional follow-up, use LinkedIn.",
+  eyebrow: "Profiles",
+  heading: "Public profiles and project links.",
   summary:
-    "This site supports recruiter and interviewer review without publishing personal phone or email details.",
-  linkedinLabel: "Connect on LinkedIn",
+    "LinkedIn and GitHub are included as neutral profile references. No private details are published on this site.",
+  linkedinLabel: "LinkedIn profile",
   linkedinUrl: "https://www.linkedin.com/in/boyong-w-160a04249/",
-  githubLabel: "View GitHub profile",
+  githubLabel: "GitHub profile",
   githubUrl: "https://github.com/Capitano00"
 };
 
@@ -104,28 +104,27 @@ export const portfolioLayers = [
   }
 ];
 
-
 export const projectPortfolio = [
   {
     id: "heliofabric",
     eyebrow: "Flagship case study",
     title: "HelioFabric",
-    status: "Internal platform case study",
+    status: "Internal case study",
     summary:
       "Governed renewable-workflow tooling around project data, workbook contracts, specialist-tool artefacts, and human review. It is presented as product and delivery evidence, not as public source code.",
-    linkLabel: "Review the flagship case study",
+    linkLabel: "Review case study",
     href: "#heliofabric-case-study",
-    tags: ["FastAPI", "Next.js", "Tool Controller", "Human review"],
+    tags: ["FastAPI", "Next.js", "Tool Controller", "Review gates"],
     proof:
-      "Best evidence for product judgement, data governance, agent-assisted delivery practice, and long-form workflow ownership."
+      "Shows product judgement, data governance, agent-assisted delivery practice, and sustained workflow ownership."
   },
   {
     id: "3d-rams",
     eyebrow: "Public side project",
     title: "3D-RAMS",
-    status: "Local-first demo agent",
+    status: "Public demo",
     summary:
-      "A public hackathon-style agent that turns a coordinate into an inspectable 3D pre-visit briefing pack using deterministic Python code, a React/Vite/CesiumJS UI, synthetic fixtures, evidence trace, and a safety gate.",
+      "A local-first demo agent that turns a coordinate into an inspectable 3D pre-visit briefing pack using deterministic Python code, a React/Vite/CesiumJS UI, synthetic fixtures, evidence trace, and a safety gate.",
     linkLabel: "View GitHub repo",
     href: "https://github.com/Capitano00/3D-RAMS",
     tags: ["Python", "React", "CesiumJS", "Safety gate"],
@@ -136,12 +135,12 @@ export const projectPortfolio = [
     id: "future-agentic-projects",
     eyebrow: "Portfolio direction",
     title: "Future AI / agentic projects",
-    status: "Reserved for reviewed public work",
+    status: "Reviewed slots",
     summary:
       "This site is structured to add future standalone tools, public experiments, and agentic workflows as they become safe, useful, and well documented.",
     linkLabel: "View GitHub profile",
     href: "https://github.com/Capitano00",
-    tags: ["Standalone tools", "Public experiments", "AI career transition"],
+    tags: ["Standalone tools", "Public experiments", "Reviewed demos"],
     proof:
       "Keeps the portfolio long-term and extensible instead of making the homepage depend on one project story."
   }
@@ -153,27 +152,35 @@ export const flagshipProject = {
   summary:
     "HelioFabric is an internal-platform case study: a governed layer around renewable-project data, specialist tools, workbook contracts, evidence artefacts, and human review.",
   metrics: [
-    { value: "324", label: "commits inspected" },
-    { value: "10+", label: "registered tool workflows" },
+    { value: "300+", label: "changes reviewed" },
+    { value: "10+", label: "tool workflows" },
     { value: "AI + data", label: "delivery method" }
   ]
 };
 
 export const flagshipCaseStudy = {
   eyebrow: "Flagship case study",
-  heading: "HelioFabric wraps expert renewable workflows without taking accountability away from engineers.",
+  heading: "HelioFabric keeps renewable-workflow automation reviewable.",
   statusNote:
-    "Internal R&D / internal platform case study. It is not presented as external SaaS, an open-source release, or an autonomous decision system.",
+    "Internal R&D / internal platform case study. Not external SaaS, not an open-source release, and not an autonomous decision system.",
   problem:
-    "Renewable-energy consulting work often spans Excel workbooks, PDFs, PVsyst/Meteonorm-style specialist tools, project registers, assumptions, evidence files, maps, and final expert review. A generic chatbot does not solve that operating problem because the bottleneck is the workflow around the expert.",
+    "Renewable-project review often spans workbooks, PDFs, specialist tools, evidence files, maps, assumptions, and final expert judgement. The hard problem is not one answer from a chatbot; it is keeping the surrounding workflow structured and reviewable.",
   solution:
-    "HelioFabric gives those workflows a governed data and tool layer: canonical project facts stay separate from extracted evidence candidates, tool runs produce artefacts, workbook imports use preview/commit gates, and users explicitly promote reviewed information into the source of truth.",
+    "HelioFabric adds a governed data and tool layer: canonical facts stay separate from evidence candidates, tool runs create artefacts, workbook imports use preview/commit gates, and reviewed information is promoted deliberately.",
+  proof:
+    "The build demonstrates a practical pattern for turning repeated technical review work into product structure while keeping human accountability visible.",
   evidence: [
-    "FastAPI backend with Pydantic, SQLAlchemy, Alembic, and SQLite/PostgreSQL-ready architecture.",
-    "Next.js/React/TypeScript frontend with workbench views, parameter maintenance, dashboards, maps, and tool surfaces.",
-    "Workbook contracts for analysis export, batch snapshots, patch updates, and review-first Excel round trips.",
+    "FastAPI backend with typed data models and database-ready architecture.",
+    "Next.js/React/TypeScript frontend with workbench, parameter, dashboard, map, and tool surfaces.",
+    "Workbook contracts for exports, snapshots, patch updates, and review-first Excel round trips.",
     "Tool Controller patterns for input preview, run history, downloadable artefacts, and supervised acceptance.",
-    "Agent-assisted delivery using source-of-truth docs, implementer/reviewer roles, verification commands, and handoff notes."
+    "Agent-assisted delivery using source-of-truth docs, verification commands, and handoff notes."
+  ],
+  method: [
+    "Separate source-of-truth facts from unreviewed extracted candidates.",
+    "Prefer preview, acceptance, and rollback points over silent canonical writes.",
+    "Use synthetic or reviewed visuals for public communication.",
+    "Keep automation framed as delivery support, not final engineering judgement."
   ],
   safeguards: [
     "No public source code for HelioFabric on this site.",
@@ -193,10 +200,10 @@ export const disclosureRules = [
 
 export const currentSignals = [
   {
-    label: "Active workstream",
-    value: "PVsyst workflow bridge",
+    label: "Workflow bridge",
+    value: "Specialist-tool evidence",
     detail:
-      "Read-only desktop evidence capture, output artefact validation, Design Optimisation handoff, and ZIP-based rerun experiments."
+      "Exploring supervised capture, artefact validation, and handoff patterns for renewable analysis workflows."
   },
   {
     label: "Delivery method",
@@ -205,10 +212,10 @@ export const currentSignals = [
       "Automation work is paired with source-of-truth notes, evidence logs, and review gates before results are treated as accepted."
   },
   {
-    label: "Next proof point",
-    value: "Synthetic demo evidence",
+    label: "Public evidence",
+    value: "Synthetic demo surfaces",
     detail:
-      "Public screenshots should use sandbox or redacted data so the product surface is visible without exposing live project material."
+      "Public screenshots use sandbox or redacted data so the product surface is visible without exposing private material."
   }
 ];
 
@@ -220,8 +227,8 @@ export const statusCards = [
   },
   {
     label: "Why it matters",
-    value: "Less repetitive review work",
-    detail: "The goal is to reduce repeated delivery effort while keeping specialist judgement visible and auditable."
+    value: "Less repeated review effort",
+    detail: "The goal is to reduce repeated delivery work while keeping specialist judgement visible and auditable."
   },
   {
     label: "How I deliver",
@@ -259,22 +266,22 @@ export const productMapSteps = [
 ];
 
 export const editorialMetrics = [
-  { value: "324", label: "commits inspected" },
-  { value: "v0.0.21+", label: "imported snapshots" },
-  { value: "2026-04-06", label: "first local commit" }
+  { value: "300+", label: "reviewed changes" },
+  { value: "Q2 2026", label: "private build period" },
+  { value: "Reviewed", label: "public evidence level" }
 ];
 
 export const projectAreas = [
   {
     title: "Governed project data",
     summary:
-      "Projects, sites, subarrays, parameters, units, formula outputs, review states, and workbook contracts are kept deliberately separate so review evidence does not become accidental truth.",
+      "Projects, sites, parameters, units, formula outputs, review states, and workbook contracts are kept deliberately separate so review evidence does not become accidental truth.",
     tags: ["Parameter Library", "Workbench", "Excel round trip"]
   },
   {
     title: "Tool Controller",
     summary:
-      "Internal tools can run against selected project/site context while retaining input previews, versioned run history, and downloadable artefacts for supervised acceptance.",
+      "Internal tools can run against selected context while retaining input previews, versioned run history, and downloadable artefacts for supervised acceptance.",
     tags: ["Tool runs", "Artefacts", "Input preview"]
   },
   {

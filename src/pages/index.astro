@@ -18,50 +18,50 @@ import { timeline } from "@/data/timeline";
 
 <BaseLayout>
   <main id="main">
-    <section class="mx-auto grid w-full max-w-7xl gap-10 overflow-hidden px-5 pb-14 pt-8 sm:px-8 lg:min-h-[84vh] lg:grid-cols-[0.95fr_1.05fr] lg:items-start lg:pt-14">
+    <section class="mx-auto grid w-full max-w-7xl gap-9 overflow-hidden px-5 pb-10 pt-7 sm:px-8 lg:min-h-[64vh] lg:grid-cols-[0.98fr_1.02fr] lg:items-start lg:pt-12">
       <div class="min-w-0 max-w-[21.25rem] sm:max-w-none">
-        <nav aria-label="Primary" class="mb-10 flex flex-wrap items-center gap-3 text-sm font-medium text-ink-soft">
-          <a class="focus-ring rounded-full px-3 py-2 hover:bg-white/80" href="#profile">Home</a>
-          <a class="focus-ring rounded-full px-3 py-2 hover:bg-white/80" href="#about">About</a>
-          <a class="focus-ring rounded-full px-3 py-2 hover:bg-white/80" href="#heliofabric">HelioFabric</a>
-          <a class="focus-ring rounded-full px-3 py-2 hover:bg-white/80" href="#projects">Projects</a>
-          <a class="focus-ring rounded-full px-3 py-2 hover:bg-white/80" href="#timeline">Timeline</a>
-          <a class="focus-ring rounded-full px-3 py-2 hover:bg-white/80" href="#contact">Contact</a>
+        <nav aria-label="Primary" class="mb-8 flex flex-wrap items-center gap-2 text-sm font-medium text-ink-soft">
+          <a class="focus-ring rounded-md px-3 py-2 hover:bg-white/80" href="#profile">Home</a>
+          <a class="focus-ring rounded-md px-3 py-2 hover:bg-white/80" href="#about">About</a>
+          <a class="focus-ring rounded-md px-3 py-2 hover:bg-white/80" href="#heliofabric">HelioFabric</a>
+          <a class="focus-ring rounded-md px-3 py-2 hover:bg-white/80" href="#projects">Projects</a>
+          <a class="focus-ring rounded-md px-3 py-2 hover:bg-white/80" href="#timeline">Timeline</a>
+          <a class="focus-ring rounded-md px-3 py-2 hover:bg-white/80" href="#profiles">Profiles</a>
         </nav>
-        <p id="profile" class="text-sm font-semibold uppercase tracking-[0.16em] text-copper">{personalProfile.eyebrow}</p>
-        <h1 class="mt-5 max-w-4xl break-words font-display text-4xl font-semibold leading-[1.02] text-ink sm:text-6xl md:text-7xl">
+        <p id="profile" class="text-xs font-semibold uppercase tracking-[0.14em] text-copper">{personalProfile.eyebrow}</p>
+        <h1 class="mt-5 max-w-4xl break-words font-display text-4xl font-semibold leading-[1.03] text-ink sm:text-[3rem] md:text-[3.25rem]">
           {personalProfile.name}
         </h1>
-        <p class="mt-5 max-w-3xl break-words font-display text-2xl font-semibold leading-tight text-ink sm:text-3xl md:text-[2.55rem]">
+        <p class="mt-5 max-w-3xl break-words font-display text-xl font-semibold leading-tight text-ink sm:text-2xl md:text-3xl">
           {personalProfile.headline}
         </p>
-        <p class="mt-6 max-w-[21rem] break-words text-base leading-7 text-ink-soft sm:max-w-2xl sm:text-lg sm:leading-8">
+        <p class="mt-5 max-w-[21rem] break-words text-base leading-7 text-ink-soft sm:max-w-2xl">
           {personalProfile.summary}
         </p>
-        <div class="mt-8 flex max-w-[21rem] flex-wrap gap-2 sm:max-w-none sm:gap-3">
-          <a class="focus-ring rounded-full bg-ink px-4 py-3 text-sm font-semibold text-paper shadow-lift sm:px-5" href={personalProfile.primaryActionHref}>
+        <div class="mt-7 flex max-w-[21rem] flex-wrap gap-2 sm:max-w-none sm:gap-3">
+          <a class="focus-ring rounded-md bg-ink px-4 py-2.5 text-sm font-semibold text-paper shadow-lift" href={personalProfile.primaryActionHref}>
             {personalProfile.primaryAction}
           </a>
-          <a class="focus-ring rounded-full border border-ink/20 bg-white/70 px-4 py-3 text-sm font-semibold text-ink sm:px-5" href={personalProfile.secondaryActionHref}>
+          <a class="focus-ring rounded-md border border-ink/20 bg-white/70 px-4 py-2.5 text-sm font-semibold text-ink" href={personalProfile.secondaryActionHref}>
             {personalProfile.secondaryAction}
           </a>
         </div>
         <div class="mt-7 grid max-w-2xl gap-3 text-sm leading-6 text-ink-soft sm:grid-cols-2">
           <p class="rounded-md border border-ink/10 bg-white/55 p-4">
-            <span class="block text-xs font-semibold uppercase tracking-[0.12em] text-copper">Professional focus</span>
+            <span class="block text-xs font-semibold uppercase tracking-[0.1em] text-copper">Professional focus</span>
             <span class="mt-2 block">{personalProfile.roleSignal}</span>
           </p>
           <p class="rounded-md border border-ink/10 bg-white/55 p-4">
-            <span class="block text-xs font-semibold uppercase tracking-[0.12em] text-copper">Delivery style</span>
+            <span class="block text-xs font-semibold uppercase tracking-[0.1em] text-copper">Delivery style</span>
             <span class="mt-2 block">{personalProfile.deliverySignal}</span>
           </p>
         </div>
       </div>
 
-      <aside id="heliofabric" aria-labelledby="featured-project-heading" class="rounded-md border border-ink/10 bg-white/58 p-5 shadow-lift backdrop-blur sm:p-7 lg:mt-16">
-        <div class="flex items-start justify-between gap-5">
-          <p class="text-sm font-semibold uppercase tracking-[0.16em] text-copper">{flagshipProject.eyebrow}</p>
-          <span class="rounded-full border border-ink/12 bg-paper/70 px-3 py-1 text-xs font-semibold uppercase tracking-[0.12em] text-ink-soft">Case study</span>
+      <aside id="heliofabric" aria-labelledby="featured-project-heading" class="rounded-md border border-ink/10 bg-white/58 p-5 shadow-lift backdrop-blur sm:p-6 lg:mt-10">
+        <div class="flex flex-wrap items-start justify-between gap-4">
+          <p class="text-xs font-semibold uppercase tracking-[0.14em] text-copper">{flagshipProject.eyebrow}</p>
+          <span class="rounded-md border border-ink/12 bg-paper/70 px-3 py-1 text-xs font-semibold text-ink-soft">Case study</span>
         </div>
         <a class="focus-ring mt-6 inline-flex rounded-md" href="#timeline" aria-label="HelioFabric project record">
           <img
@@ -69,21 +69,21 @@ import { timeline } from "@/data/timeline";
             alt="HelioFabric"
             width="1200"
             height="260"
-            class="h-auto w-52 sm:w-64"
+            class="h-auto w-48 sm:w-60"
           />
         </a>
-        <h2 id="featured-project-heading" class="mt-8 max-w-2xl font-display text-3xl font-semibold leading-tight text-ink md:text-5xl">
+        <h2 id="featured-project-heading" class="mt-7 max-w-2xl font-display text-2xl font-semibold leading-tight text-ink md:text-3xl">
           {flagshipProject.heading}
         </h2>
-        <p class="mt-5 max-w-2xl leading-7 text-ink-soft">
+        <p class="mt-5 max-w-2xl text-sm leading-6 text-ink-soft sm:text-base sm:leading-7">
           {flagshipProject.summary}
         </p>
-        <div class="mt-7 grid gap-3 sm:grid-cols-3">
+        <div class="mt-6 grid gap-3 md:grid-cols-3">
           {
             flagshipProject.metrics.map((metric) => (
               <div class="rounded-md border border-ink/10 bg-paper/72 p-4">
-                <p class="font-display text-2xl font-semibold text-ink">{metric.value}</p>
-                <p class="mt-1 text-xs font-semibold uppercase tracking-[0.12em] text-ink-soft">{metric.label}</p>
+                <p class="font-display text-xl font-semibold text-ink">{metric.value}</p>
+                <p class="mt-1 text-xs font-semibold uppercase tracking-[0.08em] text-ink-soft">{metric.label}</p>
               </div>
             ))
           }
@@ -99,14 +99,14 @@ import { timeline } from "@/data/timeline";
     <div id="brief">
       <StatusBoard />
     </div>
-    <section aria-labelledby="product-map-heading" class="mx-auto max-w-7xl px-5 py-16 sm:px-8">
-      <div class="grid gap-8 lg:grid-cols-[0.74fr_1.26fr] lg:items-start">
+    <section aria-labelledby="product-map-heading" class="mx-auto max-w-7xl px-5 py-14 sm:px-8">
+      <div class="grid gap-8 lg:grid-cols-[0.76fr_1.24fr] lg:items-start">
         <div>
-          <p class="text-sm font-semibold uppercase tracking-[0.16em] text-copper">Flagship case study</p>
-          <h2 id="product-map-heading" class="mt-3 font-display text-4xl font-semibold leading-tight text-ink md:text-5xl">
+          <p class="text-xs font-semibold uppercase tracking-[0.14em] text-copper">Flagship case study</p>
+          <h2 id="product-map-heading" class="mt-3 font-display text-3xl font-semibold leading-tight text-ink md:text-4xl">
             HelioFabric shows the work through one focused build.
           </h2>
-          <p class="mt-5 leading-7 text-ink-soft">
+          <p class="mt-5 text-sm leading-6 text-ink-soft sm:text-base sm:leading-7">
             The project gives the broader portfolio a concrete centre: workflow pain, product structure, evidence-led automation, and reviewed progress.
           </p>
         </div>
@@ -116,14 +116,14 @@ import { timeline } from "@/data/timeline";
     <MediaEvidence />
     <ProjectAreas />
 
-    <section id="timeline" aria-labelledby="timeline-heading" class="mx-auto max-w-7xl px-5 py-16 sm:px-8">
-      <div class="mb-10 max-w-3xl">
-        <p class="text-sm font-semibold uppercase tracking-[0.16em] text-copper">Development timeline</p>
-        <h2 id="timeline-heading" class="mt-3 font-display text-4xl font-semibold text-ink md:text-5xl">
-          From workflow pain to a tracked innovation programme
+    <section id="timeline" aria-labelledby="timeline-heading" class="mx-auto max-w-7xl px-5 py-14 sm:px-8">
+      <div class="mb-8 max-w-3xl">
+        <p class="text-xs font-semibold uppercase tracking-[0.14em] text-copper">Development timeline</p>
+        <h2 id="timeline-heading" class="mt-3 font-display text-3xl font-semibold text-ink md:text-4xl">
+          A quarterly view of the public story
         </h2>
-        <p class="mt-5 text-base leading-7 text-ink-soft">
-          Early dates before Git are intentionally marked as narrated. Repository-backed milestones use inspected local evidence and source-of-truth HelioFabric documentation.
+        <p class="mt-5 text-sm leading-6 text-ink-soft sm:text-base sm:leading-7">
+          The public timeline stays deliberately rounded. Detailed local chronology remains private unless a specific milestone is separately reviewed for publication.
         </p>
       </div>
       <AnimatedTimeline client:visible items={timeline} />

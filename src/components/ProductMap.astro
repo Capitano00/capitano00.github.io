@@ -2,11 +2,11 @@
 import { editorialMetrics, productMapSteps, siteMeta } from "@/data/site";
 ---
 
-<aside class="w-full min-w-0 max-w-full overflow-hidden rounded-md border border-ink/12 bg-white/88 p-5 shadow-lift backdrop-blur md:p-7" aria-label="HelioFabric product map">
+<aside class="w-full min-w-0 max-w-full overflow-hidden rounded-md border border-ink/12 bg-white/88 p-5 shadow-lift backdrop-blur md:p-6" aria-label="HelioFabric product map">
   <div class="flex flex-wrap items-start justify-between gap-4 border-b border-ink/10 pb-5">
     <div class="min-w-0">
-      <p class="text-xs font-semibold uppercase tracking-[0.14em] text-copper">Product map</p>
-      <h2 class="mt-2 max-w-xl break-words font-display text-2xl font-semibold leading-tight text-ink">
+      <p class="text-xs font-semibold uppercase tracking-[0.12em] text-copper">Product map</p>
+      <h2 class="mt-2 max-w-xl break-words font-display text-xl font-semibold leading-tight text-ink sm:text-2xl">
         From repeated workflow pressure to reviewed progress
       </h2>
     </div>
@@ -16,11 +16,11 @@ import { editorialMetrics, productMapSteps, siteMeta } from "@/data/site";
     </div>
   </div>
 
-  <div class="mt-5 grid gap-3 sm:grid-cols-3">
+  <div class="mt-5 grid gap-3 md:grid-cols-3">
     {
       editorialMetrics.map((metric) => (
         <div class="rounded-md border border-ink/10 bg-paper px-4 py-3">
-          <p class="font-display text-2xl font-semibold text-ink">{metric.value}</p>
+          <p class="font-display text-xl font-semibold text-ink">{metric.value}</p>
           <p class="mt-1 text-xs font-semibold uppercase tracking-[0.08em] text-ink-soft">{metric.label}</p>
         </div>
       ))
@@ -47,7 +47,7 @@ import { editorialMetrics, productMapSteps, siteMeta } from "@/data/site";
   </ol>
 
   <div class="mt-5 rounded-md border border-copper/20 bg-copper/10 p-4 text-sm leading-6 text-ink-soft">
-    <p><strong class="text-ink">Status:</strong> Active personal build with curated evidence and weekly progress notes.</p>
-    <p class="mt-2"><strong class="text-ink">Evidence basis:</strong> local Git history inspected on {siteMeta.repositoryEvidence.inspectedOn}.</p>
+    <p><strong class="text-ink">Status:</strong> Active personal build with curated public evidence.</p>
+    <p class="mt-2"><strong class="text-ink">Evidence basis:</strong> private history summarised at {siteMeta.repositoryEvidence.inspectedOn} level.</p>
   </div>
 </aside>

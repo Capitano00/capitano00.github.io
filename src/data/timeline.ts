@@ -11,112 +11,57 @@ export type TimelineMilestone = {
 export const timeline: TimelineMilestone[] = [
   {
     id: "origin",
-    period: "Late 2025 / early 2026",
-    title: "Origin in repetitive consulting workflow",
+    period: "Q4 2025-Q1 2026",
+    title: "Origin in repeated renewable-workflow friction",
     summary:
-      "After a large renewable portfolio review, the core problem became clear: engineers and consultants were losing time to repeated data handling, workbook preparation, evidence collection, and review coordination.",
+      "The starting point was a recurring pattern: useful technical review work was slowed by repeated workbook preparation, evidence collection, and coordination across tools.",
     evidence:
-      "Narrated origin. Pre-Git Power Automate artefacts should be added only if screenshots can be sanitised.",
+      "Narrated context retained at quarterly granularity for the public site.",
     status: "approximate",
-    tags: ["Power Automate", "Workflow discovery", "Approximate"]
+    tags: ["Workflow discovery", "Structured review", "Context"]
   },
   {
-    id: "prototype",
-    period: "Pre-Git prototype",
-    title: "From scripts to a product-shaped workflow",
+    id: "foundation",
+    period: "Q2 2026",
+    title: "Product-shaped private build",
     summary:
-      "Early automation experiments explored how structured inputs, repeatable review steps, and lightweight orchestration could reduce friction without removing expert judgement.",
+      "HelioFabric moved into a more durable private engineering workflow, with a Python backend, web frontend, structured project data, and a clearer source-of-truth model.",
     evidence:
-      "Story-led milestone. Use a reconstructed workflow diagram if original screenshots are not suitable for public release.",
-    status: "approximate",
-    tags: ["Prototype", "Structured inputs", "Human review"]
-  },
-  {
-    id: "git-foundation",
-    period: "6 April 2026",
-    title: "Private repository foundation",
-    summary:
-      "HelioFabric moved into a private Git workflow with imported snapshots from v0.0.21 onward, giving the project a durable engineering history and a better base for controlled iteration.",
-    evidence:
-      "Local Git evidence: first local commit on 2026-04-06 and imported v0.0.21+ snapshots.",
+      "Private repository and roadmap evidence summarised without exact public dates.",
     status: "repo-evidenced",
-    tags: ["Git", "v0.0.21+", "Engineering history"]
+    tags: ["FastAPI", "Next.js", "Data model"]
   },
   {
-    id: "platform",
-    period: "April 2026",
-    title: "FastAPI and Next.js product spine",
+    id: "workbook-governance",
+    period: "Q2 2026",
+    title: "Workbook governance and review states",
     summary:
-      "The project converged on a Python backend and web frontend: project/site CRUD, parameter management, formulas, units, and a workbench for structured portfolio review.",
+      "Excel remained a useful review surface while the application kept canonical data, review candidates, snapshots, and patch updates deliberately separate.",
     evidence:
-      "Roadmap evidence: Stages 1-4 establish scaffold, parameter CRUD, project data, formula engine, and unit conversions.",
+      "Workbook contract and review-flow evidence summarised at public level.",
     status: "repo-evidenced",
-    tags: ["FastAPI", "Next.js", "Parameter Library"]
-  },
-  {
-    id: "workbook-contract",
-    period: "April-May 2026",
-    title: "Workbook governance and data-pool workflow",
-    summary:
-      "Excel remained a useful review surface, but the database became the source of truth. Analysis exports, batch snapshots, and patch workbooks received distinct import/export semantics.",
-    evidence:
-      "Roadmap and workbook contract evidence: Stage 5 shipped selection-driven workbench exports and preview/commit import flows.",
-    status: "repo-evidenced",
-    tags: ["Workbench", "Excel contracts", "Preview and commit"]
+    tags: ["Workbench", "Excel contracts", "Review gates"]
   },
   {
     id: "tool-controller",
-    period: "May 2026",
+    period: "Q2 2026",
     title: "Tool Controller and artefact-backed workflows",
     summary:
-      "HelioFabric added a controlled tool layer for site-scoped calculations, irradiation evidence packs, map deliverables, and other expert workflows without silently changing canonical project data.",
+      "The build added a controlled tool layer for selected expert workflows, using input previews, run records, generated artefacts, and explicit supervised acceptance.",
     evidence:
-      "Roadmap evidence: Stage 7 Tool Controller, tool runs, artefacts, provider status, and alpha internal tools.",
+      "Tool-run and artefact patterns summarised without private run details.",
     status: "repo-evidenced",
-    tags: ["Tool Controller", "Artefacts", "Alpha tools"]
+    tags: ["Tool Controller", "Artefacts", "Human review"]
   },
   {
-    id: "design-optimisation",
-    period: "Late May-June 2026",
-    title: "Design Optimisation as the flagship active workstream",
+    id: "public-record",
+    period: "Current",
+    title: "Public portfolio record",
     summary:
-      "The active build focus is a transparent PV design optimisation workflow: PVsyst batch evidence, PVcase/DC capacity review, hourly grid clipping, source/revision history, and explainable ranking views.",
+      "The public site keeps the story selective: HelioFabric as the flagship case study, 3D-RAMS as a public demo, and future projects added only after review.",
     evidence:
-      "Local Git evidence inspected on 2026-06-04: 248 commits in the checkout, with recent commits centred on design optimisation ranking and source/revision workflows.",
+      "This GitHub Pages site and reviewed public assets.",
     status: "current",
-    tags: ["Design Optimisation", "PVsyst", "Evidence review"]
-  },
-  {
-    id: "pvsyst-workflow-bridge",
-    period: "9-10 June 2026",
-    title: "PVsyst workflow bridge and ZIP Builder alpha",
-    summary:
-      "The PVsyst path moved into supervised workflow automation: read-only desktop evidence capture, navigation screenshots, output artefact validation, Design Optimisation handoff, and a parallel ZIP-based project builder that preserves near-shading content for manual rerun validation.",
-    evidence:
-      "Repo evidence inspected on 2026-06-10: PVsyst workflow bridge notes, read-only extraction/navigation evidence, Project ZIP Builder S1 alpha note, and 324 commits in the active checkout.",
-    status: "current",
-    tags: ["PVsyst", "Read-only automation", "ZIP Builder"]
-  },
-  {
-    id: "journal",
-    period: "June 2026",
-    title: "Personal portfolio record begins",
-    summary:
-      "A separate personal website starts tracking HelioFabric at a high level: why it exists, how it is being developed, what changed each week, and what can be shared responsibly.",
-    evidence:
-      "This site. Public updates are added only after manual review.",
-    status: "current",
-    tags: ["Personal site", "Public-safe", "Weekly drafts"]
-  },
-  {
-    id: "visual-identity-rollout",
-    period: "7 June 2026",
-    title: "HelioFabric visual identity prepared for first public rollout",
-    summary:
-      "A dedicated HelioFabric logo and app-style mark were added to the personal site so the first external link has a clearer product identity and a more credible LinkedIn preview.",
-    evidence:
-      "Brand milestone: logo assets were prepared from the uploaded HelioFabric identity board and wired into the website before first public review.",
-    status: "current",
-    tags: ["Logo", "Brand identity", "Public-ready"]
+    tags: ["Public-safe", "Synthetic visuals", "Project portfolio"]
   }
 ];

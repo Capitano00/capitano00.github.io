@@ -8,38 +8,26 @@ export type WeeklyUpdate = {
 
 export const weeklyUpdates: WeeklyUpdate[] = [
   {
-    week: "Week of 2026-06-10",
-    title: "PVsyst workflow bridge and ZIP Builder alpha",
+    week: "Q2 2026",
+    title: "Public portfolio structure",
     summary:
-      "Development work focused on making PVsyst evidence collection more supervised, modular, and auditable. The workflow bridge records read-only desktop evidence and navigation captures, while a parallel ZIP Builder alpha explores safe project-file edits without writing canonical project facts.",
+      "The public site was shaped around selected, reviewable project evidence: HelioFabric as the flagship internal-platform case study and 3D-RAMS as a public local-first agent demo.",
     focus: [
-      "Extend PVsyst read-only evidence capture from project-form recognition into guarded navigation screenshots.",
-      "Add a ZIP-based alpha workflow that previews selected variant assumptions and preserves near-shading content.",
-      "Keep PVsyst outputs and edited ZIPs as review artefacts until manual validation confirms the approach."
+      "Keep the homepage compact and public-safe.",
+      "Use public-safe project summaries instead of private delivery notes.",
+      "Publish only reviewed assets, synthetic screenshots, and neutral profile links."
     ],
     status: "published"
   },
   {
-    week: "Week of 2026-06-07",
-    title: "Logo milestone and first public identity pass",
+    week: "Q2 2026",
+    title: "HelioFabric case-study evidence",
     summary:
-      "The HelioFabric visual identity was added to the personal site ahead of first public sharing. The update strengthens the product signal while keeping the page focused on high-level progress and professional credibility.",
+      "The flagship story now focuses on the durable product pattern: governed data, workbook contracts, specialist-tool artefacts, and explicit review gates.",
     focus: [
-      "Add the HelioFabric logo and app-style mark to the first viewport and sharing metadata.",
-      "Record the identity work as a public-safe June 2026 milestone.",
-      "Prepare the static build output for manual publishing after review."
-    ],
-    status: "published"
-  },
-  {
-    week: "Week of 2026-06-01",
-    title: "Starting the public portfolio record",
-    summary:
-      "The first public-safe site structure was prepared. The current product narrative centres on governed renewable-project workflows, Design Optimisation, and responsible AI-assisted delivery practice.",
-    focus: [
-      "Shape the public narrative without exposing confidential project data.",
-      "Use HelioFabric as the flagship case study before adding other projects.",
-      "Prepare a conservative update workflow for manual review before publication."
+      "Keep exact timeline detail out of the public page.",
+      "Collapse implementation evidence by default.",
+      "Describe automation as supervised delivery support rather than autonomous judgement."
     ],
     status: "published"
   }

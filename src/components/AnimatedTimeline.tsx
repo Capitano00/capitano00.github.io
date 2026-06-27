@@ -6,8 +6,8 @@ type Props = {
 };
 
 const statusLabels: Record<TimelineMilestone["status"], string> = {
-  approximate: "Narrated",
-  "repo-evidenced": "Repo evidence",
+  approximate: "Context",
+  "repo-evidenced": "Private evidence",
   current: "Current"
 };
 
@@ -29,28 +29,28 @@ export default function AnimatedTimeline({ items }: Props) {
   return (
     <div className="relative">
       <div className="absolute left-[1.1rem] top-0 hidden h-full w-px bg-copper/30 md:block" />
-      <div className="space-y-6">
+      <div className="space-y-5">
         {items.map((item, index) => (
           <motion.article
             key={item.id}
-            initial={prefersReducedMotion ? false : { opacity: 0, y: 28 }}
+            initial={prefersReducedMotion ? false : { opacity: 0, y: 24 }}
             whileInView={prefersReducedMotion ? undefined : { opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-80px" }}
-            transition={{ duration: 0.45, delay: Math.min(index * 0.04, 0.22) }}
-            className={`relative grid gap-4 rounded-md border p-5 shadow-sm backdrop-blur transition-colors hover:border-copper/35 md:grid-cols-[10rem_1fr] md:gap-8 md:p-6 ${articleClasses[item.status]}`}
+            transition={{ duration: 0.4, delay: Math.min(index * 0.04, 0.18) }}
+            className={`relative grid gap-4 rounded-md border p-5 shadow-sm backdrop-blur transition-colors hover:border-copper/35 md:grid-cols-[8.5rem_1fr] md:gap-7 ${articleClasses[item.status]}`}
           >
             <div className="flex items-start gap-3 md:block">
-              <span className="mt-1 hidden size-9 rounded-md border border-copper/35 bg-paper shadow-sm md:block" />
+              <span className="mt-1 hidden size-8 rounded-md border border-copper/35 bg-paper shadow-sm md:block" />
               <div>
                 <p className="text-sm font-semibold text-copper">{item.period}</p>
-                <p className={`mt-2 inline-flex rounded-full border px-2 py-1 text-xs font-semibold uppercase tracking-[0.08em] ${statusClasses[item.status]}`}>
+                <p className={`mt-2 inline-flex rounded-md border px-2 py-1 text-xs font-semibold ${statusClasses[item.status]}`}>
                   {statusLabels[item.status]}
                 </p>
               </div>
             </div>
             <div>
-              <h3 className="font-display text-2xl font-semibold text-ink">{item.title}</h3>
-              <p className="mt-3 max-w-3xl text-base leading-7 text-ink-soft">{item.summary}</p>
+              <h3 className="font-display text-xl font-semibold leading-tight text-ink">{item.title}</h3>
+              <p className="mt-3 max-w-3xl text-sm leading-6 text-ink-soft sm:text-base sm:leading-7">{item.summary}</p>
               <div className="mt-4 border-l-2 border-copper/40 bg-paper/70 px-4 py-3">
                 <p className="text-xs font-semibold uppercase tracking-[0.08em] text-copper">Evidence basis</p>
                 <p className="mt-1 text-sm leading-6 text-ink-soft">{item.evidence}</p>
@@ -59,7 +59,7 @@ export default function AnimatedTimeline({ items }: Props) {
                 {item.tags.map((tag) => (
                   <span
                     key={tag}
-                    className="rounded-full border border-ink/10 bg-field/70 px-3 py-1 text-xs font-medium text-ink"
+                    className="rounded-md border border-ink/10 bg-field/70 px-2.5 py-1 text-xs font-medium text-ink"
                   >
                     {tag}
                   </span>
