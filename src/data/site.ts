@@ -28,9 +28,9 @@ export const personalProfile = {
     "I turn repeated technical workflow friction into structured software: clear data boundaries, supervised automation, review gates, and public-safe evidence.",
   roleSignal: "AI-assisted engineering, workflow tooling, and public agent demos",
   deliverySignal: "Product thinking, typed systems, evidence trails, and human review before acceptance.",
-  primaryAction: "Read HelioFabric",
+  primaryAction: "Read HelioFabric case study",
   primaryActionHref: "#heliofabric-case-study",
-  secondaryAction: "Public profiles",
+  secondaryAction: "View public profiles",
   secondaryActionHref: "#profiles"
 };
 
@@ -69,7 +69,7 @@ export const capabilitySignals = [
   {
     label: "Public evidence",
     title: "Show the pattern, not the private material",
-    detail: "The site uses high-level explanations, reviewed assets, and synthetic product surfaces."
+    detail: "Public evidence uses high-level explanations, reviewed assets, and synthetic product surfaces."
   }
 ];
 
@@ -136,7 +136,7 @@ export const projectPortfolio = [
     linkLabel: "View GitHub profile",
     href: "https://github.com/Capitano00",
     tags: ["Standalone tools", "Public experiments", "Reviewed demos"],
-    proof: "Keeps the site extensible without making the public story depend on one project."
+    proof: "Keeps the portfolio extensible without making the public story depend on one project."
   }
 ];
 

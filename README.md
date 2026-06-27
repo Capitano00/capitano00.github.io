@@ -2,7 +2,7 @@
 
 Public GitHub Pages site for Boyong Wang's AI-assisted engineering portfolio, led by the HelioFabric flagship case study and designed to include public agentic side projects such as 3D-RAMS.
 
-The site is designed as a concise public engineering record: it states the workflow problem, the system shape, and the evidence boundary before adding detail.
+The public record stays concise: it states the workflow problem, the system shape, and the evidence boundary before adding detail.
 
 ## Public Route
 
