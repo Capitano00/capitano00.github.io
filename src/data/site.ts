@@ -181,7 +181,7 @@ export const flagshipCaseStudy = {
   proof:
     "The build demonstrates how repeated technical review work can become a structured, inspectable software system without hiding accountability.",
   evidence: [
-    "Typed Python backend and React/TypeScript frontend.",
+    "Python/FastAPI backend and React/TypeScript frontend.",
     "Workbench surfaces for project facts, parameters, review states, and workbook exchange.",
     "Tool Controller pattern for input preview, run records, generated artefacts, and supervised acceptance.",
     "Agent-assisted delivery supported by source-of-truth notes, verification commands, and handoff records."

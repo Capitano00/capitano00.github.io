@@ -41,23 +41,36 @@ const hasLinkedInUrl = contactProfile.linkedinUrl.trim().startsWith("http");
 const linkedInHref = hasLinkedInUrl
   ? contactProfile.linkedinUrl
   : "https://www.linkedin.com/search/results/people/?keywords=Boyong%20Wang";
+
+const sectionNav = [
+  { label: "Home", href: "#profile" },
+  { label: "Applied AI", href: "#applied-ai" },
+  { label: "HelioFabric", href: "#heliofabric-case-study" },
+  { label: "3D-RAMS", href: "#rams-demo" },
+  { label: "Method", href: "#method" },
+  { label: "Background", href: "#background" },
+  { label: "Timeline", href: "#timeline" },
+  { label: "Profiles", href: "#profiles" }
+];
 ---
 
 <BaseLayout>
   <main id="main">
+    <nav aria-label="Section navigation" class="sticky top-0 z-30 border-b border-ink/10 bg-paper/92 backdrop-blur">
+      <div class="mx-auto flex max-w-7xl items-center gap-2 overflow-x-auto px-5 py-2 sm:px-8">
+        {
+          sectionNav.map((item) => (
+            <a class="focus-ring shrink-0 rounded-md px-3 py-2 text-sm font-semibold text-ink-soft hover:bg-white/80 hover:text-ink" href={item.href}>
+              {item.label}
+            </a>
+          ))
+        }
+      </div>
+    </nav>
+
     <section class="border-b border-ink/10">
       <div class="mx-auto grid max-w-7xl gap-8 px-5 py-8 sm:px-8 lg:grid-cols-[0.95fr_1.05fr] lg:py-12">
         <div class="min-w-0">
-          <nav aria-label="Primary" class="mb-8 flex flex-wrap items-center gap-2 text-sm font-medium text-ink-soft">
-            <a class="focus-ring rounded-md px-3 py-2 hover:bg-white/80" href="#profile">Home</a>
-            <a class="focus-ring rounded-md px-3 py-2 hover:bg-white/80" href="#applied-ai">Applied AI</a>
-            <a class="focus-ring rounded-md px-3 py-2 hover:bg-white/80" href="#heliofabric-case-study">HelioFabric</a>
-            <a class="focus-ring rounded-md px-3 py-2 hover:bg-white/80" href="#rams-demo">3D-RAMS</a>
-            <a class="focus-ring rounded-md px-3 py-2 hover:bg-white/80" href="#method">Method</a>
-            <a class="focus-ring rounded-md px-3 py-2 hover:bg-white/80" href="#background">Background</a>
-            <a class="focus-ring rounded-md px-3 py-2 hover:bg-white/80" href="#timeline">Timeline</a>
-            <a class="focus-ring rounded-md px-3 py-2 hover:bg-white/80" href="#profiles">Profiles</a>
-          </nav>
           <p id="profile" class="text-xs font-semibold uppercase tracking-[0.14em] text-copper">{personalProfile.eyebrow}</p>
           <h1 class="mt-4 max-w-4xl break-words font-display text-4xl font-semibold leading-[1.03] text-ink sm:text-[3rem] md:text-[3.4rem]">
             {personalProfile.name}
