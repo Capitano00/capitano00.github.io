@@ -1,136 +1,339 @@
 ---
 import BaseLayout from "@/layouts/BaseLayout.astro";
 import AnimatedTimeline from "@/components/AnimatedTimeline";
-import CaseStudy from "@/components/CaseStudy.astro";
-import ContactSection from "@/components/ContactSection.astro";
-import CurrentStatusBand from "@/components/CurrentStatusBand.astro";
-import DisclosurePanel from "@/components/DisclosurePanel.astro";
-import MediaEvidence from "@/components/MediaEvidence.astro";
-import ProfileOverview from "@/components/ProfileOverview.astro";
-import ProductMap from "@/components/ProductMap.astro";
-import ProjectPortfolio from "@/components/ProjectPortfolio.astro";
-import ProjectAreas from "@/components/ProjectAreas.astro";
-import StatusBoard from "@/components/StatusBoard.astro";
-import UpdateList from "@/components/UpdateList.astro";
-import { flagshipProject, personalProfile, siteMeta } from "@/data/site";
+import { mediaEvidence } from "@/data/media";
 import { timeline } from "@/data/timeline";
+import {
+  capabilitySignals,
+  contactProfile,
+  disclosureRules,
+  flagshipCaseStudy,
+  flagshipProject,
+  personalProfile,
+  projectPortfolio,
+  siteMeta,
+  statusCards
+} from "@/data/site";
+
+const caseStudyPanels = [
+  {
+    title: "Implementation evidence",
+    intro: "Representative evidence, summarised without source code or private operating material.",
+    items: flagshipCaseStudy.evidence
+  },
+  {
+    title: "Delivery method",
+    intro: "The method keeps AI-assisted work inspectable and review-led.",
+    items: flagshipCaseStudy.method
+  },
+  {
+    title: "Publication safeguards",
+    intro: "The public case study stays selective by design.",
+    items: flagshipCaseStudy.safeguards
+  }
+];
+
+const hasLinkedInUrl = contactProfile.linkedinUrl.trim().startsWith("http");
+const linkedInHref = hasLinkedInUrl
+  ? contactProfile.linkedinUrl
+  : "https://www.linkedin.com/search/results/people/?keywords=Boyong%20Wang";
 ---
 
 <BaseLayout>
   <main id="main">
-    <section class="mx-auto grid w-full max-w-7xl gap-9 overflow-hidden px-5 pb-10 pt-7 sm:px-8 lg:min-h-[64vh] lg:grid-cols-[0.98fr_1.02fr] lg:items-start lg:pt-12">
-      <div class="min-w-0 max-w-[21.25rem] sm:max-w-none">
-        <nav aria-label="Primary" class="mb-8 flex flex-wrap items-center gap-2 text-sm font-medium text-ink-soft">
-          <a class="focus-ring rounded-md px-3 py-2 hover:bg-white/80" href="#profile">Home</a>
-          <a class="focus-ring rounded-md px-3 py-2 hover:bg-white/80" href="#about">About</a>
-          <a class="focus-ring rounded-md px-3 py-2 hover:bg-white/80" href="#heliofabric">HelioFabric</a>
-          <a class="focus-ring rounded-md px-3 py-2 hover:bg-white/80" href="#projects">Projects</a>
-          <a class="focus-ring rounded-md px-3 py-2 hover:bg-white/80" href="#timeline">Timeline</a>
-          <a class="focus-ring rounded-md px-3 py-2 hover:bg-white/80" href="#profiles">Profiles</a>
-        </nav>
-        <p id="profile" class="text-xs font-semibold uppercase tracking-[0.14em] text-copper">{personalProfile.eyebrow}</p>
-        <h1 class="mt-5 max-w-4xl break-words font-display text-4xl font-semibold leading-[1.03] text-ink sm:text-[3rem] md:text-[3.25rem]">
-          {personalProfile.name}
-        </h1>
-        <p class="mt-5 max-w-3xl break-words font-display text-xl font-semibold leading-tight text-ink sm:text-2xl md:text-3xl">
-          {personalProfile.headline}
-        </p>
-        <p class="mt-5 max-w-[21rem] break-words text-base leading-7 text-ink-soft sm:max-w-2xl">
-          {personalProfile.summary}
-        </p>
-        <div class="mt-7 flex max-w-[21rem] flex-wrap gap-2 sm:max-w-none sm:gap-3">
-          <a class="focus-ring rounded-md bg-ink px-4 py-2.5 text-sm font-semibold text-paper shadow-lift" href={personalProfile.primaryActionHref}>
-            {personalProfile.primaryAction}
-          </a>
-          <a class="focus-ring rounded-md border border-ink/20 bg-white/70 px-4 py-2.5 text-sm font-semibold text-ink" href={personalProfile.secondaryActionHref}>
-            {personalProfile.secondaryAction}
-          </a>
-        </div>
-        <div class="mt-7 grid max-w-2xl gap-3 text-sm leading-6 text-ink-soft sm:grid-cols-2">
-          <p class="rounded-md border border-ink/10 bg-white/55 p-4">
-            <span class="block text-xs font-semibold uppercase tracking-[0.1em] text-copper">Professional focus</span>
-            <span class="mt-2 block">{personalProfile.roleSignal}</span>
+    <section class="border-b border-ink/10">
+      <div class="mx-auto grid max-w-7xl gap-8 px-5 py-8 sm:px-8 lg:grid-cols-[0.95fr_1.05fr] lg:py-12">
+        <div class="min-w-0">
+          <nav aria-label="Primary" class="mb-8 flex flex-wrap items-center gap-2 text-sm font-medium text-ink-soft">
+            <a class="focus-ring rounded-md px-3 py-2 hover:bg-white/80" href="#profile">Home</a>
+            <a class="focus-ring rounded-md px-3 py-2 hover:bg-white/80" href="#heliofabric-case-study">HelioFabric</a>
+            <a class="focus-ring rounded-md px-3 py-2 hover:bg-white/80" href="#projects">Projects</a>
+            <a class="focus-ring rounded-md px-3 py-2 hover:bg-white/80" href="#method">Method</a>
+            <a class="focus-ring rounded-md px-3 py-2 hover:bg-white/80" href="#timeline">Timeline</a>
+            <a class="focus-ring rounded-md px-3 py-2 hover:bg-white/80" href="#profiles">Profiles</a>
+          </nav>
+          <p id="profile" class="text-xs font-semibold uppercase tracking-[0.14em] text-copper">{personalProfile.eyebrow}</p>
+          <h1 class="mt-4 max-w-4xl break-words font-display text-4xl font-semibold leading-[1.03] text-ink sm:text-[3rem] md:text-[3.4rem]">
+            {personalProfile.name}
+          </h1>
+          <p class="mt-5 max-w-3xl break-words font-display text-xl font-semibold leading-tight text-ink sm:text-2xl md:text-3xl">
+            {personalProfile.headline}
           </p>
-          <p class="rounded-md border border-ink/10 bg-white/55 p-4">
-            <span class="block text-xs font-semibold uppercase tracking-[0.1em] text-copper">Delivery style</span>
-            <span class="mt-2 block">{personalProfile.deliverySignal}</span>
+          <p class="mt-5 max-w-2xl text-base leading-7 text-ink-soft">
+            {personalProfile.summary}
           </p>
+          <div class="mt-7 flex flex-wrap gap-3">
+            <a class="focus-ring rounded-md bg-ink px-4 py-2.5 text-sm font-semibold text-paper shadow-lift" href={personalProfile.primaryActionHref}>
+              {personalProfile.primaryAction}
+            </a>
+            <a class="focus-ring rounded-md border border-ink/20 bg-white/70 px-4 py-2.5 text-sm font-semibold text-ink" href={personalProfile.secondaryActionHref}>
+              {personalProfile.secondaryAction}
+            </a>
+          </div>
         </div>
-      </div>
 
-      <aside id="heliofabric" aria-labelledby="featured-project-heading" class="rounded-md border border-ink/10 bg-white/58 p-5 shadow-lift backdrop-blur sm:p-6 lg:mt-10">
-        <div class="flex flex-wrap items-start justify-between gap-4">
-          <p class="text-xs font-semibold uppercase tracking-[0.14em] text-copper">{flagshipProject.eyebrow}</p>
-          <span class="rounded-md border border-ink/12 bg-paper/70 px-3 py-1 text-xs font-semibold text-ink-soft">Case study</span>
-        </div>
-        <a class="focus-ring mt-6 inline-flex rounded-md" href="#timeline" aria-label="HelioFabric project record">
+        <aside aria-labelledby="hero-card-heading" class="rounded-md border border-ink/10 bg-white/64 p-5 shadow-lift backdrop-blur sm:p-6">
+          <div class="flex flex-wrap items-start justify-between gap-4">
+            <p class="text-xs font-semibold uppercase tracking-[0.14em] text-copper">{flagshipProject.eyebrow}</p>
+            <span class="rounded-md border border-ink/12 bg-paper/70 px-3 py-1 text-xs font-semibold text-ink-soft">Concise case study</span>
+          </div>
           <img
             src={siteMeta.brand.logoLockup}
             alt="HelioFabric"
             width="1200"
             height="260"
-            class="h-auto w-48 sm:w-60"
+            class="mt-6 h-auto w-48 sm:w-60"
           />
-        </a>
-        <h2 id="featured-project-heading" class="mt-7 max-w-2xl font-display text-2xl font-semibold leading-tight text-ink md:text-3xl">
-          {flagshipProject.heading}
-        </h2>
-        <p class="mt-5 max-w-2xl text-sm leading-6 text-ink-soft sm:text-base sm:leading-7">
-          {flagshipProject.summary}
+          <h2 id="hero-card-heading" class="mt-7 max-w-2xl font-display text-2xl font-semibold leading-tight text-ink md:text-3xl">
+            {flagshipProject.heading}
+          </h2>
+          <p class="mt-4 max-w-2xl text-sm leading-6 text-ink-soft sm:text-base sm:leading-7">
+            {flagshipProject.summary}
+          </p>
+          <div class="mt-6 grid gap-3 sm:grid-cols-3">
+            {
+              flagshipProject.metrics.map((metric) => (
+                <div class="rounded-md border border-ink/10 bg-paper/72 p-4">
+                  <p class="font-display text-xl font-semibold text-ink">{metric.value}</p>
+                  <p class="mt-1 text-xs font-semibold uppercase tracking-[0.08em] text-ink-soft">{metric.label}</p>
+                </div>
+              ))
+            }
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section aria-labelledby="proof-heading" class="mx-auto max-w-7xl px-5 py-12 sm:px-8">
+      <div class="grid gap-6 lg:grid-cols-[0.72fr_1.28fr] lg:items-end">
+        <div>
+          <p class="text-xs font-semibold uppercase tracking-[0.14em] text-copper">Proof strip</p>
+          <h2 id="proof-heading" class="mt-3 max-w-xl font-display text-3xl font-semibold leading-tight text-ink md:text-4xl">
+            The site is organised around proof, not volume.
+          </h2>
+        </div>
+        <p class="max-w-3xl text-sm leading-6 text-ink-soft sm:text-base sm:leading-7">
+          Each signal starts from a workflow problem, states the system boundary, and keeps public evidence separate from private operating material.
         </p>
-        <div class="mt-6 grid gap-3 md:grid-cols-3">
-          {
-            flagshipProject.metrics.map((metric) => (
-              <div class="rounded-md border border-ink/10 bg-paper/72 p-4">
-                <p class="font-display text-xl font-semibold text-ink">{metric.value}</p>
-                <p class="mt-1 text-xs font-semibold uppercase tracking-[0.08em] text-ink-soft">{metric.label}</p>
+      </div>
+      <div class="mt-8 grid gap-3 md:grid-cols-2 xl:grid-cols-4">
+        {
+          capabilitySignals.map((signal) => (
+            <article class="rounded-md border border-ink/10 bg-white/68 p-5">
+              <p class="text-xs font-semibold uppercase tracking-[0.1em] text-copper">{signal.label}</p>
+              <h3 class="mt-3 font-display text-xl font-semibold leading-tight text-ink">{signal.title}</h3>
+              <p class="mt-3 text-sm leading-6 text-ink-soft">{signal.detail}</p>
+            </article>
+          ))
+        }
+      </div>
+    </section>
+
+    <section id="heliofabric-case-study" aria-labelledby="case-study-heading" class="bg-paper-warm/55">
+      <div class="mx-auto grid max-w-7xl gap-8 px-5 py-12 sm:px-8 lg:grid-cols-[0.72fr_1.28fr]">
+        <div>
+          <p class="text-xs font-semibold uppercase tracking-[0.14em] text-copper">{flagshipCaseStudy.eyebrow}</p>
+          <h2 id="case-study-heading" class="mt-3 max-w-2xl font-display text-3xl font-semibold leading-tight text-ink md:text-4xl">
+            {flagshipCaseStudy.heading}
+          </h2>
+          <p class="mt-5 rounded-md border border-copper/25 bg-white/70 p-4 text-sm leading-6 text-ink-soft">
+            <strong class="block text-ink">Boundary</strong>
+            {flagshipCaseStudy.statusNote}
+          </p>
+        </div>
+        <div class="grid gap-4">
+          <div class="grid gap-4 md:grid-cols-3">
+            <article class="rounded-md border border-ink/10 bg-white/76 p-5">
+              <p class="text-xs font-semibold uppercase tracking-[0.1em] text-copper">Problem</p>
+              <p class="mt-3 text-sm leading-6 text-ink-soft">{flagshipCaseStudy.problem}</p>
+            </article>
+            <article class="rounded-md border border-ink/10 bg-white/76 p-5">
+              <p class="text-xs font-semibold uppercase tracking-[0.1em] text-copper">Solution</p>
+              <p class="mt-3 text-sm leading-6 text-ink-soft">{flagshipCaseStudy.solution}</p>
+            </article>
+            <article class="rounded-md border border-ink/10 bg-white/76 p-5">
+              <p class="text-xs font-semibold uppercase tracking-[0.1em] text-copper">Proof</p>
+              <p class="mt-3 text-sm leading-6 text-ink-soft">{flagshipCaseStudy.proof}</p>
+            </article>
+          </div>
+          <div class="grid gap-3">
+            {
+              caseStudyPanels.map((panel) => (
+                <details class="rounded-md border border-ink/10 bg-white/76 shadow-sm">
+                  <summary class="focus-ring cursor-pointer rounded-md px-5 py-4 font-display text-xl font-semibold leading-tight text-ink">
+                    {panel.title}
+                  </summary>
+                  <div class="border-t border-ink/10 px-5 pb-5 pt-4">
+                    <p class="max-w-3xl text-sm leading-6 text-ink-soft">{panel.intro}</p>
+                    <ul class="mt-4 grid gap-2 text-sm leading-6 text-ink-soft md:grid-cols-2">
+                      {panel.items.map((item) => <li class="rounded-md bg-paper/75 px-4 py-3">{item}</li>)}
+                    </ul>
+                  </div>
+                </details>
+              ))
+            }
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects" aria-labelledby="projects-heading" class="mx-auto max-w-7xl px-5 py-12 sm:px-8">
+      <div class="grid gap-6 lg:grid-cols-[0.72fr_1.28fr] lg:items-end">
+        <div>
+          <p class="text-xs font-semibold uppercase tracking-[0.14em] text-copper">Projects</p>
+          <h2 id="projects-heading" class="mt-3 max-w-xl font-display text-3xl font-semibold leading-tight text-ink md:text-4xl">
+            One flagship, one public demo, room for reviewed tools.
+          </h2>
+        </div>
+        <p class="max-w-3xl text-sm leading-6 text-ink-soft sm:text-base sm:leading-7">
+          The portfolio is intentionally selective: fewer projects, clearer boundaries, stronger evidence.
+        </p>
+      </div>
+      <div class="mt-8 grid gap-4 lg:grid-cols-3">
+        {
+          projectPortfolio.map((project) => (
+            <article class="rounded-md border border-ink/10 bg-white/70 p-5 shadow-sm">
+              <div class="flex flex-wrap items-start justify-between gap-3">
+                <div class="min-w-0">
+                  <p class="text-xs font-semibold uppercase tracking-[0.1em] text-copper">{project.eyebrow}</p>
+                  <h3 class="mt-2 break-words font-display text-xl font-semibold leading-tight text-ink">{project.title}</h3>
+                </div>
+                <span class="w-fit rounded-md border border-ink/12 bg-paper/75 px-3 py-1 text-xs font-semibold text-ink-soft">
+                  {project.status}
+                </span>
               </div>
+              <p class="mt-4 text-sm leading-6 text-ink-soft">{project.summary}</p>
+              <p class="mt-4 rounded-md bg-paper-warm/70 p-4 text-sm leading-6 text-ink-soft">
+                <strong class="text-ink">Proof:</strong> {project.proof}
+              </p>
+              <div class="mt-4 flex flex-wrap gap-2">
+                {project.tags.map((tag) => (
+                  <span class="rounded-md border border-ink/12 bg-white px-2.5 py-1 text-xs font-semibold text-ink-soft">{tag}</span>
+                ))}
+              </div>
+              <a class="focus-ring mt-5 inline-flex rounded-md bg-ink px-4 py-2.5 text-sm font-semibold text-paper" href={project.href}>
+                {project.linkLabel}
+              </a>
+            </article>
+          ))
+        }
+      </div>
+    </section>
+
+    <section id="method" aria-labelledby="method-heading" class="bg-ink text-paper">
+      <div class="mx-auto max-w-7xl px-5 py-12 sm:px-8">
+        <div class="grid gap-6 lg:grid-cols-[0.72fr_1.28fr] lg:items-end">
+          <div>
+            <p class="text-xs font-semibold uppercase tracking-[0.14em] text-solar">Method</p>
+            <h2 id="method-heading" class="mt-3 max-w-xl font-display text-3xl font-semibold leading-tight md:text-4xl">
+              Governed AI-assisted delivery.
+            </h2>
+          </div>
+          <p class="max-w-3xl text-sm leading-6 text-paper/76 sm:text-base sm:leading-7">
+            The working pattern is simple: define the workflow, protect the data boundary, make outputs inspectable, then accept results explicitly.
+          </p>
+        </div>
+        <div class="mt-8 grid gap-0 border-y border-paper/14 lg:grid-cols-4">
+          {
+            statusCards.map((card) => (
+              <article class="border-b border-paper/14 py-5 last:border-b-0 lg:border-b-0 lg:border-r lg:px-6 lg:first:pl-0 lg:last:border-r-0">
+                <p class="text-xs font-semibold uppercase tracking-[0.1em] text-solar">{card.label}</p>
+                <h3 class="mt-2 font-display text-xl font-semibold leading-tight">{card.value}</h3>
+                <p class="mt-2 text-sm leading-6 text-paper/76">{card.detail}</p>
+              </article>
             ))
           }
         </div>
-      </aside>
-    </section>
-
-    <ProfileOverview />
-    <CaseStudy />
-    <ProjectPortfolio />
-
-    <CurrentStatusBand />
-    <div id="brief">
-      <StatusBoard />
-    </div>
-    <section aria-labelledby="product-map-heading" class="mx-auto max-w-7xl px-5 py-14 sm:px-8">
-      <div class="grid gap-8 lg:grid-cols-[0.76fr_1.24fr] lg:items-start">
-        <div>
-          <p class="text-xs font-semibold uppercase tracking-[0.14em] text-copper">Flagship case study</p>
-          <h2 id="product-map-heading" class="mt-3 font-display text-3xl font-semibold leading-tight text-ink md:text-4xl">
-            HelioFabric shows the work through one focused build.
-          </h2>
-          <p class="mt-5 text-sm leading-6 text-ink-soft sm:text-base sm:leading-7">
-            The project gives the broader portfolio a concrete centre: workflow pain, product structure, evidence-led automation, and reviewed progress.
-          </p>
-        </div>
-        <ProductMap />
       </div>
     </section>
-    <MediaEvidence />
-    <ProjectAreas />
 
-    <section id="timeline" aria-labelledby="timeline-heading" class="mx-auto max-w-7xl px-5 py-14 sm:px-8">
-      <div class="mb-8 max-w-3xl">
-        <p class="text-xs font-semibold uppercase tracking-[0.14em] text-copper">Development timeline</p>
-        <h2 id="timeline-heading" class="mt-3 font-display text-3xl font-semibold text-ink md:text-4xl">
-          A quarterly view of the public story
-        </h2>
-        <p class="mt-5 text-sm leading-6 text-ink-soft sm:text-base sm:leading-7">
-          The public timeline stays deliberately rounded. Detailed local chronology remains private unless a specific milestone is separately reviewed for publication.
+    <section id="timeline" aria-labelledby="timeline-heading" class="mx-auto max-w-7xl px-5 py-12 sm:px-8">
+      <div class="mb-8 grid gap-6 lg:grid-cols-[0.72fr_1.28fr] lg:items-end">
+        <div>
+          <p class="text-xs font-semibold uppercase tracking-[0.14em] text-copper">Quarterly timeline</p>
+          <h2 id="timeline-heading" class="mt-3 font-display text-3xl font-semibold text-ink md:text-4xl">
+            Public chronology stays deliberately rounded.
+          </h2>
+        </div>
+        <p class="max-w-3xl text-sm leading-6 text-ink-soft sm:text-base sm:leading-7">
+          The page shows quarterly milestones only. Detailed chronology stays out of the public source unless separately reviewed.
         </p>
       </div>
       <AnimatedTimeline client:visible items={timeline} />
     </section>
 
-    <UpdateList />
-    <ContactSection />
-    <DisclosurePanel />
+    <section aria-labelledby="visuals-heading" class="bg-paper-warm/55">
+      <div class="mx-auto grid max-w-7xl gap-8 px-5 py-12 sm:px-8 lg:grid-cols-[0.72fr_1.28fr]">
+        <div>
+          <p class="text-xs font-semibold uppercase tracking-[0.14em] text-copper">Visual evidence</p>
+          <h2 id="visuals-heading" class="mt-3 max-w-xl font-display text-3xl font-semibold leading-tight text-ink md:text-4xl">
+            Product surfaces without private material.
+          </h2>
+          <p class="mt-5 text-sm leading-6 text-ink-soft sm:text-base sm:leading-7">
+            Visuals are used to make the product pattern easier to scan. Synthetic and reviewed assets stay the default for public pages.
+          </p>
+        </div>
+        <div class="grid gap-4 md:grid-cols-2">
+          {
+            mediaEvidence.slice(0, 4).map((item) => (
+              <article class="rounded-md border border-ink/10 bg-white/72 p-4 shadow-sm">
+                {item.image && (
+                  <img
+                    src={item.image}
+                    alt={item.alt ?? item.title}
+                  width="1440"
+                  height="900"
+                  decoding="async"
+                  class="aspect-[16/10] w-full rounded-md border border-ink/10 bg-paper object-contain"
+                />
+                )}
+                <h3 class="mt-4 font-display text-xl font-semibold leading-tight text-ink">{item.title}</h3>
+                <p class="mt-3 text-sm leading-6 text-ink-soft">{item.intendedUse}</p>
+              </article>
+            ))
+          }
+        </div>
+      </div>
+    </section>
+
+    <section id="profiles" aria-labelledby="profiles-heading" class="mx-auto max-w-7xl px-5 py-12 sm:px-8">
+      <div class="grid gap-8 rounded-md bg-ink p-6 text-paper md:grid-cols-[0.8fr_1.2fr] md:p-8">
+        <div>
+          <p class="text-xs font-semibold uppercase tracking-[0.14em] text-solar">{contactProfile.eyebrow}</p>
+          <h2 id="profiles-heading" class="mt-3 max-w-xl font-display text-3xl font-semibold leading-tight md:text-4xl">
+            {contactProfile.heading}
+          </h2>
+        </div>
+        <div class="flex flex-col items-start justify-between gap-5">
+          <p class="max-w-2xl text-sm leading-6 text-paper/76 sm:text-base sm:leading-7">{contactProfile.summary}</p>
+          <div class="flex flex-wrap gap-3">
+            <a class="focus-ring inline-flex rounded-md bg-solar px-4 py-2.5 text-sm font-semibold text-ink shadow-lift" href={linkedInHref} target="_blank" rel="noreferrer">
+              {contactProfile.linkedinLabel}
+            </a>
+            <a class="focus-ring inline-flex rounded-md border border-paper/20 px-4 py-2.5 text-sm font-semibold text-paper" href={contactProfile.githubUrl} target="_blank" rel="noreferrer">
+              {contactProfile.githubLabel}
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section aria-labelledby="disclosure-heading" class="mx-auto max-w-7xl px-5 pb-14 sm:px-8">
+      <div class="grid gap-8 border-y border-copper/25 py-8 md:grid-cols-[0.72fr_1.28fr]">
+        <div>
+          <p class="text-xs font-semibold uppercase tracking-[0.14em] text-copper">Evidence standards</p>
+          <h2 id="disclosure-heading" class="mt-3 font-display text-3xl font-semibold leading-tight text-ink md:text-4xl">
+            Useful because it is selective.
+          </h2>
+        </div>
+        <div class="grid gap-3 md:grid-cols-2">
+          {
+            disclosureRules.map((rule) => (
+              <p class="rounded-md border border-ink/10 bg-white/72 px-4 py-3 text-sm leading-6 text-ink-soft">{rule}</p>
+            ))
+          }
+        </div>
+      </div>
+    </section>
   </main>
 </BaseLayout>

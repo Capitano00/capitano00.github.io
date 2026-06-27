@@ -29,7 +29,7 @@ export const mediaEvidence: MediaEvidence[] = [
     intendedUse:
       "Show the selection-driven product surface with synthetic project rows, review states, and workbook contract messaging.",
     publicSafetyNote:
-      "Synthetic asset. Replace with a real app screenshot only after sandbox data, labels, location details, and file references are verified clean."
+      "Synthetic asset. Replace with a real app screenshot only after sandbox data, labels, place details, and file references are verified clean."
   },
   {
     id: "tool-controller-synthetic",
@@ -51,7 +51,7 @@ export const mediaEvidence: MediaEvidence[] = [
     intendedUse:
       "Show the key governance pattern: AI or parser outputs produce review candidates rather than silently overwriting canonical data.",
     publicSafetyNote:
-      "Do not expose actual values, file names, provider accounts, location details, or source document labels."
+      "Do not expose actual values, file names, account details, place details, or source document labels."
   },
   {
     id: "real-app-capture-next",
@@ -60,6 +60,6 @@ export const mediaEvidence: MediaEvidence[] = [
     intendedUse:
       "Future replacement set for the synthetic visuals after HelioFabric is launched with sandbox data and captured from the real app.",
     publicSafetyNote:
-      "Capture only from sandbox or redacted data. Check project names, deal codes, location details, file references, provider labels, and values before replacing synthetic assets."
+      "Capture only from sandbox or redacted data. Check project names, deal codes, place details, file references, provider labels, and values before replacing synthetic assets."
   }
 ];

@@ -11,7 +11,7 @@ export const weeklyUpdates: WeeklyUpdate[] = [
     week: "Q2 2026",
     title: "Public portfolio structure",
     summary:
-      "The public site was shaped around selected, reviewable project evidence: HelioFabric as the flagship internal-platform case study and 3D-RAMS as a public local-first agent demo.",
+      "The public site is shaped around selected, reviewable evidence: HelioFabric as the flagship case study and 3D-RAMS as a public local-first agent demo.",
     focus: [
       "Keep the homepage compact and public-safe.",
       "Use public-safe project summaries instead of private delivery notes.",
