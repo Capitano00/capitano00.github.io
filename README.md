@@ -47,7 +47,6 @@ The first public version should keep three levels visible:
 - OWC / ABL Group consulting context as the professional foundation, using aggregate renewable-advisory evidence only.
 - HelioFabric as the flagship internal-platform case study.
 - 3D-RAMS as the first public side-project card, using only public README-safe claims.
-- Future project slots for reviewed standalone tools and experiments.
 
 ## Brand Assets
 

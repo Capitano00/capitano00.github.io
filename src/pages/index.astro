@@ -11,6 +11,7 @@ import {
   flagshipCaseStudy,
   flagshipProject,
   personalProfile,
+  proofIndex,
   projectPortfolio,
   siteMeta,
   statusCards,
@@ -74,13 +75,20 @@ const linkedInHref = hasLinkedInUrl
               {personalProfile.secondaryAction}
             </a>
           </div>
+          <dl class="mt-8 grid gap-2 sm:grid-cols-2">
+            {
+              proofIndex.map((item) => (
+                <div class="rounded-md border border-ink/10 bg-white/70 px-4 py-3">
+                  <dt class="text-xs font-semibold uppercase tracking-[0.1em] text-copper">{item.label}</dt>
+                  <dd class="mt-1 text-sm font-semibold leading-5 text-ink">{item.value}</dd>
+                </div>
+              ))
+            }
+          </dl>
         </div>
 
         <aside aria-labelledby="hero-card-heading" class="rounded-md border border-ink/10 bg-white/64 p-5 shadow-lift backdrop-blur sm:p-6">
-          <div class="flex flex-wrap items-start justify-between gap-4">
-            <p class="text-xs font-semibold uppercase tracking-[0.14em] text-copper">{flagshipProject.eyebrow}</p>
-            <span class="rounded-md border border-ink/12 bg-paper/70 px-3 py-1 text-xs font-semibold text-ink-soft">Concise case study</span>
-          </div>
+          <p class="text-xs font-semibold uppercase tracking-[0.14em] text-copper">{flagshipProject.eyebrow}</p>
           <img
             src={siteMeta.brand.logoLockup}
             alt="HelioFabric"
@@ -211,14 +219,14 @@ const linkedInHref = hasLinkedInUrl
         <div>
           <p class="text-xs font-semibold uppercase tracking-[0.14em] text-copper">Projects</p>
           <h2 id="projects-heading" class="mt-3 max-w-xl font-display text-3xl font-semibold leading-tight text-ink md:text-4xl">
-            Selected projects with clear evidence boundaries.
+            Selected projects, each with a clear boundary.
           </h2>
         </div>
         <p class="max-w-3xl text-sm leading-6 text-ink-soft sm:text-base sm:leading-7">
-          HelioFabric shows the deepest workflow ownership. 3D-RAMS shows a smaller public agentic demo. Future projects only belong here when they add a distinct, reviewable signal.
+          HelioFabric shows the deepest workflow ownership. 3D-RAMS shows the same preference for inspectable outputs in a smaller public demo.
         </p>
       </div>
-      <div class="mt-8 grid gap-4 lg:grid-cols-3">
+      <div class="mt-8 grid gap-4 lg:grid-cols-2">
         {
           projectPortfolio.map((project) => (
             <article class="rounded-md border border-ink/10 bg-white/70 p-5 shadow-sm">
@@ -232,9 +240,16 @@ const linkedInHref = hasLinkedInUrl
                 </span>
               </div>
               <p class="mt-4 text-sm leading-6 text-ink-soft">{project.summary}</p>
-              <p class="mt-4 rounded-md bg-paper-warm/70 p-4 text-sm leading-6 text-ink-soft">
-                <strong class="text-ink">Proof:</strong> {project.proof}
-              </p>
+              <div class="mt-4 grid gap-3 sm:grid-cols-2">
+                <p class="rounded-md bg-paper-warm/70 p-4 text-sm leading-6 text-ink-soft">
+                  <strong class="block text-ink">What it shows</strong>
+                  {project.proof}
+                </p>
+                <p class="rounded-md bg-paper/80 p-4 text-sm leading-6 text-ink-soft">
+                  <strong class="block text-ink">Boundary</strong>
+                  {project.boundary}
+                </p>
+              </div>
               <div class="mt-4 flex flex-wrap gap-2">
                 {project.tags.map((tag) => (
                   <span class="rounded-md border border-ink/12 bg-white px-2.5 py-1 text-xs font-semibold text-ink-soft">{tag}</span>
@@ -306,7 +321,7 @@ const linkedInHref = hasLinkedInUrl
         <div>
           <p class="text-xs font-semibold uppercase tracking-[0.14em] text-copper">Quarterly timeline</p>
           <h2 id="timeline-heading" class="mt-3 font-display text-3xl font-semibold text-ink md:text-4xl">
-            Quarterly milestones, kept intentionally high-level.
+            Quarterly milestones without private chronology.
           </h2>
         </div>
         <p class="max-w-3xl text-sm leading-6 text-ink-soft sm:text-base sm:leading-7">
@@ -321,7 +336,7 @@ const linkedInHref = hasLinkedInUrl
         <div>
           <p class="text-xs font-semibold uppercase tracking-[0.14em] text-copper">Visual evidence</p>
           <h2 id="visuals-heading" class="mt-3 max-w-xl font-display text-3xl font-semibold leading-tight text-ink md:text-4xl">
-            Reviewed visuals that explain the product pattern.
+            Product surfaces, shown with reviewed visuals.
           </h2>
           <p class="mt-5 text-sm leading-6 text-ink-soft sm:text-base sm:leading-7">
             The visuals show how the workflow is structured: workbench surfaces, tool runs, review states, and evidence candidates, using synthetic or reviewed assets.
@@ -375,9 +390,9 @@ const linkedInHref = hasLinkedInUrl
     <section aria-labelledby="disclosure-heading" class="mx-auto max-w-7xl px-5 pb-14 sm:px-8">
       <div class="grid gap-8 border-y border-copper/25 py-8 md:grid-cols-[0.72fr_1.28fr]">
         <div>
-          <p class="text-xs font-semibold uppercase tracking-[0.14em] text-copper">Evidence standards</p>
+          <p class="text-xs font-semibold uppercase tracking-[0.14em] text-copper">Publication boundary</p>
           <h2 id="disclosure-heading" class="mt-3 font-display text-3xl font-semibold leading-tight text-ink md:text-4xl">
-            Public evidence stays selective.
+            What this page leaves out.
           </h2>
         </div>
         <div class="grid gap-3 md:grid-cols-2">

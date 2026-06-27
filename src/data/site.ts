@@ -22,7 +22,7 @@ export const siteMeta = {
 
 export const personalProfile = {
   name: "Boyong Wang",
-  eyebrow: "Public engineering portfolio",
+  eyebrow: "Renewable consulting + workflow systems",
   headline: "Renewable-energy consultant building reviewable engineering workflow tools.",
   summary:
     "I work as a consultant at OWC / ABL Group, where technical due diligence, energy yield work, design review, and renewable advisory expose the workflow friction that good software should reduce.",
@@ -34,6 +34,29 @@ export const personalProfile = {
   secondaryActionHref: "#profiles"
 };
 
+export const proofIndex = [
+  {
+    label: "Professional base",
+    value: "Consultant at OWC / ABL Group"
+  },
+  {
+    label: "Domain exposure",
+    value: "80+ renewable projects, 5+ GW advisory context"
+  },
+  {
+    label: "Flagship system",
+    value: "HelioFabric workflow tooling"
+  },
+  {
+    label: "Public demo",
+    value: "3D-RAMS local-first agent"
+  },
+  {
+    label: "Technical base",
+    value: "Physics, robotics, sensor fusion"
+  }
+];
+
 export const consultingFoundation = {
   eyebrow: "Consulting foundation",
   heading: "The workflow problems come from real renewable advisory work.",
@@ -41,39 +64,23 @@ export const consultingFoundation = {
     "The software work starts from consultant delivery: turning technical assumptions, evidence, workbook logic, and review comments into clear outputs that other people can inspect.",
   items: [
     {
-      label: "Current base",
+      label: "OWC / ABL Group",
       title: "Consultant at OWC / ABL Group",
       detail:
         "Renewable-energy advisory work across technical due diligence, energy yield assessment, design review, planning review, and stakeholder-ready reporting."
     },
     {
-      label: "Aggregate exposure",
+      label: "Renewable scale",
       title: "80+ projects, 5+ GW advisory context",
       detail:
-        "Public-safe scale signals from utility-scale solar PV, BESS, and Power-to-X work, kept at aggregate level without client or site details."
+        "Aggregate experience across utility-scale solar PV, BESS, and Power-to-X work, kept at portfolio level without client or site details."
     },
     {
-      label: "Operating focus",
+      label: "Workflow focus",
       title: "Optimise engineering workflows",
       detail:
         "The long-term focus is to make repeated expert work easier to structure, automate, inspect, and review without weakening accountability."
     }
-  ]
-};
-
-export const aboutProfile = {
-  eyebrow: "Positioning",
-  heading: "Selected work, explained from first principles.",
-  paragraphs: [
-    "The portfolio is intentionally short: each section states the problem, the system shape, and the evidence boundary.",
-    "HelioFabric is the flagship because it joins product judgement, data contracts, specialist-tool workflows, and governed AI-assisted delivery. 3D-RAMS sits beside it as a public local-first demo."
-  ],
-  focusAreas: [
-    "Renewable workflow design",
-    "Structured data contracts",
-    "Agent-assisted delivery",
-    "Evidence-led review",
-    "Public demos"
   ]
 };
 
@@ -102,31 +109,13 @@ export const capabilitySignals = [
 
 export const contactProfile = {
   eyebrow: "Profiles",
-  heading: "Public profiles and project links.",
+  heading: "Public profiles.",
   summary: "LinkedIn and GitHub are included as neutral profile references. No private details are published here.",
   linkedinLabel: "LinkedIn profile",
   linkedinUrl: "https://www.linkedin.com/in/boyong-w-160a04249/",
   githubLabel: "GitHub profile",
   githubUrl: "https://github.com/Capitano00"
 };
-
-export const portfolioLayers = [
-  {
-    label: "Signal",
-    title: "Product judgement",
-    detail: "Operational friction translated into product structure, ownership boundaries, and evidence."
-  },
-  {
-    label: "Flagship",
-    title: "HelioFabric",
-    detail: "An internal-platform case study for governed renewable-workflow tooling."
-  },
-  {
-    label: "Method",
-    title: "Responsible AI delivery",
-    detail: "AI-assisted build work framed through source-of-truth notes, verification, and review gates."
-  }
-];
 
 export const projectPortfolio = [
   {
@@ -139,7 +128,8 @@ export const projectPortfolio = [
     linkLabel: "Read case study",
     href: "#heliofabric-case-study",
     tags: ["FastAPI", "Next.js", "Tool Controller", "Review gates"],
-    proof: "Shows product judgement, data governance, sustained ownership, and supervised automation patterns."
+    proof: "Product judgement, data governance, sustained ownership, and supervised automation patterns.",
+    boundary: "Internal case study only; no public source code or private delivery material."
   },
   {
     id: "3d-rams",
@@ -151,19 +141,8 @@ export const projectPortfolio = [
     linkLabel: "View GitHub repo",
     href: "https://github.com/Capitano00/3D-RAMS",
     tags: ["Python", "React", "CesiumJS", "Safety gate"],
-    proof: "Shows public agentic engineering range while keeping certified RAMS and work approval out of scope."
-  },
-  {
-    id: "future-agentic-projects",
-    eyebrow: "Future slots",
-    title: "Reviewed public tools",
-    status: "Reserved",
-    summary:
-      "The portfolio is structured to add future standalone tools and experiments only when they are useful, safe to publish, and documented clearly.",
-    linkLabel: "View GitHub profile",
-    href: "https://github.com/Capitano00",
-    tags: ["Standalone tools", "Public experiments", "Reviewed demos"],
-    proof: "Keeps the portfolio extensible without making the public story depend on one project."
+    proof: "Public agentic engineering range with an explicit safety gate.",
+    boundary: "Demo briefing pack only; not certified RAMS, work approval, or production deployment."
   }
 ];
 
@@ -175,7 +154,7 @@ export const flagshipProject = {
   metrics: [
     { value: "300+", label: "reviewed changes" },
     { value: "10+", label: "tool workflows" },
-    { value: "Q2 2026", label: "public evidence review" }
+    { value: "Review-led", label: "acceptance model" }
   ]
 };
 
@@ -218,24 +197,6 @@ export const disclosureRules = [
   "Treat HelioFabric as a case study unless a separate release review approves standalone public code."
 ];
 
-export const currentSignals = [
-  {
-    label: "Workflow layer",
-    value: "Governed data and tools",
-    detail: "Reviewable project facts, evidence candidates, workbook exchange, and tool-run artefacts."
-  },
-  {
-    label: "AI posture",
-    value: "Supervised assistance",
-    detail: "Automation creates candidates and artefacts; acceptance remains explicit and review-led."
-  },
-  {
-    label: "Public record",
-    value: "Selective evidence",
-    detail: "The portfolio shows patterns, diagrams, and synthetic surfaces rather than private operating material."
-  }
-];
-
 export const statusCards = [
   {
     label: "Consulting input",
@@ -259,8 +220,8 @@ export const statusCards = [
   },
   {
     label: "Evidence",
-    value: "Public-safe proof",
-    detail: "Progress is described through high-level workflow evidence and reviewed visuals."
+    value: "Reviewed evidence",
+    detail: "Progress is described through high-level workflow evidence, synthetic visuals, and approved public claims."
   }
 ];
 
@@ -290,49 +251,3 @@ export const technicalFoundation = {
     }
   ]
 };
-
-export const productMapSteps = [
-  {
-    label: "Workflow pressure",
-    detail: "Repeated workbook and evidence handling"
-  },
-  {
-    label: "Data boundary",
-    detail: "Facts, candidates, outputs, acceptance"
-  },
-  {
-    label: "Tool Controller",
-    detail: "Previewed runs and artefacts"
-  },
-  {
-    label: "Human review",
-    detail: "Explicit acceptance before truth"
-  }
-];
-
-export const editorialMetrics = [
-  { value: "300+", label: "reviewed changes" },
-  { value: "Q2 2026", label: "public review point" },
-  { value: "Reviewed", label: "evidence level" }
-];
-
-export const projectAreas = [
-  {
-    title: "Governed project data",
-    summary:
-      "Facts, parameters, formula outputs, review states, and workbook contracts are kept separate so evidence does not become accidental truth.",
-    tags: ["Parameter Library", "Workbench", "Excel round trip"]
-  },
-  {
-    title: "Tool Controller",
-    summary:
-      "Internal tools run against selected context while retaining input previews, run records, and generated artefacts for supervised acceptance.",
-    tags: ["Tool runs", "Artefacts", "Input preview"]
-  },
-  {
-    title: "Responsible automation",
-    summary:
-      "AI-assisted workflows are framed as reviewable evidence paths, not silent canonical-data writers or unsupervised public claims.",
-    tags: ["Human review", "No secrets", "Reviewed first"]
-  }
-];
