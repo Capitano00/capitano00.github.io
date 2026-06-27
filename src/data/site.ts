@@ -17,7 +17,7 @@ export const heroProfile = {
   name: "Boyong Wang",
   headline: "Consultant @ OWC",
   summary:
-    "I work as a renewable-energy consultant at OWC / ABL Group and build tools around the friction I see in expert review work: documents, workbooks, assumptions, evidence, specialist tools, and sign-off loops.",
+    "I work within the Onshore Solar team, focusing on utility-scale PV and PV + BESS hybrid projects. I provide technical advisory and due diligence support for clients buying, selling, or developing assets, and for banks requiring lenders' technical advisory.",
   judgement:
     "The pattern I care about is simple: AI and automation can create useful candidates, but acceptance should stay explicit, traceable, and human-reviewed.",
   primaryAction: "View projects",
