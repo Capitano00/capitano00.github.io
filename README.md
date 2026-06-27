@@ -1,12 +1,10 @@
-# Boyong Wang Public Engineering Portfolio
+# Boyong Wang Personal Website
 
-Public GitHub Pages site for Boyong Wang's renewable-energy consulting foundation, applied AI workflow systems, HelioFabric flagship case study, and public demo project 3D-RAMS.
+GitHub Pages source for Boyong Wang's professional website.
 
-The public record stays concise: it starts from consulting context, states the workflow problem, describes the system shape, and keeps clear evidence boundaries before adding detail.
+Content starts from renewable-energy consulting experience, then shows applied AI workflow systems, side projects, and technical background. HelioFabric is presented as the flagship project inside the project section, while 3D-RAMS is the public demo repository.
 
-## Public Route
-
-Primary route: GitHub Pages.
+## Route
 
 ```text
 https://capitano00.github.io
@@ -18,8 +16,6 @@ Target repository:
 Capitano00/capitano00.github.io
 ```
 
-The GitHub Pages repository should contain approved public site source only. Keep local drafts, review notes, raw screenshots, raw brand source boards, secrets, local data stores, and HelioFabric source code out of the public repo.
-
 ## Local Commands
 
 ```powershell
@@ -28,43 +24,30 @@ npm run dev
 npm run build
 ```
 
-The static build output is generated in `dist/`.
+Static output is generated in `dist/`.
 
-## Publication Checklist
+## Site Structure
 
-Before pushing or publishing:
+- Professional career: OWC / ABL Group consulting foundation and aggregate renewable-advisory context.
+- Applied AI systems: document workflows, workbook/tool automation, review gates, data contracts, and traceable outputs.
+- Side projects: HelioFabric as the flagship project and 3D-RAMS as the public demo.
+- Technical background: physics, robotics, sensor fusion, and connected-vehicle research systems.
+- Profiles: LinkedIn, GitHub, and the 3D-RAMS repository.
+
+## Publication Rules
+
+- Do not publish client identities, sensitive site details, deal terms, access material, local data stores, report material, or confidential material.
+- Do not publish HelioFabric source code or raw operating material.
+- Do not imply HelioFabric is an official employer product.
+- Use synthetic, redacted, or reviewed visuals only.
+- Keep public chronology at quarterly level or remove it from the visible site.
+
+## Release Checklist
+
+Before pushing:
 
 1. Run `npm run build`.
-2. Search the tracked public repo for blocked content: private identities, sensitive place details, machine-specific paths, secret files, unapproved folders, unreviewed evidence files, unapproved report/workbook names, and draft update wording.
-3. Inspect the generated `dist/` page on desktop and mobile.
-4. Confirm GitHub profile and LinkedIn profile links work.
-5. Push only approved public site files to `Capitano00/capitano00.github.io`.
-
-## Project Structure
-
-The public page should keep five levels visible:
-
-- OWC / ABL Group consulting context as the professional foundation, using aggregate renewable-advisory evidence only.
-- Applied AI system patterns for documents, workbooks, tool runs, evidence candidates, and review gates.
-- HelioFabric as the flagship internal-platform case study with an architecture flow.
-- 3D-RAMS as the public local-first demo, using only claims already safe in the public repository.
-- Technical foundation from physics, robotics, and sensor fusion.
-
-## Brand Assets
-
-Public site assets are limited to reviewed public derivatives:
-
-- `public/brand/heliofabric-logo-lockup.png`
-- `public/brand/heliofabric-icon.png`
-- `public/favicon.png`
-- `public/og-image.png`
-
-Raw brand source boards and design-review notes stay local unless separately approved.
-
-## Disclosure Rules
-
-- Use UK English for public prose.
-- Do not publish private identities, private project details, sensitive place details, financial terms, secrets, unreviewed evidence files, local data stores, unapproved code trees, or confidential material.
-- Treat screenshots as synthetic, sanitised, or manually reviewed evidence only.
-- Do not publish internal-use details or unpublished role-status wording unless an approved public statement exists.
-- Present HelioFabric as an internal-platform case study, not external SaaS or an open-source code release.
+2. Search source and `dist/index.html` for blocked wording, local paths, secret markers, and sensitive project terms.
+3. Inspect desktop and mobile layouts.
+4. Confirm LinkedIn, GitHub, and 3D-RAMS links work.
+5. Push only reviewed website source to `Capitano00/capitano00.github.io`.

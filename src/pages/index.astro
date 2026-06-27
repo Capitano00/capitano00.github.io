@@ -1,66 +1,33 @@
 ---
 import BaseLayout from "@/layouts/BaseLayout.astro";
-import AnimatedTimeline from "@/components/AnimatedTimeline";
-import { mediaEvidence } from "@/data/media";
-import { timeline } from "@/data/timeline";
 import {
   appliedAISystems,
-  capabilitySignals,
-  contactProfile,
-  disclosureRules,
-  flagshipCaseStudy,
-  flagshipProject,
+  atAGlance,
+  careerFoundation,
   helioArchitecture,
-  personalProfile,
-  proofIndex,
-  ramsCaseStudy,
-  siteMeta,
-  statusCards,
-  technicalFoundation
+  heroProfile,
+  profileLinks,
+  projects,
+  publicationNote,
+  technicalBackground
 } from "@/data/site";
 
-const caseStudyPanels = [
-  {
-    title: "Implementation evidence",
-    intro: "Representative evidence, summarised without source code or private operating material.",
-    items: flagshipCaseStudy.evidence
-  },
-  {
-    title: "Delivery method",
-    intro: "The method keeps AI-assisted work inspectable and review-led.",
-    items: flagshipCaseStudy.method
-  },
-  {
-    title: "Safety and publication limits",
-    intro: "The case study keeps private material out of the public page.",
-    items: flagshipCaseStudy.safeguards
-  }
-];
-
-const hasLinkedInUrl = contactProfile.linkedinUrl.trim().startsWith("http");
-const linkedInHref = hasLinkedInUrl
-  ? contactProfile.linkedinUrl
-  : "https://www.linkedin.com/search/results/people/?keywords=Boyong%20Wang";
-
 const sectionNav = [
-  { label: "Home", href: "#profile" },
+  { label: "Career", href: "#career" },
   { label: "Applied AI", href: "#applied-ai" },
-  { label: "HelioFabric", href: "#heliofabric-case-study" },
-  { label: "3D-RAMS", href: "#rams-demo" },
-  { label: "Method", href: "#method" },
+  { label: "Projects", href: "#projects" },
   { label: "Background", href: "#background" },
-  { label: "Timeline", href: "#timeline" },
   { label: "Profiles", href: "#profiles" }
 ];
 ---
 
 <BaseLayout>
   <main id="main">
-    <nav aria-label="Section navigation" class="sticky top-0 z-30 border-b border-ink/10 bg-paper/92 backdrop-blur">
+    <nav aria-label="Section navigation" class="sticky top-0 z-30 border-b border-ink/10 bg-paper/94 backdrop-blur">
       <div class="mx-auto flex max-w-7xl items-center gap-2 overflow-x-auto px-5 py-2 sm:px-8">
         {
           sectionNav.map((item) => (
-            <a class="focus-ring shrink-0 rounded-md px-3 py-2 text-sm font-semibold text-ink-soft hover:bg-white/80 hover:text-ink" href={item.href}>
+            <a class="focus-ring shrink-0 rounded-md px-3 py-2 text-sm font-semibold text-ink-soft hover:bg-white/85 hover:text-ink" href={item.href}>
               {item.label}
             </a>
           ))
@@ -69,206 +36,68 @@ const sectionNav = [
     </nav>
 
     <section class="border-b border-ink/10">
-      <div class="mx-auto grid max-w-7xl gap-8 px-5 py-8 sm:px-8 lg:grid-cols-[0.95fr_1.05fr] lg:py-12">
+      <div class="mx-auto grid max-w-7xl gap-8 px-5 py-10 sm:px-8 lg:grid-cols-[1fr_0.82fr] lg:py-14">
         <div class="min-w-0">
-          <p id="profile" class="text-xs font-semibold uppercase tracking-[0.14em] text-copper">{personalProfile.eyebrow}</p>
-          <h1 class="mt-4 max-w-4xl break-words font-display text-4xl font-semibold leading-[1.03] text-ink sm:text-[3rem] md:text-[3.4rem]">
-            {personalProfile.name}
+          <p class="text-xs font-semibold uppercase tracking-[0.14em] text-copper">{heroProfile.eyebrow}</p>
+          <h1 class="mt-4 max-w-4xl break-words font-display text-4xl font-semibold leading-[1.03] text-ink sm:text-[3rem] md:text-[3.35rem]">
+            {heroProfile.name}
           </h1>
-          <p class="mt-5 max-w-3xl break-words font-display text-xl font-semibold leading-tight text-ink sm:text-2xl md:text-3xl">
-            {personalProfile.headline}
+          <p class="mt-5 max-w-3xl break-words font-display text-xl font-semibold leading-tight text-ink sm:text-2xl md:text-[2rem]">
+            {heroProfile.headline}
           </p>
           <p class="mt-5 max-w-2xl text-base leading-7 text-ink-soft">
-            {personalProfile.summary}
+            {heroProfile.summary}
           </p>
           <p class="mt-4 max-w-2xl rounded-md border border-copper/20 bg-white/72 p-4 text-sm font-semibold leading-6 text-ink">
-            {personalProfile.judgement}
+            {heroProfile.judgement}
           </p>
           <div class="mt-7 flex flex-wrap gap-3">
-            <a class="focus-ring rounded-md bg-ink px-4 py-2.5 text-sm font-semibold text-paper shadow-lift" href={personalProfile.primaryActionHref}>
-              {personalProfile.primaryAction}
+            <a class="focus-ring rounded-md bg-ink px-4 py-2.5 text-sm font-semibold text-paper shadow-lift" href={heroProfile.primaryActionHref}>
+              {heroProfile.primaryAction}
             </a>
-            <a class="focus-ring rounded-md border border-ink/20 bg-white/70 px-4 py-2.5 text-sm font-semibold text-ink" href={personalProfile.secondaryActionHref}>
-              {personalProfile.secondaryAction}
+            <a class="focus-ring rounded-md border border-ink/20 bg-white/72 px-4 py-2.5 text-sm font-semibold text-ink" href={heroProfile.secondaryActionHref}>
+              {heroProfile.secondaryAction}
+            </a>
+            <a class="focus-ring rounded-md border border-copper/30 bg-white/72 px-4 py-2.5 text-sm font-semibold text-ink" href={heroProfile.tertiaryActionHref} target="_blank" rel="noreferrer">
+              {heroProfile.tertiaryAction}
             </a>
           </div>
-          <dl class="mt-8 grid gap-2 sm:grid-cols-2">
+        </div>
+
+        <aside aria-labelledby="glance-heading" class="rounded-md border border-ink/10 bg-white/66 p-5 shadow-lift backdrop-blur sm:p-6">
+          <p class="text-xs font-semibold uppercase tracking-[0.14em] text-copper">At a glance</p>
+          <h2 id="glance-heading" class="mt-3 font-display text-2xl font-semibold leading-tight text-ink">
+            Career context, system craft, and public demos.
+          </h2>
+          <dl class="mt-6 grid gap-3">
             {
-              proofIndex.map((item) => (
-                <div class="rounded-md border border-ink/10 bg-white/70 px-4 py-3">
+              atAGlance.map((item) => (
+                <div class="rounded-md border border-ink/10 bg-paper/72 px-4 py-3">
                   <dt class="text-xs font-semibold uppercase tracking-[0.1em] text-copper">{item.label}</dt>
                   <dd class="mt-1 text-sm font-semibold leading-5 text-ink">{item.value}</dd>
                 </div>
               ))
             }
           </dl>
-        </div>
-
-        <aside aria-labelledby="hero-card-heading" class="rounded-md border border-ink/10 bg-white/64 p-5 shadow-lift backdrop-blur sm:p-6">
-          <p class="text-xs font-semibold uppercase tracking-[0.14em] text-copper">{flagshipProject.eyebrow}</p>
-          <img
-            src={siteMeta.brand.logoLockup}
-            alt="HelioFabric"
-            width="1200"
-            height="260"
-            class="mt-6 h-auto w-48 sm:w-60"
-          />
-          <h2 id="hero-card-heading" class="mt-7 max-w-2xl font-display text-2xl font-semibold leading-tight text-ink md:text-3xl">
-            {flagshipProject.heading}
-          </h2>
-          <p class="mt-4 max-w-2xl text-sm leading-6 text-ink-soft sm:text-base sm:leading-7">
-            {flagshipProject.summary}
-          </p>
-          <div class="mt-6 grid gap-3 sm:grid-cols-3">
-            {
-              flagshipProject.metrics.map((metric) => (
-                <div class="rounded-md border border-ink/10 bg-paper/72 p-4">
-                  <p class="font-display text-xl font-semibold text-ink">{metric.value}</p>
-                  <p class="mt-1 text-xs font-semibold uppercase tracking-[0.08em] text-ink-soft">{metric.label}</p>
-                </div>
-              ))
-            }
-          </div>
         </aside>
       </div>
     </section>
 
-    <section id="applied-ai" aria-labelledby="applied-ai-heading" class="mx-auto max-w-7xl px-5 py-12 sm:px-8">
+    <section id="career" aria-labelledby="career-heading" class="mx-auto max-w-7xl px-5 py-12 sm:px-8">
       <div class="grid gap-6 lg:grid-cols-[0.72fr_1.28fr] lg:items-end">
         <div>
-          <p class="text-xs font-semibold uppercase tracking-[0.14em] text-copper">{appliedAISystems.eyebrow}</p>
-          <h2 id="applied-ai-heading" class="mt-3 max-w-xl font-display text-3xl font-semibold leading-tight text-ink md:text-4xl">
-            {appliedAISystems.heading}
+          <p class="text-xs font-semibold uppercase tracking-[0.14em] text-copper">{careerFoundation.eyebrow}</p>
+          <h2 id="career-heading" class="mt-3 max-w-xl font-display text-3xl font-semibold leading-tight text-ink md:text-4xl">
+            {careerFoundation.heading}
           </h2>
         </div>
         <p class="max-w-3xl text-sm leading-6 text-ink-soft sm:text-base sm:leading-7">
-          {appliedAISystems.intro}
+          {careerFoundation.intro}
         </p>
       </div>
-      <div class="mt-8 grid gap-4 md:grid-cols-2 xl:grid-cols-4">
+      <div class="mt-8 grid gap-4 md:grid-cols-3">
         {
-          appliedAISystems.items.map((item) => (
-            <article class="rounded-md border border-ink/10 bg-white/68 p-5 shadow-sm">
-              <p class="text-xs font-semibold uppercase tracking-[0.1em] text-copper">{item.label}</p>
-              <h3 class="mt-3 font-display text-xl font-semibold leading-tight text-ink">{item.title}</h3>
-              <p class="mt-3 text-sm leading-6 text-ink-soft">{item.detail}</p>
-            </article>
-          ))
-        }
-      </div>
-    </section>
-
-    <section aria-labelledby="proof-heading" class="mx-auto max-w-7xl px-5 py-12 sm:px-8">
-      <div class="grid gap-6 lg:grid-cols-[0.72fr_1.28fr] lg:items-end">
-        <div>
-          <p class="text-xs font-semibold uppercase tracking-[0.14em] text-copper">Engineering signals</p>
-          <h2 id="proof-heading" class="mt-3 max-w-xl font-display text-3xl font-semibold leading-tight text-ink md:text-4xl">
-            How I turn workflow friction into reviewable tools.
-          </h2>
-        </div>
-        <p class="max-w-3xl text-sm leading-6 text-ink-soft sm:text-base sm:leading-7">
-          The work starts with repeated operational pressure, then turns it into explicit data boundaries, tool surfaces, evidence trails, and review points.
-        </p>
-      </div>
-      <div class="mt-8 grid gap-3 md:grid-cols-2 xl:grid-cols-4">
-        {
-          capabilitySignals.map((signal) => (
-            <article class="rounded-md border border-ink/10 bg-white/68 p-5">
-              <p class="text-xs font-semibold uppercase tracking-[0.1em] text-copper">{signal.label}</p>
-              <h3 class="mt-3 font-display text-xl font-semibold leading-tight text-ink">{signal.title}</h3>
-              <p class="mt-3 text-sm leading-6 text-ink-soft">{signal.detail}</p>
-            </article>
-          ))
-        }
-      </div>
-    </section>
-
-    <section id="heliofabric-case-study" aria-labelledby="case-study-heading" class="bg-paper-warm/55">
-      <div class="mx-auto grid max-w-7xl gap-8 px-5 py-12 sm:px-8 lg:grid-cols-[0.72fr_1.28fr]">
-        <div>
-          <p class="text-xs font-semibold uppercase tracking-[0.14em] text-copper">{flagshipCaseStudy.eyebrow}</p>
-          <h2 id="case-study-heading" class="mt-3 max-w-2xl font-display text-3xl font-semibold leading-tight text-ink md:text-4xl">
-            {flagshipCaseStudy.heading}
-          </h2>
-          <p class="mt-5 max-w-2xl text-sm leading-6 text-ink-soft sm:text-base sm:leading-7">
-            {flagshipCaseStudy.statusNote}
-          </p>
-        </div>
-        <div class="grid gap-4">
-          <div class="grid gap-4 md:grid-cols-2">
-            {
-              flagshipCaseStudy.executiveSummary.map((item) => (
-                <article class="rounded-md border border-ink/10 bg-white/76 p-5">
-                  <p class="text-xs font-semibold uppercase tracking-[0.1em] text-copper">{item.label}</p>
-                  <h3 class="mt-3 font-display text-xl font-semibold leading-tight text-ink">{item.title}</h3>
-                  <p class="mt-3 text-sm leading-6 text-ink-soft">{item.detail}</p>
-                </article>
-              ))
-            }
-          </div>
-          <article aria-labelledby="architecture-heading" class="rounded-md border border-ink/10 bg-white/76 p-5">
-            <div class="grid gap-4 lg:grid-cols-[0.58fr_1.42fr]">
-              <div>
-                <p class="text-xs font-semibold uppercase tracking-[0.1em] text-copper">Architecture</p>
-                <h3 id="architecture-heading" class="mt-3 font-display text-xl font-semibold leading-tight text-ink">
-                  Inputs become accepted state only after traceable review.
-                </h3>
-                <p class="mt-3 text-sm leading-6 text-ink-soft">
-                  The flow makes the key applied-AI judgement visible: model or tool output is useful, but it is not the source of truth.
-                </p>
-              </div>
-              <ol class="grid gap-3 md:grid-cols-5" aria-label="HelioFabric architecture flow">
-                {
-                  helioArchitecture.map((step, index) => (
-                    <li class="relative rounded-md border border-ink/10 bg-paper/72 p-4">
-                      <p class="text-xs font-semibold uppercase tracking-[0.08em] text-copper">{step.label}</p>
-                      <h4 class="mt-2 font-display text-base font-semibold leading-tight text-ink">{step.title}</h4>
-                      <p class="mt-2 text-xs leading-5 text-ink-soft">{step.detail}</p>
-                      {index < helioArchitecture.length - 1 && (
-                        <span aria-hidden="true" class="absolute -right-2 top-1/2 hidden h-px w-4 bg-copper/50 md:block" />
-                      )}
-                    </li>
-                  ))
-                }
-              </ol>
-            </div>
-          </article>
-          <div class="grid gap-3">
-            {
-              caseStudyPanels.map((panel) => (
-                <details class="rounded-md border border-ink/10 bg-white/76 shadow-sm">
-                  <summary class="focus-ring cursor-pointer rounded-md px-5 py-4 font-display text-xl font-semibold leading-tight text-ink">
-                    {panel.title}
-                  </summary>
-                  <div class="border-t border-ink/10 px-5 pb-5 pt-4">
-                    <p class="max-w-3xl text-sm leading-6 text-ink-soft">{panel.intro}</p>
-                    <ul class="mt-4 grid gap-2 text-sm leading-6 text-ink-soft md:grid-cols-2">
-                      {panel.items.map((item) => <li class="rounded-md bg-paper/75 px-4 py-3">{item}</li>)}
-                    </ul>
-                  </div>
-                </details>
-              ))
-            }
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="rams-demo" aria-labelledby="rams-heading" class="mx-auto max-w-7xl px-5 py-12 sm:px-8">
-      <div class="grid gap-6 lg:grid-cols-[0.72fr_1.28fr] lg:items-end">
-        <div>
-          <p class="text-xs font-semibold uppercase tracking-[0.14em] text-copper">{ramsCaseStudy.eyebrow}</p>
-          <h2 id="rams-heading" class="mt-3 max-w-xl font-display text-3xl font-semibold leading-tight text-ink md:text-4xl">
-            {ramsCaseStudy.heading}
-          </h2>
-        </div>
-        <p class="max-w-3xl text-sm leading-6 text-ink-soft sm:text-base sm:leading-7">
-          {ramsCaseStudy.summary}
-        </p>
-      </div>
-      <div class="mt-8 grid gap-4 md:grid-cols-2 xl:grid-cols-4">
-        {
-          ramsCaseStudy.points.map((point) => (
+          careerFoundation.points.map((point) => (
             <article class="rounded-md border border-ink/10 bg-white/70 p-5 shadow-sm">
               <p class="text-xs font-semibold uppercase tracking-[0.1em] text-copper">{point.label}</p>
               <h3 class="mt-3 font-display text-xl font-semibold leading-tight text-ink">{point.title}</h3>
@@ -277,38 +106,28 @@ const sectionNav = [
           ))
         }
       </div>
-      <div class="mt-6 flex flex-wrap items-center justify-between gap-4 rounded-md border border-ink/10 bg-white/72 p-5">
-        <div class="flex flex-wrap gap-2">
-          {ramsCaseStudy.tags.map((tag) => (
-            <span class="rounded-md border border-ink/12 bg-paper px-2.5 py-1 text-xs font-semibold text-ink-soft">{tag}</span>
-          ))}
-        </div>
-        <a class="focus-ring inline-flex rounded-md bg-ink px-4 py-2.5 text-sm font-semibold text-paper" href={ramsCaseStudy.href} target="_blank" rel="noreferrer">
-          {ramsCaseStudy.linkLabel}
-        </a>
-      </div>
     </section>
 
-    <section id="method" aria-labelledby="method-heading" class="bg-ink text-paper">
+    <section id="applied-ai" aria-labelledby="applied-ai-heading" class="bg-paper-warm/55">
       <div class="mx-auto max-w-7xl px-5 py-12 sm:px-8">
         <div class="grid gap-6 lg:grid-cols-[0.72fr_1.28fr] lg:items-end">
           <div>
-            <p class="text-xs font-semibold uppercase tracking-[0.14em] text-solar">Method</p>
-            <h2 id="method-heading" class="mt-3 max-w-xl font-display text-3xl font-semibold leading-tight md:text-4xl">
-              Governed AI-assisted delivery.
+            <p class="text-xs font-semibold uppercase tracking-[0.14em] text-copper">{appliedAISystems.eyebrow}</p>
+            <h2 id="applied-ai-heading" class="mt-3 max-w-xl font-display text-3xl font-semibold leading-tight text-ink md:text-4xl">
+              {appliedAISystems.heading}
             </h2>
           </div>
-          <p class="max-w-3xl text-sm leading-6 text-paper/76 sm:text-base sm:leading-7">
-            The working pattern is simple: define the workflow, protect the data boundary, make outputs inspectable, then accept results explicitly.
+          <p class="max-w-3xl text-sm leading-6 text-ink-soft sm:text-base sm:leading-7">
+            {appliedAISystems.intro}
           </p>
         </div>
-        <div class="mt-8 grid gap-4 md:grid-cols-2 xl:grid-cols-5">
+        <div class="mt-8 grid gap-4 md:grid-cols-2 xl:grid-cols-4">
           {
-            statusCards.map((card) => (
-              <article class="rounded-md border border-paper/14 bg-paper/5 p-5">
-                <p class="text-xs font-semibold uppercase tracking-[0.1em] text-solar">{card.label}</p>
-                <h3 class="mt-2 font-display text-xl font-semibold leading-tight">{card.value}</h3>
-                <p class="mt-2 text-sm leading-6 text-paper/76">{card.detail}</p>
+            appliedAISystems.items.map((item) => (
+              <article class="rounded-md border border-ink/10 bg-white/74 p-5 shadow-sm">
+                <p class="text-xs font-semibold uppercase tracking-[0.1em] text-copper">{item.label}</p>
+                <h3 class="mt-3 font-display text-xl font-semibold leading-tight text-ink">{item.title}</h3>
+                <p class="mt-3 text-sm leading-6 text-ink-soft">{item.detail}</p>
               </article>
             ))
           }
@@ -316,73 +135,139 @@ const sectionNav = [
       </div>
     </section>
 
-    <section id="background" aria-labelledby="background-heading" class="mx-auto max-w-7xl px-5 py-12 sm:px-8">
+    <section id="projects" aria-labelledby="projects-heading" class="mx-auto max-w-7xl px-5 py-12 sm:px-8">
       <div class="grid gap-6 lg:grid-cols-[0.72fr_1.28fr] lg:items-end">
         <div>
-          <p class="text-xs font-semibold uppercase tracking-[0.14em] text-copper">{technicalFoundation.eyebrow}</p>
-          <h2 id="background-heading" class="mt-3 max-w-xl font-display text-3xl font-semibold leading-tight text-ink md:text-4xl">
-            {technicalFoundation.heading}
+          <p class="text-xs font-semibold uppercase tracking-[0.14em] text-copper">Side projects</p>
+          <h2 id="projects-heading" class="mt-3 max-w-xl font-display text-3xl font-semibold leading-tight text-ink md:text-4xl">
+            Projects that turn the workflow pattern into working systems.
           </h2>
         </div>
         <p class="max-w-3xl text-sm leading-6 text-ink-soft sm:text-base sm:leading-7">
-          {technicalFoundation.intro}
+          HelioFabric is the flagship project. 3D-RAMS is the public demo that makes the same review-led pattern easier to inspect.
         </p>
       </div>
-      <div class="mt-8 grid gap-4 md:grid-cols-3">
+
+      <div class="mt-8 grid gap-6">
         {
-          technicalFoundation.items.map((item) => (
-            <article class="rounded-md border border-ink/10 bg-white/70 p-5 shadow-sm">
-              <p class="text-xs font-semibold uppercase tracking-[0.1em] text-copper">{item.label}</p>
-              <h3 class="mt-3 font-display text-xl font-semibold leading-tight text-ink">{item.title}</h3>
-              <p class="mt-3 text-sm leading-6 text-ink-soft">{item.detail}</p>
+          projects.map((project) => (
+            <article id={project.id} class="rounded-md border border-ink/10 bg-white/72 p-5 shadow-sm sm:p-6">
+              <div class="grid gap-6 lg:grid-cols-[0.62fr_1.38fr]">
+                <div>
+                  <p class="text-xs font-semibold uppercase tracking-[0.14em] text-copper">{project.eyebrow}</p>
+                  {project.image && (
+                    <img
+                      src={project.image}
+                      alt={project.imageAlt ?? project.title}
+                      width="1200"
+                      height="260"
+                      decoding="async"
+                      class="mt-5 h-auto w-48 sm:w-56"
+                    />
+                  )}
+                  <h3 class="mt-4 font-display text-2xl font-semibold leading-tight text-ink md:text-3xl">{project.title}</h3>
+                  <p class="mt-3 text-lg font-semibold leading-7 text-ink">{project.subtitle}</p>
+                  <p class="mt-4 text-sm leading-6 text-ink-soft sm:text-base sm:leading-7">{project.summary}</p>
+                  <p class="mt-4 inline-flex rounded-md border border-copper/25 bg-paper px-3 py-1.5 text-xs font-semibold uppercase tracking-[0.08em] text-copper">
+                    {project.status}
+                  </p>
+                  {project.href && (
+                    <div class="mt-5">
+                      <a class="focus-ring inline-flex rounded-md bg-ink px-4 py-2.5 text-sm font-semibold text-paper" href={project.href} target="_blank" rel="noreferrer">
+                        {project.linkLabel}
+                      </a>
+                    </div>
+                  )}
+                </div>
+
+                <div class="grid gap-4">
+                  <div class="grid gap-3 sm:grid-cols-3">
+                    {
+                      project.metrics.map((metric) => (
+                        <div class="rounded-md border border-ink/10 bg-paper/76 p-4">
+                          <p class="font-display text-xl font-semibold text-ink">{metric.value}</p>
+                          <p class="mt-1 text-xs font-semibold uppercase tracking-[0.08em] text-ink-soft">{metric.label}</p>
+                        </div>
+                      ))
+                    }
+                  </div>
+
+                  <div class="grid gap-4 md:grid-cols-3">
+                    {
+                      project.points.map((point) => (
+                        <section class="rounded-md border border-ink/10 bg-white/80 p-4">
+                          <p class="text-xs font-semibold uppercase tracking-[0.1em] text-copper">{point.label}</p>
+                          <h4 class="mt-3 font-display text-lg font-semibold leading-tight text-ink">{point.title}</h4>
+                          <p class="mt-3 text-sm leading-6 text-ink-soft">{point.detail}</p>
+                        </section>
+                      ))
+                    }
+                  </div>
+
+                  {project.id === "heliofabric" && (
+                    <section aria-labelledby="architecture-heading" class="rounded-md border border-ink/10 bg-paper/72 p-4">
+                      <h4 id="architecture-heading" class="font-display text-xl font-semibold leading-tight text-ink">
+                        Architecture pattern
+                      </h4>
+                      <ol class="mt-4 grid gap-3 md:grid-cols-5" aria-label="HelioFabric architecture flow">
+                        {
+                          helioArchitecture.map((step, index) => (
+                            <li class="relative rounded-md border border-ink/10 bg-white/80 p-3">
+                              <p class="text-xs font-semibold uppercase tracking-[0.08em] text-copper">{step.label}</p>
+                              <h5 class="mt-2 font-display text-base font-semibold leading-tight text-ink">{step.title}</h5>
+                              <p class="mt-2 text-xs leading-5 text-ink-soft">{step.detail}</p>
+                              {index < helioArchitecture.length - 1 && (
+                                <span aria-hidden="true" class="absolute -right-2 top-1/2 hidden h-px w-4 bg-copper/50 md:block" />
+                              )}
+                            </li>
+                          ))
+                        }
+                      </ol>
+                    </section>
+                  )}
+
+                  <div class="grid gap-3">
+                    {
+                      project.details.map((panel) => (
+                        <details class="rounded-md border border-ink/10 bg-white/80 shadow-sm">
+                          <summary class="focus-ring cursor-pointer rounded-md px-4 py-3 font-display text-lg font-semibold leading-tight text-ink">
+                            {panel.title}
+                          </summary>
+                          <ul class="grid gap-2 border-t border-ink/10 px-4 pb-4 pt-3 text-sm leading-6 text-ink-soft md:grid-cols-2">
+                            {panel.items.map((item) => <li class="rounded-md bg-paper/75 px-4 py-3">{item}</li>)}
+                          </ul>
+                        </details>
+                      ))
+                    }
+                  </div>
+                </div>
+              </div>
             </article>
           ))
         }
       </div>
     </section>
 
-    <section id="timeline" aria-labelledby="timeline-heading" class="mx-auto max-w-7xl px-5 py-12 sm:px-8">
-      <div class="mb-8 grid gap-6 lg:grid-cols-[0.72fr_1.28fr] lg:items-end">
-        <div>
-          <p class="text-xs font-semibold uppercase tracking-[0.14em] text-copper">Quarterly timeline</p>
-          <h2 id="timeline-heading" class="mt-3 font-display text-3xl font-semibold text-ink md:text-4xl">
-            Quarterly milestones without private chronology.
-          </h2>
-        </div>
-        <p class="max-w-3xl text-sm leading-6 text-ink-soft sm:text-base sm:leading-7">
-          The timeline shows maturity of the work without exposing day-to-day notes, private context, or unnecessary chronology.
-        </p>
-      </div>
-      <AnimatedTimeline client:visible items={timeline} />
-    </section>
-
-    <section aria-labelledby="visuals-heading" class="bg-paper-warm/55">
-      <div class="mx-auto grid max-w-7xl gap-8 px-5 py-12 sm:px-8 lg:grid-cols-[0.72fr_1.28fr]">
-        <div>
-          <p class="text-xs font-semibold uppercase tracking-[0.14em] text-copper">Visual evidence</p>
-          <h2 id="visuals-heading" class="mt-3 max-w-xl font-display text-3xl font-semibold leading-tight text-ink md:text-4xl">
-            Product surfaces, shown with reviewed visuals.
-          </h2>
-          <p class="mt-5 text-sm leading-6 text-ink-soft sm:text-base sm:leading-7">
-            The visuals show how the workflow is structured: workbench surfaces, tool runs, review states, and evidence candidates, using synthetic or reviewed assets.
+    <section id="background" aria-labelledby="background-heading" class="bg-ink text-paper">
+      <div class="mx-auto max-w-7xl px-5 py-12 sm:px-8">
+        <div class="grid gap-6 lg:grid-cols-[0.72fr_1.28fr] lg:items-end">
+          <div>
+            <p class="text-xs font-semibold uppercase tracking-[0.14em] text-solar">{technicalBackground.eyebrow}</p>
+            <h2 id="background-heading" class="mt-3 max-w-xl font-display text-3xl font-semibold leading-tight md:text-4xl">
+              {technicalBackground.heading}
+            </h2>
+          </div>
+          <p class="max-w-3xl text-sm leading-6 text-paper/76 sm:text-base sm:leading-7">
+            {technicalBackground.intro}
           </p>
         </div>
-        <div class="grid gap-4 md:grid-cols-2">
+        <div class="mt-8 grid gap-4 md:grid-cols-3">
           {
-            mediaEvidence.slice(0, 4).map((item) => (
-              <article class="rounded-md border border-ink/10 bg-white/72 p-4 shadow-sm">
-                {item.image && (
-                  <img
-                    src={item.image}
-                    alt={item.alt ?? item.title}
-                  width="1440"
-                  height="900"
-                  decoding="async"
-                  class="aspect-[16/10] w-full rounded-md border border-ink/10 bg-paper object-contain"
-                />
-                )}
-                <h3 class="mt-4 font-display text-xl font-semibold leading-tight text-ink">{item.title}</h3>
-                <p class="mt-3 text-sm leading-6 text-ink-soft">{item.intendedUse}</p>
+            technicalBackground.items.map((item) => (
+              <article class="rounded-md border border-paper/14 bg-paper/5 p-5">
+                <p class="text-xs font-semibold uppercase tracking-[0.1em] text-solar">{item.label}</p>
+                <h3 class="mt-3 font-display text-xl font-semibold leading-tight">{item.title}</h3>
+                <p class="mt-3 text-sm leading-6 text-paper/76">{item.detail}</p>
               </article>
             ))
           }
@@ -391,38 +276,39 @@ const sectionNav = [
     </section>
 
     <section id="profiles" aria-labelledby="profiles-heading" class="mx-auto max-w-7xl px-5 py-12 sm:px-8">
-      <div class="grid gap-8 rounded-md bg-ink p-6 text-paper md:grid-cols-[0.8fr_1.2fr] md:p-8">
+      <div class="grid gap-8 rounded-md border border-ink/10 bg-white/72 p-6 shadow-sm md:grid-cols-[0.8fr_1.2fr] md:p-8">
         <div>
-          <p class="text-xs font-semibold uppercase tracking-[0.14em] text-solar">{contactProfile.eyebrow}</p>
-          <h2 id="profiles-heading" class="mt-3 max-w-xl font-display text-3xl font-semibold leading-tight md:text-4xl">
-            {contactProfile.heading}
+          <p class="text-xs font-semibold uppercase tracking-[0.14em] text-copper">{profileLinks.eyebrow}</p>
+          <h2 id="profiles-heading" class="mt-3 max-w-xl font-display text-3xl font-semibold leading-tight text-ink md:text-4xl">
+            {profileLinks.heading}
           </h2>
         </div>
         <div class="flex flex-col items-start justify-between gap-5">
-          <p class="max-w-2xl text-sm leading-6 text-paper/76 sm:text-base sm:leading-7">{contactProfile.summary}</p>
+          <p class="max-w-2xl text-sm leading-6 text-ink-soft sm:text-base sm:leading-7">{profileLinks.summary}</p>
           <div class="flex flex-wrap gap-3">
-            <a class="focus-ring inline-flex rounded-md bg-solar px-4 py-2.5 text-sm font-semibold text-ink shadow-lift" href={linkedInHref} target="_blank" rel="noreferrer">
-              {contactProfile.linkedinLabel}
-            </a>
-            <a class="focus-ring inline-flex rounded-md border border-paper/20 px-4 py-2.5 text-sm font-semibold text-paper" href={contactProfile.githubUrl} target="_blank" rel="noreferrer">
-              {contactProfile.githubLabel}
-            </a>
+            {
+              profileLinks.links.map((link) => (
+                <a class="focus-ring inline-flex rounded-md bg-ink px-4 py-2.5 text-sm font-semibold text-paper shadow-lift" href={link.href} target="_blank" rel="noreferrer">
+                  {link.label}
+                </a>
+              ))
+            }
           </div>
         </div>
       </div>
     </section>
 
-    <section aria-labelledby="disclosure-heading" class="mx-auto max-w-7xl px-5 pb-14 sm:px-8">
+    <section aria-labelledby="publication-heading" class="mx-auto max-w-7xl px-5 pb-14 sm:px-8">
       <div class="grid gap-8 border-y border-copper/25 py-8 md:grid-cols-[0.72fr_1.28fr]">
         <div>
-          <p class="text-xs font-semibold uppercase tracking-[0.14em] text-copper">Publication boundary</p>
-          <h2 id="disclosure-heading" class="mt-3 font-display text-3xl font-semibold leading-tight text-ink md:text-4xl">
-            What this page leaves out.
+          <p class="text-xs font-semibold uppercase tracking-[0.14em] text-copper">{publicationNote.eyebrow}</p>
+          <h2 id="publication-heading" class="mt-3 font-display text-2xl font-semibold leading-tight text-ink md:text-3xl">
+            {publicationNote.heading}
           </h2>
         </div>
-        <div class="grid gap-3 md:grid-cols-2">
+        <div class="grid gap-3 md:grid-cols-3">
           {
-            disclosureRules.map((rule) => (
+            publicationNote.rules.map((rule) => (
               <p class="rounded-md border border-ink/10 bg-white/72 px-4 py-3 text-sm leading-6 text-ink-soft">{rule}</p>
             ))
           }
