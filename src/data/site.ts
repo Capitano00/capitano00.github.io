@@ -127,7 +127,7 @@ export const projects: Project[] = [
     subtitle: "Governed workflow layer for renewable-project review.",
     summary:
       "HelioFabric organises project facts, evidence candidates, workbook exchanges, tool runs, generated artefacts, and explicit review states.",
-    status: "Internal R&D / internal platform",
+    status: "Private repo / internal R&D platform",
     image: siteMeta.brand.logoLockup,
     imageAlt: "HelioFabric logo",
     metrics: [
