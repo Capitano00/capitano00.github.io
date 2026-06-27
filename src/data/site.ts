@@ -13,9 +13,9 @@ export const siteMeta = {
 };
 
 export const heroProfile = {
-  eyebrow: "Renewable consulting + applied AI systems",
+  eyebrow: "Renewable energy technical advisory + AI automation for engineering workflow efficiency",
   name: "Boyong Wang",
-  headline: "I build reviewable software for engineering workflows.",
+  headline: "Consultant @ OWC",
   summary:
     "I work as a renewable-energy consultant at OWC / ABL Group and build tools around the friction I see in expert review work: documents, workbooks, assumptions, evidence, specialist tools, and sign-off loops.",
   judgement:
