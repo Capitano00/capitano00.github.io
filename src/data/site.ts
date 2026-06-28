@@ -117,7 +117,6 @@ type Project = {
   linkLabel?: string;
   metrics: Array<{ value: string; label: string }>;
   points: Array<{ label: string; title: string; detail: string }>;
-  details: Array<{ title: string; items: string[] }>;
 };
 
 export const projects: Project[] = [
@@ -150,29 +149,16 @@ export const projects: Project[] = [
           "The product pattern separates canonical facts, extracted candidates, tool outputs, workbook exchange, and accepted state."
       },
       {
+        label: "Implementation",
+        title: "FastAPI service and React workbench",
+        detail:
+          "Python/FastAPI services, React/TypeScript surfaces, relational project records, workbook exchange, generated artefacts, and Tool Controller run records support preview, execution, and supervised acceptance."
+      },
+      {
         label: "Governance",
         title: "Candidates before truth",
         detail:
           "Automation output is useful only when evidence, assumptions, and review state are visible before acceptance."
-      }
-    ],
-    details: [
-      {
-        title: "Implementation evidence",
-        items: [
-          "Python/FastAPI backend and React/TypeScript frontend.",
-          "Relational data model for project facts, parameters, review states, and workbook exchange.",
-          "Tool Controller pattern for input preview, run records, generated artefacts, and supervised acceptance.",
-          "Agent-assisted delivery supported by source-of-truth notes, verification commands, and handoff records."
-        ]
-      },
-      {
-        title: "Publication limits",
-        items: [
-          "No HelioFabric source code is published here.",
-          "No client identities, sensitive site details, access material, local stores, or report material are included.",
-          "AI and automation are described as supervised support, not autonomous engineering judgement."
-        ]
       }
     ]
   },
@@ -209,16 +195,6 @@ export const projects: Project[] = [
         title: "Certified claims blocked",
         detail:
           "The demo blocks certified RAMS, work approval, emergency guidance, and competent-person replacement claims."
-      }
-    ],
-    details: [
-      {
-        title: "Architecture path",
-        items: [
-          "The public README maps local response and trace objects to a later managed-cloud architecture.",
-          "AWS services are described as a future production path, not as a completed deployment.",
-          "The demo runs without AWS access material, external keys, live scraping, or real project data."
-        ]
       }
     ]
   }

@@ -182,7 +182,7 @@ const sectionNav = [
                     }
                   </div>
 
-                  <div class="grid gap-4 md:grid-cols-3">
+                  <div class="grid gap-4 md:grid-cols-2 xl:grid-cols-4">
                     {
                       project.points.map((point) => (
                         <section class="rounded-md border border-ink/10 bg-white/80 p-4">
@@ -227,21 +227,6 @@ const sectionNav = [
                       </ol>
                     </section>
                   )}
-
-                  <div class="grid gap-3">
-                    {
-                      project.details.map((panel) => (
-                        <details class="rounded-md border border-ink/10 bg-white/80 shadow-sm">
-                          <summary class="focus-ring cursor-pointer rounded-md px-4 py-3 font-display text-lg font-semibold leading-tight text-ink">
-                            {panel.title}
-                          </summary>
-                          <ul class="grid gap-2 border-t border-ink/10 px-4 pb-4 pt-3 text-sm leading-6 text-ink-soft md:grid-cols-2">
-                            {panel.items.map((item) => <li class="rounded-md bg-paper/75 px-4 py-3">{item}</li>)}
-                          </ul>
-                        </details>
-                      ))
-                    }
-                  </div>
                 </div>
               </div>
             </article>
