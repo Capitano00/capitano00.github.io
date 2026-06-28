@@ -54,9 +54,9 @@ export const careerFoundation = {
   points: [
     {
       label: "Advisory scope",
-      title: "Independent, owner's, and lender advisory",
+      title: "IE, OE, and LTA across project stages",
       detail:
-        "Lender's technical advisory, technical due diligence, energy yield assessment, site/design/technology review, planning review, financial-model input review, construction monitoring, and operational analysis."
+        "Technical due diligence scopes include energy yield assessment, site/design/technology review, planning review, financial-model input review, construction monitoring, and operational analysis."
     },
     {
       label: "Project experience",
@@ -65,10 +65,10 @@ export const careerFoundation = {
         "Utility-scale solar PV, BESS, and Power-to-X work across M&A, lender technical advisory, independent engineer, and owner engineer contexts."
     },
     {
-      label: "Workflow insight",
-      title: "Where advisory work becomes software",
+      label: "Mission and commitment",
+      title: "Driving sustainability and engineering efficiency",
       detail:
-        "Recurring document review, workbook exchange, specialist-tool evidence, map deliverables, and acceptance checks inform the personal tools shown below."
+        "Working to help the UK and global markets move toward greener energy in the AI era by converting technical expertise into real-world impact, improving engineering efficiency, and working toward chartership while upholding professional standards and responsibility."
     }
   ]
 };
