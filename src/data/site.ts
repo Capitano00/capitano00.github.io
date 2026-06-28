@@ -166,7 +166,7 @@ export const projects: Project[] = [
     id: "rams-demo",
     eyebrow: "Ongoing open-source project",
     title: "3D-RAMS",
-    subtitle: "Local-first agent for inspectable pre-visit briefing packs",
+    subtitle: "Understand site risks before a field visit",
     summary:
       "3D-RAMS turns a coordinate into a 3D pre-visit briefing pack using synthetic fixtures, a deterministic backend workflow, and explicit safety gates.",
     status: "Public repository / active demo",
@@ -272,4 +272,3 @@ export const profileLinks = {
     }
   ]
 };
-
