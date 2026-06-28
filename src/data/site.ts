@@ -50,13 +50,13 @@ export const careerFoundation = {
   eyebrow: "Professional career",
   heading: "Technical advisory across the project lifecycle",
   intro:
-    "The consulting work spans acquisition, financing, development, construction monitoring, and operational review, turning technical evidence into clear recommendations for project teams and infrastructure stakeholders.",
+    "The consulting work spans acquisition, financing, development, construction monitoring, operational review, and related advisory work, identifying material risks and providing mitigation recommendations for stakeholders supporting project development and transactions.",
   points: [
     {
       label: "Advisory scope",
-      title: "Due diligence and owner engineering",
+      title: "Independent, owner's, and lender advisory",
       detail:
-        "Technical due diligence, energy yield assessment, site/design/technology review, planning review, financial-model input review, construction monitoring, and operational analysis."
+        "Lender's technical advisory, technical due diligence, energy yield assessment, site/design/technology review, planning review, financial-model input review, construction monitoring, and operational analysis."
     },
     {
       label: "Project experience",
