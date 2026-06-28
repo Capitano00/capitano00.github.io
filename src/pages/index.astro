@@ -289,16 +289,19 @@ const sectionNav = [
 
     <section id="profiles" aria-labelledby="profiles-heading" class="mx-auto max-w-7xl px-5 py-12 sm:px-8">
       <div class="rounded-md border border-copper/12 bg-paper-warm/64 p-6 shadow-sm md:p-8">
-        <div>
-          <p class="text-xs font-semibold uppercase tracking-[0.14em] text-copper">{profileLinks.eyebrow}</p>
-          <h2 id="profiles-heading" class="mt-3 max-w-xl font-display text-3xl font-semibold leading-tight text-ink md:text-4xl">
-            {profileLinks.heading}
-          </h2>
-          <div class="mt-6 flex flex-wrap gap-3">
+        <div class="grid gap-6 lg:grid-cols-[minmax(0,0.9fr)_minmax(18rem,0.62fr)] lg:items-center">
+          <div class="min-w-0">
+            <p class="text-xs font-semibold uppercase tracking-[0.14em] text-copper">{profileLinks.eyebrow}</p>
+            <h2 id="profiles-heading" class="mt-3 max-w-2xl font-display text-3xl font-semibold leading-tight text-ink md:text-4xl">
+              {profileLinks.heading}
+            </h2>
+          </div>
+          <div class="grid gap-3 sm:grid-cols-3 lg:grid-cols-1 lg:justify-self-end lg:w-full lg:max-w-sm">
             {
               profileLinks.links.map((link) => (
-                <a class="focus-ring inline-flex rounded-md border border-ink/15 bg-white/76 px-4 py-2.5 text-sm font-semibold text-ink shadow-sm transition hover:border-copper/30 hover:bg-white hover:text-copper" href={link.href} target="_blank" rel="noreferrer">
-                  {link.label}
+                <a class="focus-ring inline-flex min-h-11 items-center justify-center rounded-md border border-ink/15 bg-white/76 px-4 py-2.5 text-center text-sm font-semibold text-ink shadow-sm transition hover:border-copper/30 hover:bg-white hover:text-copper lg:justify-between" href={link.href} target="_blank" rel="noreferrer">
+                  <span>{link.label}</span>
+                  <span aria-hidden="true" class="hidden text-copper lg:inline">-&gt;</span>
                 </a>
               ))
             }
