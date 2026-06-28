@@ -133,7 +133,7 @@ export const projects: Project[] = [
     metrics: [
       { value: "10+", label: "workflow surfaces" },
       { value: "Review-led", label: "acceptance model" },
-      { value: "Python + React", label: "system stack" }
+      { value: "Python, React, SQLite", label: "system stack" }
     ],
     points: [
       {
@@ -272,3 +272,4 @@ export const profileLinks = {
     }
   ]
 };
+
