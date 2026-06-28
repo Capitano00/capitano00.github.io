@@ -49,7 +49,7 @@ const sectionNav = [
           <p class="mt-5 max-w-3xl break-words font-display text-xl font-semibold leading-tight text-ink-soft sm:text-2xl md:text-[2rem]">
             {heroProfile.headline}
           </p>
-          <p class="mt-5 max-w-2xl text-base leading-7 text-ink-soft">
+          <p class="mt-5 max-w-3xl text-base leading-7 text-ink-soft">
             {heroProfile.summary}
           </p>
           <p class="mt-4 max-w-2xl rounded-md border border-copper/20 bg-white/72 p-4 text-sm font-semibold leading-6 text-ink">
@@ -62,13 +62,10 @@ const sectionNav = [
             <a class="focus-ring rounded-md border border-ink/20 bg-white/72 px-4 py-2.5 text-sm font-semibold text-ink" href={heroProfile.secondaryActionHref}>
               {heroProfile.secondaryAction}
             </a>
-            <a class="focus-ring rounded-md border border-copper/30 bg-white/72 px-4 py-2.5 text-sm font-semibold text-ink" href={heroProfile.tertiaryActionHref} target="_blank" rel="noreferrer">
-              {heroProfile.tertiaryAction}
-            </a>
           </div>
         </div>
 
-        <aside aria-labelledby="glance-heading" class="rounded-md border border-ink/10 bg-white/66 p-5 shadow-lift backdrop-blur sm:p-6">
+        <aside aria-labelledby="glance-heading" class="self-start rounded-md border border-ink/10 bg-white/66 p-5 shadow-lift backdrop-blur sm:p-6">
           <h2 id="glance-heading" class="font-display text-2xl font-semibold leading-tight text-ink">
             Executive Summary
           </h2>
@@ -113,9 +110,9 @@ const sectionNav = [
 
     <section id="applied-ai" aria-labelledby="applied-ai-heading" class="bg-paper-warm/55">
       <div class="mx-auto max-w-7xl px-5 py-12 sm:px-8">
-        <div class="max-w-4xl">
+        <div class="max-w-5xl">
           <p class="text-xs font-semibold uppercase tracking-[0.14em] text-copper">{appliedAISystems.eyebrow}</p>
-          <h2 id="applied-ai-heading" class="mt-3 max-w-3xl font-display text-3xl font-semibold leading-tight text-ink md:text-4xl">
+          <h2 id="applied-ai-heading" class="mt-3 max-w-5xl font-display text-3xl font-semibold leading-tight text-ink md:text-4xl">
             {appliedAISystems.heading}
           </h2>
         </div>

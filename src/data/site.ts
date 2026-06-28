@@ -22,15 +22,13 @@ export const heroProfile = {
     "At OWC / ABL Group, I work as part of a team of experienced engineers and industry specialists with a global project record spanning hundreds of gigawatts.",
   headline: "Consultant @ OWC",
   summary:
-    "My work sits within the Onshore Solar team, with a focus on utility-scale PV and PV + BESS hybrid projects. This includes technical advisory and due diligence support for asset acquisition, sale, development, lenders' technical advisory from an independent engineering perspective, and owner's engineering work such as construction monitoring and operational analysis.",
+    "My work sits within the Onshore Solar team, with a focus on utility-scale solar PV, BESS, and hybrid projects. This includes technical advisory and due diligence support for asset acquisition, sale, development, lenders' technical advisory from an independent engineering perspective, and owner's engineering work such as construction monitoring and operational analysis.",
   judgement:
     "Alongside project work, I explore where AI and automation can reduce friction in engineering workflows. The tools are designed to support engineering and consulting review rather than replace it, with agent evaluation, human-in-the-loop checks, traceable evidence, and explicit decision gates.",
   primaryAction: "View personal projects",
   primaryActionHref: "#projects",
   secondaryAction: "View profiles",
-  secondaryActionHref: "#profiles",
-  tertiaryAction: "3D-RAMS repo",
-  tertiaryActionHref: "https://github.com/Capitano00/3D-RAMS"
+  secondaryActionHref: "#profiles"
 };
 
 export const atAGlance = [
@@ -50,27 +48,27 @@ export const atAGlance = [
 
 export const careerFoundation = {
   eyebrow: "Professional career",
-  heading: "Renewable consulting is the domain base.",
+  heading: "Technical advisory across the project lifecycle.",
   intro:
-    "My day-to-day work sits in renewable advisory, where technical judgement depends on clear assumptions, well-structured evidence, and reviewable outputs.",
+    "The consulting work spans acquisition, financing, development, construction monitoring, and operational review, turning technical evidence into clear recommendations for project teams and infrastructure stakeholders.",
   points: [
     {
-      label: "Consulting",
-      title: "OWC / ABL Group",
+      label: "Advisory scope",
+      title: "Due diligence and owner engineering",
       detail:
-        "Renewable-energy consulting across technical due diligence, energy yield assessment, design review, planning review, and stakeholder advisory."
+        "Technical due diligence, energy yield assessment, site/design/technology review, planning review, financial-model input review, construction monitoring, and operational analysis."
     },
     {
-      label: "Scale",
-      title: "Utility-scale project exposure",
+      label: "Project experience",
+      title: "80+ projects across 5+ GW",
       detail:
-        "Aggregate experience across 80+ solar PV, BESS, and Power-to-X projects, with 5+ GW of advisory context."
+        "Utility-scale solar PV, BESS, and Power-to-X work across M&A, lender technical advisory, independent engineer, and owner engineer contexts."
     },
     {
-      label: "Workflow lens",
-      title: "From repeated review loops to tools",
+      label: "Workflow insight",
+      title: "Where advisory work becomes software",
       detail:
-        "Recurring workbook, document, assumption, evidence, and specialist-tool steps become candidates for structured workflow software."
+        "Recurring document review, workbook exchange, specialist-tool evidence, map deliverables, and acceptance checks inform the personal tools shown below."
     }
   ]
 };
@@ -180,12 +178,12 @@ export const projects: Project[] = [
   },
   {
     id: "rams-demo",
-    eyebrow: "Public demo",
+    eyebrow: "Ongoing open-source project",
     title: "3D-RAMS",
     subtitle: "Local-first agent for inspectable pre-visit briefing packs.",
     summary:
       "3D-RAMS turns a coordinate into a 3D pre-visit briefing pack using synthetic fixtures, a deterministic backend workflow, and explicit safety gates.",
-    status: "Public repository",
+    status: "Public repository / active demo",
     href: "https://github.com/Capitano00/3D-RAMS",
     linkLabel: "View repository",
     metrics: [
