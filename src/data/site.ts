@@ -18,8 +18,6 @@ export const heroProfile = {
     "AI automation for engineering workflow efficiency"
   ],
   name: "Boyong Wang",
-  companyContext:
-    "At OWC / ABL Group, I work as part of a team of experienced engineers and industry specialists with a global project record spanning hundreds of gigawatts.",
   headline: "Consultant @ OWC",
   summary:
     "My work sits within the Onshore Solar team, with a focus on utility-scale solar PV, BESS, and hybrid projects. This includes technical advisory and due diligence support for asset acquisition, sale, development, lenders' technical advisory from an independent engineering perspective, and owner's engineering work such as construction monitoring and operational analysis.",
