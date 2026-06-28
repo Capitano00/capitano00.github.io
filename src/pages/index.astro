@@ -293,7 +293,7 @@ const sectionNav = [
     </details>
 
     <section id="profiles" aria-labelledby="profiles-heading" class="mx-auto max-w-7xl px-5 py-12 sm:px-8">
-      <div class="grid gap-8 rounded-md border border-ink/10 bg-white/72 p-6 shadow-sm md:grid-cols-[0.8fr_1.2fr] md:p-8">
+      <div class="grid gap-8 rounded-md border border-copper/12 bg-paper-warm/64 p-6 shadow-sm md:grid-cols-[0.8fr_1.2fr] md:p-8">
         <div>
           <p class="text-xs font-semibold uppercase tracking-[0.14em] text-copper">{profileLinks.eyebrow}</p>
           <h2 id="profiles-heading" class="mt-3 max-w-xl font-display text-3xl font-semibold leading-tight text-ink md:text-4xl">
@@ -305,7 +305,7 @@ const sectionNav = [
           <div class="flex flex-wrap gap-3">
             {
               profileLinks.links.map((link) => (
-                <a class="focus-ring inline-flex rounded-md bg-ink px-4 py-2.5 text-sm font-semibold text-paper shadow-lift" href={link.href} target="_blank" rel="noreferrer">
+                <a class="focus-ring inline-flex rounded-md border border-ink/15 bg-white/76 px-4 py-2.5 text-sm font-semibold text-ink shadow-sm transition hover:border-copper/30 hover:bg-white hover:text-copper" href={link.href} target="_blank" rel="noreferrer">
                   {link.label}
                 </a>
               ))
