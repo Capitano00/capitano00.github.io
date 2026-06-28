@@ -48,7 +48,7 @@ export const atAGlance = [
 
 export const careerFoundation = {
   eyebrow: "Professional career",
-  heading: "Technical advisory across the project lifecycle.",
+  heading: "Technical advisory across the project lifecycle",
   intro:
     "The consulting work spans acquisition, financing, development, construction monitoring, and operational review, turning technical evidence into clear recommendations for project teams and infrastructure stakeholders.",
   points: [
@@ -75,7 +75,7 @@ export const careerFoundation = {
 
 export const appliedAISystems = {
   eyebrow: "Applied AI build experience",
-  heading: "Agentic harnesses, workflow agents, and evaluation.",
+  heading: "Agentic harnesses, workflow agents, and evaluation",
   items: [
     {
       label: "Agentic harness",
@@ -125,7 +125,7 @@ export const projects: Project[] = [
     id: "heliofabric",
     eyebrow: "Flagship project",
     title: "HelioFabric",
-    subtitle: "Governed workflow layer for renewable-project review.",
+    subtitle: "Governed workflow layer for renewable-project review",
     summary:
       "HelioFabric organises project facts, evidence candidates, workbook exchanges, tool runs, generated artefacts, and explicit review states.",
     status: "Private repo / internal R&D platform",
@@ -180,7 +180,7 @@ export const projects: Project[] = [
     id: "rams-demo",
     eyebrow: "Ongoing open-source project",
     title: "3D-RAMS",
-    subtitle: "Local-first agent for inspectable pre-visit briefing packs.",
+    subtitle: "Local-first agent for inspectable pre-visit briefing packs",
     summary:
       "3D-RAMS turns a coordinate into a 3D pre-visit briefing pack using synthetic fixtures, a deterministic backend workflow, and explicit safety gates.",
     status: "Public repository / active demo",
@@ -254,7 +254,7 @@ export const helioArchitecture = [
 
 export const technicalBackground = {
   eyebrow: "Technical background",
-  heading: "Theoretical physics + robotics.",
+  heading: "Theoretical physics + robotics",
   intro: "BSc theoretical physics, MSc robotics, and connected-vehicle research.",
   items: [
     {
@@ -280,7 +280,7 @@ export const technicalBackground = {
 
 export const profileLinks = {
   eyebrow: "Profiles",
-  heading: "Public profiles and project links.",
+  heading: "Public profiles and project links",
   links: [
     {
       label: "LinkedIn profile",
