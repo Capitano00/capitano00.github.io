@@ -281,7 +281,6 @@ export const technicalBackground = {
 export const profileLinks = {
   eyebrow: "Profiles",
   heading: "Public profiles and project links.",
-  summary: "LinkedIn, GitHub, and the public demo repository are the main external references.",
   links: [
     {
       label: "LinkedIn profile",
