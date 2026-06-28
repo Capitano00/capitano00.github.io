@@ -79,9 +79,9 @@ export const appliedAISystems = {
   items: [
     {
       label: "Agentic harness",
-      title: "Codex + Claude Code delivery system",
+      title: "Supervised AI delivery system",
       detail:
-        "Built a supervised development harness for full-stack tools, task breakdown, verification commands, handoff notes, and human review."
+        "Built a role-based delivery harness for full-stack tools, with task packets, specialist handoffs, verification commands, and human review gates."
     },
     {
       label: "Workflow agents",
@@ -99,7 +99,7 @@ export const appliedAISystems = {
       label: "Scale",
       title: "10B+ tokens of tool-building work",
       detail:
-        "Used Codex and Claude Code across sustained build cycles, with practical lessons on context, model boundaries, and verification."
+        "Worked across AI coding, reasoning, and review environments at sustained scale, developing practical judgement on context design, model boundaries, and verification."
     }
   ]
 };
