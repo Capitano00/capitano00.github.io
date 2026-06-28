@@ -76,34 +76,32 @@ export const careerFoundation = {
 };
 
 export const appliedAISystems = {
-  eyebrow: "Applied AI systems",
-  heading: "I design systems where AI outputs remain reviewable.",
-  intro:
-    "The work is workflow-first: capture inputs, generate candidates, keep traces, expose assumptions, and promote results only after review.",
+  eyebrow: "Applied AI build experience",
+  heading: "Agentic harnesses, workflow agents, and evaluation.",
   items: [
     {
-      label: "Documents",
-      title: "Evidence extraction",
+      label: "Agentic harness",
+      title: "Codex + Claude Code delivery system",
       detail:
-        "Reports, PDFs, assumptions, and source notes become structured candidates with references, not silent final answers."
+        "Built a supervised development harness for full-stack tools, task breakdown, verification commands, handoff notes, and human review."
     },
     {
-      label: "Workbooks",
-      title: "Tool and workbook automation",
+      label: "Workflow agents",
+      title: "RAG and tool-backed assistants",
       detail:
-        "Excel-style review surfaces and specialist-tool runs get input previews, records, generated artefacts, and acceptance states."
+        "Built agents for document review, planning review, proposal drafting, technical-risk extraction, and project-data workflows."
     },
     {
-      label: "Agents",
-      title: "Human-reviewed outputs",
+      label: "Evaluation",
+      title: "Expert review stays explicit",
       detail:
-        "LLM, parser, or tool outputs stay separate from accepted project state until assumptions and evidence are inspected."
+        "Designed review patterns where assumptions, evidence, generated outputs, and acceptance state remain inspectable before use."
     },
     {
-      label: "Architecture",
-      title: "Cloud-ready shape",
+      label: "Scale",
+      title: "10B+ tokens of tool-building work",
       detail:
-        "API-led services, durable records, data contracts, traceable artefacts, and clean handoff points for managed infrastructure."
+        "Used Codex and Claude Code across sustained build cycles, with practical lessons on context, model boundaries, and verification."
     }
   ]
 };
@@ -258,27 +256,26 @@ export const helioArchitecture = [
 
 export const technicalBackground = {
   eyebrow: "Technical background",
-  heading: "Physics and robotics shaped the engineering base.",
-  intro:
-    "The common thread is traceability: model assumptions, sensor inputs, control logic, and review states need to be visible enough to inspect.",
+  heading: "Theoretical physics + robotics.",
+  intro: "BSc theoretical physics, MSc robotics, and connected-vehicle research.",
   items: [
     {
-      label: "Physics",
+      label: "BSc Physics with Theoretical Physics",
       title: "Imperial College London",
       detail:
-        "Physics with Theoretical Physics, including data-compression optimisation work for the ESA Comet Interceptor mission."
+        "BSc project: data-compression optimisation for the ESA Comet Interceptor mission."
     },
     {
-      label: "Robotics",
+      label: "MSc Robotics and Autonomous Systems",
       title: "University of Sussex",
       detail:
-        "MSc Robotics and Autonomous Systems, with UKF-based sensor fusion for real-time UGV indoor localisation."
+        "MSc project: Unscented Kalman Filter sensor fusion for real-time UGV indoor localisation."
     },
     {
-      label: "Research systems",
-      title: "SvecLab connected-vehicle work",
+      label: "Research Assistant",
+      title: "Robotics Lab",
       detail:
-        "ROS platform and sensor-fusion test workflows using Linux, Arduino, STM32, YOLO, and localisation methods."
+        "Connected-vehicle research with ROS sensor-fusion workflows using Linux, Arduino, STM32, YOLO, and localisation methods."
     }
   ]
 };

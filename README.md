@@ -29,9 +29,9 @@ Static output is generated in `dist/`.
 ## Site Structure
 
 - Professional career: OWC / ABL Group consulting foundation and aggregate renewable-advisory context.
-- Applied AI systems: document workflows, workbook/tool automation, review gates, data contracts, and traceable outputs.
+- Applied AI build experience: agentic harnesses, workflow agents, evaluation patterns, and human-reviewed delivery.
 - Personal projects: HelioFabric as the flagship project and 3D-RAMS as the public demo.
-- Technical background: physics, robotics, sensor fusion, and connected-vehicle research systems.
+- Technical background: physics, robotics, sensor fusion, and connected-vehicle research.
 - Profiles: LinkedIn, GitHub, and the 3D-RAMS repository.
 
 ## Publication Rules
