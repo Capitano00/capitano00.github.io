@@ -3,7 +3,7 @@ export const siteMeta = {
   description:
     "Personal website for Boyong Wang: renewable-energy consulting, applied AI workflow systems, HelioFabric, and public engineering demos.",
   author: "Boyong Wang",
-  reviewedThrough: "Q2 2026",
+  reviewedThrough: "Q3 2026",
   canonicalUrl: "https://capitano00.github.io",
   brand: {
     logoLockup: "/brand/heliofabric-logo-lockup.png",
@@ -37,6 +37,10 @@ export const atAGlance = [
   {
     label: "Project experience",
     value: "80+ projects totalling over 5 GW across EMEA, APAC, and AMEA"
+  },
+  {
+    label: "Credential",
+    value: "AWS Certified Solutions Architect - Associate (SAA-C03)"
   },
   {
     label: "Skillset",
